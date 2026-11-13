@@ -493,6 +493,10 @@
 
   .mail-card .mail-photo { display: block; width: calc(100% + 4.5rem); max-width: none; margin: -2.5rem -2.25rem 1.75rem; aspect-ratio: 3 / 2; height: auto; object-fit: cover; }
 
+  .about-mark.photo { padding: 0; background: var(--forest-light); border: none; }
+  .about-mark.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  @media (max-width: 860px) { .about-mark.photo { aspect-ratio: 1 / 1; padding: 0; } }
+
   /* page hero for inner pages */
   .page-hero { position: relative; overflow: hidden; background: radial-gradient(ellipse at 30% 20%, #135a44 0%, var(--forest-dark) 65%); padding: 5rem 2rem 4.5rem; text-align: center; }
   .page-hero .hero-vines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
@@ -654,12 +658,8 @@
 <section class="about" id="about">
   <div class="section-inner-wide">
     <div class="about-grid">
-      <div class="about-mark">
-        <svg viewBox="0 0 400 400" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M-10 360 C 90 330, 180 380, 280 345 S 380 300, 420 320" fill="none" stroke="rgba(13,74,56,0.10)" stroke-width="1.5"/>
-          <path d="M-10 50 C 80 80, 170 30, 260 55 S 370 90, 420 60" fill="none" stroke="rgba(184,92,44,0.14)" stroke-width="1.5"/>
-        </svg>
-        <img src="assets/logo.webp" alt="Embodied Work Solutions — An embodied approach to organizing your work and life." />
+      <div class="about-mark photo">
+        <img src="assets/photos/sk.webp" alt="SK smiling, in glasses and a black tank top that reads Be You, They’ll Adjust, in front of a Progress Pride flag" width="720" height="720" />
       </div>
       <div>
         <p class="section-label">About</p>
