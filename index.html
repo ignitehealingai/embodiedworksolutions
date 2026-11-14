@@ -4,693 +4,402 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Embodied Work Solutions</title>
-<meta name="description" content="I help people create systems and build tools that meet them where they are." />
+<meta name="description" content="You don't have to know where to start. Practical help with AI, technology, business systems, and projects — in plain language, built around real people." />
 <link rel="icon" type="image/webp" href="assets/leaf.webp" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
-    --forest: #0d4a38;
-    --forest-dark: #083326;
-    --forest-mid: #1a6b52;
-    --forest-light: #e6f0ec;
-    --forest-pale: #f4f8f6;
-    --terracotta: #b85c2c;
-    --terracotta-light: #d4773e;
-    --honey: #e8b44b;
-    --sand: #f8f1e2;
-    --warm-white: #faf9f7;
-    --off-white: #f2f0eb;
-    --text-dark: #1c2b27;
-    --text-mid: #3a4f47;
-    --text-muted: #6b8279;
-    --border: #c8d8d2;
-    --rule: #dde8e4;
+    --forest: #0d4a38; --forest-dark: #083326; --forest-mid: #1a6b52;
+    --forest-light: #e6f0ec; --forest-pale: #f4f8f6;
+    --terracotta: #b85c2c; --terracotta-light: #d4773e; --honey: #e8b44b;
+    --sand: #f8f1e2; --warm-white: #faf9f7; --off-white: #f2f0eb;
+    --text-dark: #1c2b27; --text-mid: #3a4f47; --text-muted: #5f766d;
+    --border: #c8d8d2; --rule: #dde8e4;
+    --serif: 'Cormorant Garamond', Georgia, serif; --sans: 'Lato', system-ui, sans-serif;
   }
-
-  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  body { font-family: var(--sans); color: var(--text-dark); background: var(--warm-white); line-height: 1.7; font-size: 17px; }
+  a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--terracotta-light); outline-offset: 3px; }
+  img { display: block; max-width: 100%; height: auto; }
+  .skip { position: absolute; left: -9999px; top: 0; background: var(--forest); color: #fff; padding: .5rem 1rem; z-index: 200; }
+  .skip:focus { left: 1rem; top: .5rem; }
 
-  body {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    color: var(--text-dark);
-    background: var(--warm-white);
-    line-height: 1.7;
-    font-size: 17px;
-  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
+  .narrow { max-width: 760px; }
+  section { padding: 6rem 0; }
+  .eyebrow { font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 1rem; font-weight: 700; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 500; color: var(--forest); line-height: 1.15; }
+  h2 { font-size: clamp(2.1rem, 4.4vw, 3.2rem); margin-bottom: 1.25rem; }
+  h3 { font-size: 1.55rem; line-height: 1.25; margin-bottom: .6rem; }
+  p.lede { font-size: 1.12rem; color: var(--text-mid); max-width: 680px; }
+  p + p { margin-top: 1rem; }
+  .muted { color: var(--text-muted); }
 
-  a:focus-visible { outline: 2px solid var(--terracotta-light); outline-offset: 3px; }
-
-  .skip { position: absolute; left: -9999px; top: 0; background: var(--forest); color: #fff; padding: 0.5rem 1rem; z-index: 200; }
-  .skip:focus { left: 1rem; top: 0.5rem; }
+  .btn { display: inline-flex; align-items: center; gap: .55rem; background: var(--forest); color: #fff; text-decoration: none; padding: .95rem 1.7rem; font-size: 14px; letter-spacing: .06em; font-weight: 700; border-radius: 999px; transition: background .2s; }
+  .btn:hover { background: var(--forest-mid); }
+  .btn.warm { background: var(--terracotta); }
+  .btn.warm:hover { background: var(--terracotta-light); }
+  .btn.ghost { background: transparent; color: var(--forest); border: 1.5px solid var(--forest); }
+  .btn.ghost:hover { background: var(--forest-light); }
+  .btn.light { background: #fff; color: var(--forest-dark); }
+  .btn.light:hover { background: var(--sand); }
+  .arrow { font-family: var(--sans); }
+  .micro { font-size: 13px; color: var(--text-muted); letter-spacing: .03em; margin-top: 1.1rem; }
+  .micro span + span::before { content: "·"; margin: 0 .6rem; color: var(--terracotta-light); }
 
   /* NAV */
-  nav {
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(250,249,247,0.96);
-    backdrop-filter: blur(6px);
-    border-bottom: 1px solid var(--rule);
-    padding: 0 2.5rem;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 64px;
-  }
-  .nav-brand {
-    display: flex; align-items: center; gap: 0.6rem;
-    font-family: 'Lato', sans-serif; font-weight: 300;
-    font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--forest); text-decoration: none;
-  }
-  .nav-brand img { height: 26px; width: auto; }
-  .nav-links { display: flex; gap: 2.25rem; list-style: none; align-items: center; }
-  .nav-links a {
-    font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--text-mid); text-decoration: none; transition: color 0.2s;
-  }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(250,249,247,.95); backdrop-filter: blur(6px); border-bottom: 1px solid var(--rule); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--forest); font-family: var(--serif); font-size: 1.3rem; line-height: 1.05; font-weight: 600; }
+  .brand img { height: 30px; width: auto; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  .nav-links a { color: var(--text-mid); text-decoration: none; font-size: 14px; }
   .nav-links a:hover { color: var(--forest); }
-  .nav-links .nav-cta {
-    background: var(--forest); color: #fff;
-    padding: 0.5rem 1.25rem; border-radius: 2px; letter-spacing: 0.06em; transition: background 0.2s;
-  }
-  .nav-links .nav-cta:hover { background: var(--forest-mid); color: #fff; }
+  .nav-links .btn { color: #fff; padding: .6rem 1.2rem; font-size: 13px; }
 
   /* HERO */
-  .hero {
-    position: relative; min-height: 560px; overflow: hidden;
-    display: flex; align-items: center; justify-content: center; text-align: center;
-    background: radial-gradient(ellipse at 30% 20%, #135a44 0%, var(--forest-dark) 65%);
-    padding: 5rem 0;
-  }
-  .hero-vines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
-  .hero-content { position: relative; z-index: 2; max-width: 760px; padding: 0 2rem; }
-  .hero-eyebrow {
-    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-    color: rgba(255,255,255,0.65); margin-bottom: 1.25rem;
-  }
-  .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.6rem, 6vw, 4.4rem); font-weight: 500;
-    color: #fff; line-height: 1.1; margin-bottom: 0.5rem;
-  }
-  .hero h1 em { color: var(--honey); font-style: italic; }
-  .hero-rule { width: 60px; height: 2px; background: var(--terracotta-light); margin: 1.5rem auto; }
-  .hero p { font-size: 1.08rem; color: rgba(255,255,255,0.85); margin: 0 auto 1rem; font-weight: 300; max-width: 640px; }
-  .hero p.hero-sub { color: rgba(255,255,255,0.7); margin-bottom: 2.25rem; }
-  .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-  .btn-primary {
-    display: inline-block; background: var(--terracotta); color: #fff;
-    padding: 0.9rem 2.25rem; font-size: 13px; letter-spacing: 0.1em;
-    text-transform: uppercase; text-decoration: none; transition: background 0.2s;
-  }
-  .btn-primary:hover { background: var(--terracotta-light); }
-  .btn-outline {
-    display: inline-block; background: transparent; color: #fff;
-    padding: 0.9rem 2.25rem; font-size: 13px; letter-spacing: 0.1em;
-    text-transform: uppercase; text-decoration: none;
-    border: 1px solid rgba(255,255,255,0.5); transition: border-color 0.2s, background 0.2s;
-  }
-  .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+  .hero { padding: 7rem 0 6rem; background: var(--sand); position: relative; overflow: hidden; }
+  .hero::after { content: ""; position: absolute; right: -120px; top: -80px; width: 460px; height: 460px; border-radius: 50%; background: radial-gradient(circle, rgba(232,180,75,.22), rgba(232,180,75,0) 70%); pointer-events: none; }
+  .hero h1 { font-size: clamp(2.8rem, 6.4vw, 4.8rem); max-width: 820px; margin-bottom: 1.5rem; }
+  .hero h1 em { color: var(--terracotta); }
+  .hero p.lede { font-size: 1.2rem; margin-bottom: 2.25rem; }
+  .hero .actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-  /* INTRO */
-  .intro-band { background: var(--off-white); padding: 5rem 2rem; text-align: center; }
-  .intro-band p.lead {
-    font-family: 'Cormorant Garamond', serif; font-size: clamp(1.7rem, 3.4vw, 2.3rem); font-style: italic;
-    color: var(--forest); max-width: 720px; margin: 0 auto 1.5rem; line-height: 1.3;
-  }
-  .intro-band p { font-size: 1.05rem; color: var(--text-mid); max-width: 640px; margin: 0 auto 1rem; }
-  .intro-band p.intro-turn { color: var(--forest); font-weight: 700; margin-top: 1.75rem; margin-bottom: 0; }
+  /* MESSY MIDDLE */
+  .quotes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin: 2.75rem 0 2rem; }
+  .q { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 1.6rem 1.75rem; display: flex; gap: 1.25rem; align-items: baseline; }
+  .q .n { font-family: var(--serif); font-size: 1.6rem; color: var(--terracotta-light); }
+  .q p { font-family: var(--serif); font-size: 1.45rem; color: var(--forest); line-height: 1.3; font-style: italic; }
+  .bridge { font-family: var(--serif); font-size: 1.4rem; color: var(--forest); }
+  .bridge a { color: var(--terracotta); text-decoration: none; }
+  .pills { display: flex; flex-wrap: wrap; gap: .6rem; list-style: none; margin-top: 1.75rem; }
+  .pills li { font-size: 13px; color: var(--forest); background: var(--forest-light); padding: .45rem 1rem; border-radius: 999px; }
 
-  hr.rule { height: 1px; background: var(--rule); border: none; margin: 0; }
+  /* SOUND FAMILIAR */
+  .familiar { background: var(--forest-pale); }
+  .split { display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: start; }
+  .split .photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 16px; }
+  .turn { font-family: var(--serif); font-size: 1.5rem; color: var(--forest); font-style: italic; margin-top: 1.5rem; }
+  .signs { list-style: none; margin-top: 2.25rem; display: grid; gap: 1.1rem; }
+  .signs li { padding-left: 1.4rem; border-left: 2px solid var(--terracotta-light); color: var(--text-mid); }
+  .signs strong { color: var(--forest); }
 
-  section { padding: 5.5rem 2rem; }
-  .section-inner { max-width: 900px; margin: 0 auto; }
-  .section-inner-wide { max-width: 1080px; margin: 0 auto; }
-  .section-label {
-    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--terracotta); margin-bottom: 1rem;
-  }
-  h2.serif {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 4vw, 3rem); font-weight: 500;
-    color: var(--forest); line-height: 1.2; margin-bottom: 1.5rem;
-  }
-  .center { text-align: center; }
-  .body-copy { color: var(--text-mid); margin-bottom: 1rem; max-width: 680px; }
-  .center .body-copy { margin-left: auto; margin-right: auto; }
+  /* HELP AREAS */
+  .areas { display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem; margin-top: 3rem; }
+  .area { background: #fff; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+  .area img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+  .area .body { padding: 2rem; }
+  .tag { display: inline-block; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--terracotta); font-weight: 700; margin-bottom: .75rem; }
+  .area ul { list-style: none; margin-top: 1.25rem; border-top: 1px solid var(--rule); }
+  .area li { padding: .7rem 0 .7rem 1.6rem; border-bottom: 1px solid var(--rule); position: relative; color: var(--text-mid); font-size: .97rem; }
+  .area li::before { content: "→"; position: absolute; left: 0; color: var(--terracotta-light); }
+  .note { margin-top: 2rem; font-family: var(--serif); font-size: 1.3rem; color: var(--forest); text-align: center; }
 
-  /* PICTURE IT */
-  .picture { background: var(--forest-pale); }
-  .picture-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 3rem 0 2.5rem; }
-  .vignette {
-    background: var(--warm-white); border: 1px solid var(--border);
-    border-top: 3px solid var(--forest-light);
-    padding: 2rem 1.75rem; display: flex; flex-direction: column; gap: 1rem; align-items: flex-start;
-    transition: border-top-color 0.2s;
-  }
-  .vignette:hover { border-top-color: var(--terracotta); }
-  .vignette-icon {
-    width: 42px; height: 42px; border-radius: 50%; background: var(--forest-light);
-    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-  }
-  .vignette-icon svg { width: 20px; height: 20px; }
-  .vignette-tag { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 0.4rem; }
-  .vignette h3.feel { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; font-size: 2rem; line-height: 1; color: var(--terracotta); }
-  .vignette p.vignette-tag { font-family: 'Lato', sans-serif; font-size: 10px; line-height: 1.5; color: var(--terracotta); }
-  .vignette p { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; line-height: 1.4; color: var(--forest); }
-  .picture-close { font-size: 1.05rem; color: var(--text-mid); max-width: 680px; margin: 0 auto; text-align: center; }
-
-  /* AI BAND */
-  .ai { background: var(--forest); color: #fff; position: relative; overflow: hidden; }
-  .ai .section-label { color: var(--honey); opacity: 0.85; }
-  .ai h2.serif { color: #fff; max-width: 760px; }
-  .ai .ai-intro { color: rgba(255,255,255,0.82); margin-bottom: 1rem; max-width: 640px; }
-  .ai-steps {
-    display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem;
-    margin-top: 3rem; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 2.5rem;
-  }
-  .ai-step h4 {
-    font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 500;
-    color: #fff; margin-bottom: 0.25rem;
-  }
-  .ai-step span { display: block; width: 24px; height: 2px; background: var(--terracotta-light); margin-bottom: 0.9rem; }
-  .ai-lead { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.25rem; color: rgba(255,255,255,0.9); margin-top: 2.5rem; max-width: 720px; }
-
-  /* THINKING PARTNER */
-  .partner { background: var(--warm-white); }
-  .process-steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 2rem; margin: 3rem 0; }
-  .step { border-left: 2px solid var(--border); padding-left: 1.25rem; }
-  .step-num {
-    font-family: 'Cormorant Garamond', serif; font-size: 2.5rem;
-    font-weight: 400; color: var(--terracotta-light); opacity: 0.55; line-height: 1; margin-bottom: 0.6rem;
-  }
-  .step p { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--forest); line-height: 1.35; }
-  .partner-close { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; border-top: 1px solid var(--rule); padding-top: 2.5rem; }
-  .partner-close p { color: var(--text-mid); }
-  .partner-close p.emph { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-style: italic; color: var(--forest); line-height: 1.4; }
-
-  /* WORK */
-  .work { background: var(--off-white); }
-  .work-cards { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; margin: 3rem 0 2.5rem; }
-  .work-card { background: var(--warm-white); border: 1px solid var(--border); padding: 1.75rem 1.5rem; }
-  .work-card svg { width: 28px; height: 28px; margin-bottom: 1rem; }
-  .work-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: var(--forest); font-weight: 500; line-height: 1.3; }
-  .work-foot { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
-  .work-foot p { color: var(--text-mid); max-width: 620px; }
-  .text-link {
-    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700;
-    color: var(--forest); text-decoration: none;
-    border-bottom: 1px solid var(--border); padding-bottom: 3px; transition: color 0.2s, border-color 0.2s; white-space: nowrap;
-  }
-  .text-link:hover { color: var(--terracotta); border-color: var(--terracotta); }
+  /* NUMBERED TRIO / STEPS */
+  .support { background: var(--off-white); }
+  .trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  .card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 2rem 1.75rem; }
+  .card .n { font-family: var(--serif); font-size: 2.6rem; line-height: 1; color: var(--terracotta-light); opacity: .7; margin-bottom: 1rem; }
+  .card p { color: var(--text-mid); font-size: .97rem; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin: 3rem 0 2.5rem; }
+  .step { border-top: 2px solid var(--forest); padding-top: 1.25rem; }
+  .step .label { font-size: 11px; letter-spacing: .18em; font-weight: 700; color: var(--terracotta); margin-bottom: .6rem; }
+  .step h3 { font-size: 1.4rem; }
+  .step p { color: var(--text-mid); font-size: .95rem; }
 
   /* WAYS */
-  .ways { background: var(--warm-white); }
-  .ways-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.75rem; margin-top: 3rem; }
-  .way-card {
-    background: var(--warm-white); border: 1px solid var(--border);
-    border-top: 3px solid var(--forest-light); padding: 2.25rem 2rem 2rem;
-    transition: border-top-color 0.2s;
-  }
-  .way-card:hover { border-top-color: var(--terracotta); }
-  .way-tag { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 0.6rem; }
-  .way-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.55rem; font-weight: 500; color: var(--forest); line-height: 1.2; margin-bottom: 1rem; }
-  .way-card p { font-size: 0.95rem; color: var(--text-mid); margin-bottom: 0.75rem; }
-  .way-card p.way-tag, .fit-card p.way-tag { font-size: 10px; color: var(--terracotta); margin-bottom: 0.75rem; line-height: 1.5; }
+  .ways { background: var(--forest-pale); }
+  .ways .card h3 { font-size: 1.45rem; }
+  .ways .card .tag { margin-bottom: .4rem; }
+  .fineprint { margin-top: 2rem; color: var(--text-muted); font-size: .95rem; max-width: 720px; }
 
-  /* FIT */
-  .fit { background: var(--sand); }
-  .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4.5rem; align-items: center; }
-  .fit-card { background: var(--warm-white); border: 1px solid var(--border); border-top: 3px solid var(--terracotta); padding: 2.25rem 2.25rem 2rem; }
-  .fit-card .way-tag { margin-bottom: 0.75rem; }
-  .fit-card p.big { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; color: var(--forest); line-height: 1.35; margin-bottom: 1rem; }
-  .fit-card p { color: var(--text-mid); font-size: 0.97rem; }
-  .chips { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; list-style: none; }
-  .chips li { font-size: 12px; letter-spacing: 0.06em; color: var(--forest); background: var(--forest-light); padding: 0.4rem 0.85rem; border-radius: 999px; }
+  /* REALLY FOR */
+  .reallyfor { background: var(--forest); color: #fff; }
+  .reallyfor .eyebrow { color: var(--honey); }
+  .reallyfor h2 { color: #fff; }
+  .reallyfor p { color: rgba(255,255,255,.82); }
+  .reallyfor .split { align-items: center; }
+  .reallyfor .photo img { aspect-ratio: 4 / 3; }
+  .pull { font-family: var(--serif); font-style: italic; font-size: clamp(1.6rem, 3vw, 2.1rem); line-height: 1.3; color: #fff; border-left: 3px solid var(--honey); padding-left: 1.25rem; margin-top: 2rem; }
+  .caption { margin-top: .9rem; font-size: 13px; color: rgba(255,255,255,.65); letter-spacing: .04em; }
 
   /* ABOUT */
-  .about { background: var(--forest-pale); }
-  .about-grid { display: grid; grid-template-columns: 5fr 6fr; gap: 4.5rem; align-items: center; }
-  .about-mark {
-    background: var(--sand); border: 1px solid var(--border);
-    aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; padding: 2.5rem;
-    position: relative; overflow: hidden;
-  }
-  .about-mark img { width: 100%; height: auto; position: relative; z-index: 1; }
-  .about-mark svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-  .about h2.serif { font-size: clamp(2.4rem, 5vw, 3.4rem); }
-  .about p.about-lead { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-style: italic; color: var(--forest); line-height: 1.4; margin-bottom: 1.25rem; }
-  .about p { color: var(--text-mid); margin-bottom: 1rem; }
+  .about .split { grid-template-columns: 1fr 1.25fr; align-items: center; }
+  .about .photo img { width: min(100%, 380px); aspect-ratio: 1 / 1; object-fit: cover; border-radius: 50%; margin: 0 auto; }
+  .about .skills { margin-top: 1.75rem; }
 
-  /* CTA */
-  .cta-band { background: var(--forest-dark); padding: 6rem 2rem; text-align: center; position: relative; overflow: hidden; }
-  .cta-band .section-label { color: rgba(255,255,255,0.45); }
-  .cta-band h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem,4.5vw,3.2rem); font-weight: 500; color: #fff; margin: 0 auto 1.25rem; max-width: 780px; line-height: 1.2;
-  }
-  .cta-band h2 em { color: var(--honey); }
-  .cta-band p { color: rgba(255,255,255,0.72); margin: 0 auto 1rem; font-size: 1.03rem; max-width: 600px; position: relative; }
-  .cta-band .rate { display: inline-block; border: 1px solid rgba(255,255,255,0.18); padding: 0.6rem 1.25rem; margin: 0.5rem 0 1.75rem; font-size: 13px; letter-spacing: 0.08em; color: rgba(255,255,255,0.8); position: relative; }
-  .cta-band .rate strong { color: var(--honey); font-weight: 700; }
-  .btn-white {
-    display: inline-block; background: #fff; color: var(--forest-dark);
-    padding: 1rem 2.75rem; font-size: 13px; letter-spacing: 0.12em;
-    text-transform: uppercase; text-decoration: none; font-weight: 700; transition: background 0.2s; position: relative;
-  }
-  .btn-white:hover { background: var(--sand); }
-  .cta-email { margin-top: 1.5rem !important; font-size: 15px !important; }
-  .cta-email a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.35); }
-  .cta-email a:hover { border-color: #fff; }
+  /* APPROACH */
+  .approach { background: var(--sand); text-align: center; }
+  .approach h2 { font-size: clamp(2.4rem, 5vw, 3.6rem); }
+  .approach h2 span { display: block; color: var(--terracotta); font-style: italic; }
+  .approach p { color: var(--text-mid); max-width: 680px; margin: 0 auto; }
+
+  /* FAQ */
+  .faq details { border-bottom: 1px solid var(--rule); padding: 1.25rem 0; }
+  .faq details:first-of-type { border-top: 1px solid var(--rule); margin-top: 2rem; }
+  .faq summary { cursor: pointer; list-style: none; font-family: var(--serif); font-size: 1.45rem; color: var(--forest); display: flex; justify-content: space-between; gap: 1rem; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; color: var(--terracotta); font-family: var(--sans); font-size: 1.4rem; line-height: 1; }
+  .faq details[open] summary::after { content: "–"; }
+  .faq details p { color: var(--text-mid); margin-top: .75rem; max-width: 680px; }
+
+  /* FINAL CTA */
+  .final { background: var(--forest-dark); color: #fff; text-align: center; padding: 6.5rem 0; }
+  .final .eyebrow { color: var(--honey); }
+  .final h2 { color: #fff; font-size: clamp(2.2rem, 5vw, 3.4rem); }
+  .final p { color: rgba(255,255,255,.78); max-width: 620px; margin: 0 auto 2.25rem; }
+  .checks { display: flex; justify-content: center; flex-wrap: wrap; gap: .5rem 1.75rem; list-style: none; margin-top: 1.75rem; color: rgba(255,255,255,.8); font-size: 14px; }
+  .checks li::before { content: "✓"; color: var(--honey); margin-right: .45rem; }
 
   /* FOOTER */
-  footer {
-    background: var(--forest-dark);
-    border-top: 1px solid rgba(255,255,255,0.08);
-    padding: 3.5rem 2rem; text-align: center;
-  }
-  .footer-logo { width: 260px; max-width: 70%; height: auto; margin: 0 auto 2rem; display: block; opacity: 0.95; }
-  .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.75rem; flex-wrap: wrap; list-style: none; }
-  .footer-links a { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
-  .footer-links a:hover { color: rgba(255,255,255,0.9); }
-  .footer-contact { font-size: 14px; color: rgba(255,255,255,0.5); }
-  .footer-contact a { color: rgba(255,255,255,0.75); text-decoration: none; }
-  .footer-contact a:hover { color: #fff; }
-  .footer-fine { margin-top: 2.25rem; font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.28); text-transform: uppercase; }
+  footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
+  .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
+  .tagline { font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: var(--honey); margin: .6rem 0 2rem; }
+  .foot-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; border-top: 1px solid rgba(255,255,255,.1); padding-top: 1.75rem; font-size: 14px; }
+  footer a { color: rgba(255,255,255,.85); text-decoration: none; }
+  footer a:hover { color: #fff; }
+  .foot-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
 
-
-  /* WHO */
-  .who { background: var(--warm-white); }
-  .who-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.25rem; margin-top: 3rem; }
-  .who-card { border-top: 2px solid var(--forest); padding-top: 1.25rem; }
-  .who-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 500; color: var(--forest); line-height: 1.2; margin-bottom: 0.6rem; }
-  .who-card p { font-size: 0.92rem; color: var(--text-mid); line-height: 1.6; }
-  .who-card.dash { border-top-style: dashed; border-top-color: var(--terracotta); }
-
-  /* FEATURED STORY */
-  .story {
-    display: grid; grid-template-columns: auto 1fr auto; gap: 2rem; align-items: center;
-    background: var(--forest); color: #fff; padding: 2.25rem 2.5rem; margin-bottom: 2.5rem;
-    border-left: 4px solid var(--honey);
+  @media (max-width: 900px) {
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .split, .about .split { grid-template-columns: 1fr; gap: 2.5rem; }
+    .split .photo img { aspect-ratio: 16 / 10; }
+    .about .photo img { max-width: 280px; }
   }
-  .story-icon { width: 64px; height: 64px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; }
-  .story-icon svg { width: 30px; height: 30px; }
-  .story p.story-tag { font-size: 10px; max-width: none; letter-spacing: 0.2em; text-transform: uppercase; color: var(--honey); margin-bottom: 0.4rem; }
-  .story h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 500; line-height: 1.2; margin-bottom: 0.5rem; }
-  .story p { font-size: 0.95rem; color: rgba(255,255,255,0.78); max-width: 560px; }
-  .story-link {
-    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; white-space: nowrap;
-    color: var(--forest-dark); background: #fff; padding: 0.8rem 1.4rem; text-decoration: none; transition: background 0.2s;
-  }
-  .story-link:hover { background: var(--sand); }
-
-  @media (max-width: 960px) {
-    .who-grid { grid-template-columns: repeat(3, 1fr); }
-    .picture-grid { grid-template-columns: repeat(2, 1fr) !important; }
-    .ai-steps { grid-template-columns: repeat(3, 1fr); }
-    .work-cards { grid-template-columns: repeat(2, 1fr); }
-    .process-steps { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 860px) {
-    nav { padding: 0 1.25rem; }
+  @media (max-width: 760px) {
+    section { padding: 4.5rem 0; }
+    .wrap { padding: 0 1.25rem; }
     .nav-links li:not(:last-child) { display: none; }
-    .nav-brand span { display: none; }
-    section { padding: 4rem 1.25rem; }
-    .picture-grid, .ways-cards, .fit-grid, .story, .about-grid, .partner-close { grid-template-columns: 1fr; }
-    .fit-grid, .about-grid { gap: 2.5rem; }
-    .about-mark { aspect-ratio: auto; padding: 3rem 2rem; }
-    .ai-steps { grid-template-columns: repeat(2, 1fr); }
-    .who-grid { grid-template-columns: repeat(2, 1fr); }
-    .picture-grid { grid-template-columns: 1fr !important; }
-    .story { padding: 2rem 1.5rem; gap: 1.25rem; }
+    .brand span { display: none; }
+    .quotes, .areas, .trio { grid-template-columns: 1fr; }
+    .hero { padding: 5rem 0 4.5rem; }
   }
-  @media (max-width: 520px) {
-    .work-cards, .process-steps, .ai-steps { grid-template-columns: 1fr; }
-    .who-grid { grid-template-columns: 1fr; }
-    .hero { min-height: 0; padding: 4.5rem 0; }
-  }
-
-  /* ===== v2 additions ===== */
-  .hero h1 { font-size: clamp(2.3rem, 5.2vw, 3.9rem); }
-  .hero-eyebrow em { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; letter-spacing: 0.04em; text-transform: none; color: var(--terracotta-light); }
-
-  /* DOORS */
-  .doors { background: var(--warm-white); }
-  .door-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; margin-top: 3rem; }
-  .door {
-    display: flex; flex-direction: column; text-decoration: none; color: inherit;
-    background: var(--warm-white); border: 1px solid var(--border); border-top: 4px solid var(--forest);
-    padding: 2.25rem 2rem 2rem; transition: border-top-color 0.2s, transform 0.2s, box-shadow 0.2s;
-  }
-  .door:hover, .door:focus-visible { border-top-color: var(--terracotta); transform: translateY(-3px); box-shadow: 0 10px 28px rgba(8,51,38,0.08); }
-  .door-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; line-height: 1; color: var(--terracotta-light); opacity: 0.6; margin-bottom: 0.75rem; }
-  .door h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.85rem; font-weight: 500; color: var(--forest); line-height: 1.15; margin-bottom: 0.5rem; }
-  .door .door-when { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; color: var(--terracotta); line-height: 1.35; margin-bottom: 1rem; }
-  .door p { font-size: 0.95rem; color: var(--text-mid); margin-bottom: 1.25rem; }
-  .door .door-go { margin-top: auto; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: var(--forest); }
-  .through-line {
-    margin: 3.25rem auto 0; max-width: 760px; text-align: center;
-    border-top: 1px solid var(--rule); padding-top: 2.25rem;
-  }
-  .through-line p.q { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 3vw, 2rem); font-style: italic; color: var(--forest); line-height: 1.3; margin-bottom: 0.75rem; }
-  .through-line p { color: var(--text-mid); }
-
-  /* DOOR SECTIONS */
-  .door-head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 0.75rem; }
-  .door-head .section-label { margin-bottom: 0; }
-  .door-intro { color: var(--text-mid); max-width: 700px; margin-bottom: 1rem; }
-  .door-intro.strong { color: var(--forest); font-weight: 700; }
-  .footing { background: var(--warm-white); }
-  .build { background: var(--forest-pale); }
-  .teams { background: var(--warm-white); }
-
-  .offer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
-  .offering-card-airy {
-    background: var(--warm-white); border: 1px solid var(--border); border-top: 3px solid var(--forest-light);
-    padding: 2rem 2rem 1.75rem; transition: border-top-color 0.2s;
-  }
-  .offering-card-airy:hover { border-top-color: var(--terracotta); }
-  .offering-card-airy p.offering-item-tag { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 0.5rem; }
-  .offering-card-airy h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 500; color: var(--forest); margin-bottom: 0.75rem; line-height: 1.25; }
-  .offering-card-airy h4 small { font-family: 'Lato', sans-serif; font-size: 0.85rem; font-weight: 300; }
-  .offering-card-airy p { font-size: 0.93rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 0.6rem; }
-  .offering-card-airy p.offering-best-for { font-size: 0.85rem; font-style: italic; color: var(--text-muted); margin-bottom: 0; }
-
-  .assess {
-    margin-top: 2.5rem; display: grid; grid-template-columns: 1.2fr 1fr; gap: 0;
-    border: 1px solid var(--border); background: var(--warm-white);
-  }
-  .assess-main { padding: 2.5rem; border-top: 4px solid var(--terracotta); }
-  .assess-main p.tag { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 0.6rem; }
-  .assess-main h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 500; color: var(--forest); line-height: 1.2; margin-bottom: 0.9rem; }
-  .assess-main p { color: var(--text-mid); font-size: 0.97rem; margin-bottom: 1.5rem; }
-  .assess-side { background: var(--forest); color: #fff; padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; gap: 1rem; }
-  .day-chip { display: inline-block; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; padding: 0.4rem 0.8rem; }
-  .day-chip.good { background: var(--forest-light); color: var(--forest-mid); }
-  .day-chip.hard { background: #fceee6; color: var(--terracotta); }
-  .assess-side p { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; line-height: 1.4; color: rgba(255,255,255,0.88); }
-  .btn-forest {
-    display: inline-block; background: var(--forest-dark); color: #fff; padding: 0.9rem 2rem;
-    font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: background 0.2s;
-  }
-  .btn-forest:hover { background: var(--forest-mid); }
-
-  .parents-note {
-    margin-top: 2.5rem; display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: start;
-    background: var(--sand); padding: 2rem 2.25rem; border-left: 3px solid var(--honey);
-  }
-  .parents-note h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; color: var(--forest); line-height: 1.25; margin-bottom: 0.6rem; }
-  .parents-note p { color: var(--text-mid); font-size: 0.95rem; margin-bottom: 0.6rem; }
-  .parents-note p:last-child { margin-bottom: 0; }
-  .parents-note .vignette-icon { background: var(--warm-white); }
-
-  .sub-head { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 500; color: var(--forest); margin: 3.5rem 0 0.25rem; line-height: 1.2; }
-  .sub-head + p { color: var(--text-mid); max-width: 680px; }
-  .build .who-grid { margin-top: 2rem; }
-  .build .ways-cards { margin-top: 2rem; }
-  .build .way-card { background: var(--warm-white); }
-  .rate-line {
-    margin-top: 2rem; display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap;
-    background: var(--warm-white); border: 1px solid var(--border); padding: 1.25rem 1.5rem;
-  }
-  .rate-line strong { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 500; color: var(--terracotta); line-height: 1; }
-  .rate-line span { color: var(--text-mid); font-size: 0.95rem; flex: 1; min-width: 220px; }
-
-  /* RCSD */
-  .rcsd { background: var(--forest); color: #fff; }
-  .rcsd .section-label { color: var(--honey); opacity: 0.85; }
-  .rcsd h2.serif { color: #fff; }
-  .rcsd .rcsd-intro { color: rgba(255,255,255,0.82); margin-bottom: 1rem; max-width: 660px; }
-  .rcsd-pillars { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin-top: 3rem; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 2.5rem; }
-  .rcsd-pillar h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 500; color: #fff; margin-bottom: 0.6rem; }
-  .rcsd-pillar p { font-size: 0.93rem; color: rgba(255,255,255,0.72); line-height: 1.65; }
-  .rcsd-tm { display: block; margin-top: 2.5rem; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.35); border-top: 1px solid rgba(255,255,255,0.12); padding-top: 1.5rem; }
-
-  /* HOW I WORK steps (titled) */
-  .how-steps .step h4 { font-size: 13px; letter-spacing: 0.06em; font-weight: 700; text-transform: uppercase; color: var(--forest); margin-bottom: 0.5rem; }
-  .how-steps .step p.step-body { font-family: 'Lato', sans-serif; font-size: 0.92rem; color: var(--text-mid); line-height: 1.6; }
-
-  /* ECOSYSTEM */
-  .eco-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 3.5rem; }
-  .eco-card { background: var(--warm-white); border: 1px solid var(--border); padding: 1.75rem 1.5rem; display: flex; flex-direction: column; }
-  .eco-card p.eco-card-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 0.5rem; }
-  .eco-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--forest); font-weight: 500; margin-bottom: 0.6rem; }
-  .eco-card p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.6; margin-bottom: 1rem; }
-  .eco-card .text-link { margin-top: auto; align-self: flex-start; }
-
-  .cta-band h2 + p.cta-sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.3rem; color: rgba(255,255,255,0.85); }
-
-  @media (max-width: 960px) {
-    .door-grid { grid-template-columns: 1fr; }
-    .assess { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 860px) {
-    .offer-grid, .rcsd-pillars, .eco-cards { grid-template-columns: 1fr; }
-    .parents-note { grid-template-columns: 1fr; }
-    .assess-main, .assess-side { padding: 2rem 1.5rem; }
-  }
-
-  .simple-steps { grid-template-columns: repeat(3, 1fr) !important; }
-  .simple-steps .step h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; letter-spacing: 0; text-transform: none; font-weight: 500; line-height: 1.25; }
-  .hero { min-height: 520px; }
-  .hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
-  .nav-links a[aria-current="page"] { color: var(--forest); border-bottom: 2px solid var(--terracotta); padding-bottom: 3px; }
-  .note-line { margin-top: 2rem; background: var(--warm-white); border: 1px solid var(--border); border-left: 3px solid var(--forest); padding: 1.1rem 1.5rem; color: var(--text-mid); font-size: 0.97rem; }
-
-  .vignette.photo { padding: 0; gap: 0; overflow: hidden; }
-  .vignette.photo img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
-  .vignette.photo .vt { padding: 1.4rem 1.6rem 1.75rem; }
-  .vignette.photo h3.feel { margin-bottom: 0.6rem; }
-  .help-card { padding: 0 !important; overflow: hidden; }
-  .help-card img, .walk img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; display: block; }
-  .help-card .hc { padding: 1.6rem 1.85rem 1.85rem; display: flex; flex-direction: column; flex: 1; }
-  .walk { padding: 0 !important; overflow: hidden; }
-  .walk .wk { padding: 1.75rem 2rem 2rem; }
-
-  .has-photo .hero-vines { display: none; }
-  .has-photo .hero-eyebrow em { color: #f2c86b; }
-  .has-photo h1, .has-photo p, .has-photo .section-label { text-shadow: 0 1px 14px rgba(8,51,38,0.55); }
-  .hero.has-photo, .page-hero.has-photo { background-size: cover; background-position: center; }
-
-  .rcsd-top { display: grid; grid-template-columns: 1.3fr 1fr; gap: 3.5rem; align-items: center; }
-  .rcsd-top img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block; border: 6px solid rgba(255,255,255,0.08); }
-  .q-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin: 3rem 0; align-items: start; }
-  .q-step { display: flex; flex-direction: column; gap: 1.1rem; }
-  .q-step img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
-  .q-step .step { border-left: 2px solid var(--border); padding-left: 1.1rem; }
-  .q-step.low { padding-top: 3.5rem; }
-  @media (max-width: 960px) { .q-steps { grid-template-columns: repeat(2, 1fr); } .rcsd-top { grid-template-columns: 1fr; gap: 2rem; } }
-  @media (max-width: 520px) { .q-steps { grid-template-columns: 1fr; } .q-step.low { padding-top: 0; } }
-
-  .q-list { margin: 3rem 0; }
-  .q-row { display: grid; grid-template-columns: 220px 70px 1fr; align-items: center; gap: 1.5rem; padding: 1rem 0; border-bottom: 1px solid var(--rule); }
-  .q-row img { width: 220px; height: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; }
-  .q-row .n { font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--terracotta-light); line-height: 1; text-align: center; }
-  .q-row .q { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--forest); line-height: 1.25; }
-  @media (max-width: 640px) { .q-row { grid-template-columns: 110px 44px 1fr; gap: 0.9rem; } .q-row img { width: 110px; } .q-row .n { font-size: 2rem; } .q-row .q { font-size: 1.3rem; } }
-
-  .mail-card .mail-photo { display: block; width: calc(100% + 4.5rem); max-width: none; margin: -2.5rem -2.25rem 1.75rem; aspect-ratio: 3 / 2; height: auto; object-fit: cover; }
-
-  .about-mark.photo { padding: 0; background: var(--forest-light); border: none; }
-  .about-mark.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  @media (max-width: 860px) { .about-mark.photo { aspect-ratio: 1 / 1; padding: 0; } }
-
-  /* page hero for inner pages */
-  .page-hero { position: relative; overflow: hidden; background: radial-gradient(ellipse at 30% 20%, #135a44 0%, var(--forest-dark) 65%); padding: 5rem 2rem 4.5rem; text-align: center; }
-  .page-hero .hero-vines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
-  .page-hero > div { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; }
-  .page-hero .section-label { color: var(--honey); opacity: 0.85; }
-  .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-weight: 500; color: #fff; font-size: clamp(2.3rem, 5vw, 3.5rem); line-height: 1.12; }
-  .page-hero h1 em { color: var(--honey); }
-  .page-hero p.sub { color: rgba(255,255,255,0.82); font-size: 1.08rem; font-weight: 300; margin-top: 1.25rem; }
-
-  /* offering teaser cards (home) */
-  .help { background: var(--warm-white); }
-  .help-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.75rem; }
-  .help-card { display: flex; flex-direction: column; text-decoration: none; color: inherit; background: var(--warm-white); border: 1px solid var(--border); border-top: 4px solid var(--forest); padding: 2rem 1.85rem; transition: border-top-color .2s, transform .2s, box-shadow .2s; }
-  .help-card:hover, .help-card:focus-visible { border-top-color: var(--terracotta); transform: translateY(-3px); box-shadow: 0 10px 28px rgba(8,51,38,0.08); }
-  .help-card p.tag { font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--terracotta); margin-bottom: .6rem; }
-  .help-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 500; color: var(--forest); line-height: 1.2; margin-bottom: .75rem; }
-  .help-card p { font-size: .95rem; color: var(--text-mid); margin-bottom: 1.25rem; }
-  .help-card .go { margin-top: auto; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: var(--forest); }
-
-  /* offerings page */
-  .offer { padding: 5rem 2rem; }
-  .offer:nth-of-type(even) { background: var(--forest-pale); }
-  .offer-row { display: grid; grid-template-columns: 1.35fr 1fr; gap: 4rem; align-items: start; max-width: 1080px; margin: 0 auto; }
-  .offer h2.serif { font-size: clamp(2rem, 3.6vw, 2.7rem); }
-  .offer p { color: var(--text-mid); margin-bottom: 1rem; }
-  .walk { background: var(--warm-white); border: 1px solid var(--border); border-top: 3px solid var(--terracotta); padding: 2rem; }
-  .walk p.tag { font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 1rem; }
-  .walk ul { list-style: none; margin-bottom: 1.75rem; }
-  .walk li { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: var(--forest); line-height: 1.35; padding: .65rem 0 .65rem 1.6rem; border-bottom: 1px solid var(--rule); position: relative; }
-  .walk li::before { content: ""; position: absolute; left: 0; top: 1.05rem; width: 10px; height: 10px; border-radius: 50%; background: var(--forest-light); border: 1.5px solid var(--forest-mid); }
-  .walk li:last-child { border-bottom: none; }
-  .unsure { background: var(--sand); text-align: center; padding: 4.5rem 2rem; }
-  .unsure h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 500; color: var(--forest); margin-bottom: .75rem; }
-  .unsure p { color: var(--text-mid); max-width: 600px; margin: 0 auto 1.75rem; }
-
-  /* contact page */
-  .contact-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: start; }
-  .prompts { list-style: none; margin: 1.5rem 0 2rem; }
-  .prompts li { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; color: var(--forest); line-height: 1.35; padding: .9rem 0 .9rem 2.25rem; border-bottom: 1px solid var(--rule); position: relative; }
-  .prompts li span { position: absolute; left: 0; top: .95rem; font-size: 1rem; color: var(--terracotta-light); }
-  .mail-card { background: var(--forest); color: #fff; padding: 2.5rem 2.25rem; border-left: 4px solid var(--honey); }
-  .mail-card p.tag { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--honey); margin-bottom: .75rem; }
-  .mail-card h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.9rem; line-height: 1.2; margin-bottom: 1rem; }
-  .mail-card p { color: rgba(255,255,255,.8); font-size: .97rem; margin-bottom: 1.5rem; }
-  .mail-card .addr { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: #fff; word-break: break-all; margin: 1.25rem 0 0; }
-  .mail-card .addr a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.35); }
-
-  @media (max-width: 860px) {
-    .simple-steps, .help-grid { grid-template-columns: 1fr !important; }
-    .offer-row, .contact-grid { grid-template-columns: 1fr; gap: 2.25rem; }
-    .offer { padding: 3.75rem 1.25rem; }
-    .nav-links li:not(:last-child) { display: none; }
-  }
+  @media (max-width: 480px) { .steps { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+
 <nav aria-label="Main">
-  <a href="index.html" class="nav-brand"><img src="assets/leaf.webp" alt="" /><span>Embodied Work Solutions</span></a>
-  <ul class="nav-links">
-    <li><a href="index.html" aria-current="page">Home</a></li>
-    <li><a href="offerings.html">Offerings</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html" class="nav-cta">Bring your idea to life</a></li>
-  </ul>
+  <div class="wrap">
+    <a href="#top" class="brand"><img src="assets/leaf.webp" alt="" /><span>Embodied Work<br>Solutions</span></a>
+    <ul class="nav-links">
+      <li><a href="#help">How I help</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation" class="btn">Let’s talk <span class="arrow">↗</span></a></li>
+    </ul>
+  </div>
 </nav>
-<header class="hero has-photo" id="top" style="background-image:linear-gradient(rgba(8,51,38,0.6),rgba(8,51,38,0.55)),url(assets/photos/header-home.webp)">
-  <svg class="hero-vines" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <g fill="none" stroke-linecap="round">
-      <path d="M-40 470 C 220 420, 420 520, 700 470 S 1180 380, 1480 430" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
-      <path d="M-40 510 C 260 470, 480 560, 760 515 S 1200 430, 1480 480" stroke="rgba(212,119,62,0.22)" stroke-width="1.5"/>
-      <path d="M-40 120 C 180 160, 360 70, 620 110 S 1040 190, 1480 120" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-      <path d="M1100 600 C 1130 520, 1200 470, 1280 440" stroke="rgba(232,180,75,0.22)" stroke-width="1.5"/>
-      <path d="M200 600 C 230 540, 300 500, 360 485" stroke="rgba(255,255,255,0.08)" stroke-width="1.2"/>
-    </g>
-    <g fill="rgba(232,180,75,0.20)">
-      <path d="M1280 440 c 18 -30 48 -38 70 -36 c -6 26 -34 44 -70 36 z"/>
-      <path d="M1210 468 c -4 -26 10 -46 30 -54 c 6 22 -6 44 -30 54 z"/>
-    </g>
-    <g fill="rgba(255,255,255,0.08)">
-      <path d="M360 485 c 14 -24 38 -30 56 -28 c -5 21 -27 35 -56 28 z"/>
-      <path d="M300 505 c -3 -21 8 -37 24 -43 c 5 18 -5 35 -24 43 z"/>
-    </g>
-  </svg>
-  <div class="hero-content">
-    <p class="hero-eyebrow"><em>An embodied approach to organizing your work and life.</em></p>
-    <h1>I help people create systems and build tools that <em>meet them where they are.</em></h1>
-    <div class="hero-rule"></div>
-    <div class="hero-btns">
-      <a href="contact.html" class="btn-primary">Let’s bring your idea to life</a>
-      <a href="offerings.html" class="btn-outline">See offerings</a>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">AI · Technology · Business Systems · Projects</p>
+    <h1>You don’t have to know <em>where to start.</em></h1>
+    <p class="lede">You just know something needs to work better. Maybe it’s a technology problem, a project with too many moving parts, or a tool you know could help if only you had time to figure it out. I help people turn that stuck feeling into a clear, workable next step.</p>
+    <div class="actions">
+      <a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation" class="btn warm">Let’s figure it out together <span class="arrow">↗</span></a>
+      <a href="#help" class="btn ghost">See how I can help</a>
     </div>
+    <p class="micro"><span>Free 20-minute conversation</span><span>On Zoom</span><span>No pressure to commit</span></p>
   </div>
 </header>
 
 <main id="main">
 
-<section class="picture">
-  <div class="section-inner-wide">
-    <div class="center">
-      <p class="section-label">What it can feel like</p>
-      <h2 class="serif">Imagine the possibilities.</h2>
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Bring me the messy middle</p>
+    <h2>Whatever’s on your plate.</h2>
+    <div class="quotes">
+      <div class="q"><span class="n">01</span><p>“I keep hearing I should be using AI, but for what?”</p></div>
+      <div class="q"><span class="n">02</span><p>“My systems are scattered across too many tools.”</p></div>
+      <div class="q"><span class="n">03</span><p>“I have an idea. I can’t seem to get it moving.”</p></div>
+      <div class="q"><span class="n">04</span><p>“I just need someone to help me figure this thing out.”</p></div>
     </div>
-    <div class="picture-grid"><div class="vignette photo"><img src="assets/photos/pride.webp" alt="A bright orange zinnia, petals flung wide open in the sun" loading="lazy" width="900" height="675" /><div class="vt"><h3 class="feel">Pride</h3><p>The pride and excitement you feel sharing your new website link with a potential client.</p></div></div><div class="vignette photo"><img src="assets/photos/relief.webp" alt="Sunset clouds glowing gold above the treetops as the day lets go" loading="lazy" width="900" height="675" /><div class="vt"><h3 class="feel">Relief</h3><p>The sigh of relief when you stop by the grocery store and your custom-built shopping list is ready to go, right at your fingertips.</p></div></div><div class="vignette photo"><img src="assets/photos/ease.webp" alt="A wide, open path through a green forest, sunlight resting on the ground" loading="lazy" width="900" height="675" /><div class="vt"><h3 class="feel">Ease</h3><p>The ease of starting your day knowing you can find whatever you need in one place.</p></div></div><div class="vignette photo"><img src="assets/photos/thrill.webp" alt="A yellow swallowtail, wings spread wide, landing on fragrant purple blooms" loading="lazy" width="900" height="675" /><div class="vt"><h3 class="feel">Thrill</h3><p>The thrill of excitement you get sharing an Instagram post announcing your upcoming art show.</p></div></div><div class="vignette photo"><img src="assets/photos/exhale.webp" alt="Autumn leaves drifting on still water, the sky reflected among them" loading="lazy" width="900" height="675" /><div class="vt"><h3 class="feel">Exhale</h3><p>The long exhale when your apps, calendars, and systems finally talk to each other—and nothing lives in three places anymore.</p></div></div><div class="vignette photo"><img src="assets/photos/clarity.webp" alt="Layers of blue mountains rolling out to the horizon under a wide sky" loading="lazy" width="900" height="675" /><div class="vt"><h3 class="feel">Clarity</h3><p>The clarity of finally making the software decision you’ve been circling for weeks, with the costs and tradeoffs laid out in front of you.</p></div></div></div>
+    <p class="bridge">You bring the problem. We’ll find a place to begin. <a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation">→</a></p>
+    <ul class="pills">
+      <li>Practical help</li><li>Plain language</li><li>Collaborative problem-solving</li><li>Tools you can actually use</li>
+    </ul>
   </div>
 </section>
 
-<section class="help">
-  <div class="section-inner-wide">
-    <div class="center">
-      <p class="section-label">Ways I can help</p>
-      <h2 class="serif">Where would you like to start?</h2>
+<section class="familiar">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Sound familiar?</p>
+      <h2>You’re capable.<br>The setup isn’t working.</h2>
+      <p class="lede">You’ve tried figuring it out yourself. You’ve downloaded the apps, saved the tutorials, made the lists, and maybe started the project three different times. And still, something is getting in your way.</p>
+      <p class="turn">It doesn’t have to stay that complicated.<br>We can start with the problem as it is.</p>
+      <ul class="signs">
+        <li><strong>Too much tech, not enough clarity.</strong> You’re juggling apps and information that should make life easier, but don’t.</li>
+        <li><strong>AI curiosity, with real questions.</strong> You want to know what actually helps, what’s worth learning, and what to avoid.</li>
+        <li><strong>Good ideas that keep stalling.</strong> The goal makes sense. The steps, ownership, and systems don’t—yet.</li>
+        <li><strong>No time to become an expert.</strong> You want a real person to sit alongside you, explain things clearly, and get something moving.</li>
+      </ul>
     </div>
-    <div class="help-grid">
-      <a class="help-card" href="offerings.html#build">
-        <img src="assets/photos/build.webp" alt="A single new green sprout reaching up from the forest floor" loading="lazy" width="1200" height="750" />
-        <div class="hc">
-        <p class="tag">Build the thing</p>
-        <h3>Have an idea you want to build?</h3>
-        <p>Websites, apps, and custom tools made for how you actually work and live.</p>
-        <span class="go">Learn more →</span>
-              </div>
-      </a>
-      <a class="help-card" href="offerings.html#systems">
-        <img src="assets/photos/systems.webp" alt="Tree roots spreading wide across the forest floor, holding steady" loading="lazy" width="1200" height="750" />
-        <div class="hc">
-        <p class="tag">Systems that fit</p>
-        <h3>Need a system that actually fits?</h3>
-        <p>Routines, calendars, and information that hold up on hard days, too.</p>
-        <span class="go">Learn more →</span>
-              </div>
-      </a>
-      <a class="help-card" href="offerings.html#ai">
+    <div class="photo"><img src="assets/photos/ease.webp" alt="A wide, open path through a green forest, sunlight resting on the ground" loading="lazy" width="900" height="675" /></div>
+  </div>
+</section>
+
+<section id="help">
+  <div class="wrap">
+    <p class="eyebrow">What we can work on</p>
+    <h2>Real help for real-world problems.</h2>
+    <p class="lede">I work where technology, people, and projects meet. Here are some of the places we might begin—not boxes you have to fit yourself into.</p>
+    <div class="areas">
+      <article class="area">
         <img src="assets/photos/ai.webp" alt="Two bees at work side by side on a glowing sunflower" loading="lazy" width="1200" height="750" />
-        <div class="hc">
-        <p class="tag">Getting started with AI</p>
-        <h3>Curious about AI and unsure where to start?</h3>
-        <p>We’ll find where it could actually help you—and try it together.</p>
-        <span class="go">Learn more →</span>
-              </div>
-      </a>
+        <div class="body">
+          <span class="tag">01 / AI &amp; technology support</span>
+          <h3>Make the tools work for you.</h3>
+          <p class="muted">We’ll find the right level of technology for what you’re trying to do, then make it useful in your actual work. That might mean understanding AI, fixing a frustrating setup, or building a repeatable way of getting things done.</p>
+          <ul>
+            <li>Get started with ChatGPT or other AI tools in a practical, confident way</li>
+            <li>Untangle an annoying digital task or technology problem</li>
+            <li>Use AI to organize ideas, draft materials, or simplify recurring work</li>
+            <li>Connect information, documents, and everyday workflows</li>
+          </ul>
+        </div>
+      </article>
+      <article class="area">
+        <img src="assets/photos/systems.webp" alt="Tree roots spreading wide across the forest floor, holding steady" loading="lazy" width="1200" height="750" />
+        <div class="body">
+          <span class="tag">02 / Business systems &amp; project support</span>
+          <h3>Turn the moving pieces into a plan.</h3>
+          <p class="muted">When a project feels too big, a workflow is breaking down, or your business relies on remembering everything yourself, we’ll map what’s happening and make the next steps clearer.</p>
+          <ul>
+            <li>Turn an idea into a project plan you can actually follow</li>
+            <li>Map a process and find where things get stuck</li>
+            <li>Set up organizing tools, responsibilities, and handoffs</li>
+            <li>Move a stalled project toward decisions and deliverables</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+    <p class="note">Not sure which category applies? You don’t need to choose one. That’s what our first conversation is for.</p>
+  </div>
+</section>
+
+<section class="support">
+  <div class="wrap">
+    <p class="eyebrow">What good support looks like</p>
+    <h2>Not another pile of advice.<br>Something you can actually use.</h2>
+    <p class="lede">The exact outcome depends on the problem. But the aim is always the same: less friction, more clarity, and something useful you can carry forward yourself.</p>
+    <div class="trio">
+      <div class="card"><p class="n">01</p><h3>A clearer starting point</h3><p>Understand what matters, what’s in the way, and which next move is worth your time.</p></div>
+      <div class="card"><p class="n">02</p><h3>A workable solution</h3><p>When the scope calls for it, we set up a tool, improve a workflow, or create a practical plan together.</p></div>
+      <div class="card"><p class="n">03</p><h3>Confidence to keep going</h3><p>Clear explanations and a usable handoff—so the result doesn’t depend on keeping me around.</p></div>
     </div>
   </div>
 </section>
 
-<section class="partner" id="how">
-  <div class="section-inner-wide">
-    <p class="section-label">How it works</p>
-    <h2 class="serif">We start where you are.</h2>
-    <div class="process-steps how-steps simple-steps">
-      <div class="step"><p class="step-num">01</p><h4>Tell me what’s hard—or what you want to make</h4><p class="step-body">A conversation, rough notes, or an unfinished attempt is plenty to begin.</p></div>
-      <div class="step"><p class="step-num">02</p><h4>We find what fits</h4><p class="step-body">Sometimes that’s a tool that already exists. Sometimes it’s a simple system. Sometimes we build something just for you.</p></div>
-      <div class="step"><p class="step-num">03</p><h4>We make sure it holds</h4><p class="step-body">We test it on your real life—including a hard day—and adjust until it works.</p></div>
+<section id="how">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2>A simple way from stuck to moving.</h2>
+    <p class="lede">We don’t start with a complicated assessment or a long sales pitch. We start with what you’re trying to accomplish.</p>
+    <div class="steps">
+      <div class="step"><p class="label">01 / TALK</p><h3>Tell me what’s happening.</h3><p>We meet on Zoom for a free 20-minute conversation. You can bring a question, an idea, a tangled situation, or simply the sense that something needs to change.</p></div>
+      <div class="step"><p class="label">02 / FIND THE FIT</p><h3>Choose a first move.</h3><p>I’ll be direct about whether I can help. If it makes sense, we’ll agree on a focused session, a small project, or a longer partnership.</p></div>
+      <div class="step"><p class="label">03 / BUILD</p><h3>Work on the actual thing.</h3><p>We untangle the problem, test possibilities, and build something useful. Your needs—not the newest software—shape the approach.</p></div>
+      <div class="step"><p class="label">04 / HANDOFF</p><h3>Make it yours.</h3><p>We make sure you understand what we’ve created, what to do next, and how to maintain it. No unnecessary complexity or dependency.</p></div>
     </div>
-    <p class="note-line">Small projects are welcome. We agree on scope and cost before we start. Written next steps and check-ins that suit you—neurodivergent folks especially welcome.</p>
+    <a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation" class="btn warm">Start with a free conversation <span class="arrow">↗</span></a>
+  </div>
+</section>
+
+<section class="ways">
+  <div class="wrap">
+    <p class="eyebrow">Ways to work together</p>
+    <h2>Just enough support for what you need.</h2>
+    <p class="lede">You might need help with one specific problem or someone alongside you for a longer project. We’ll decide that after we understand what you’re working on.</p>
+    <div class="trio">
+      <div class="card"><span class="tag">Focused help</span><h3>One problem, one session.</h3><p>For a specific tech question, confusing tool, or decision you want to work through together.</p></div>
+      <div class="card"><span class="tag">Build together</span><h3>A small, useful project.</h3><p>For setting up a workflow, making a plan, organizing a system, or learning a tool by using it.</p></div>
+      <div class="card"><span class="tag">Ongoing partnership</span><h3>Support as things evolve.</h3><p>For bigger changes, implementation work, project coordination, or continuing support at an agreed scope.</p></div>
+    </div>
+    <p class="fineprint">Paid work is scoped and agreed upon in advance, with invoices handled through Wave. No need to choose a package before we talk.</p>
+  </div>
+</section>
+
+<section class="reallyfor">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">What this is really for</p>
+      <h2>Make more room for what matters.</h2>
+      <p>Getting organized, using AI well, or finishing a stuck project isn’t the whole point. The point is having tools and systems that give you more space for your work, your people, and your actual life.</p>
+      <p class="pull">Better systems should support the person using them—not the other way around.</p>
+    </div>
+    <figure class="photo">
+      <img src="assets/photos/clarity.webp" alt="Layers of blue mountains rolling out to the horizon under a wide sky" loading="lazy" width="900" height="675" />
+      <figcaption class="caption">Good systems should make it easier to be human.</figcaption>
+    </figure>
   </div>
 </section>
 
 <section class="about" id="about">
-  <div class="section-inner-wide">
-    <div class="about-grid">
-      <div class="about-mark photo">
-        <img src="assets/photos/sk.webp" alt="SK smiling, in glasses and a black tank top that reads Be You, They’ll Adjust, in front of a Progress Pride flag" width="720" height="720" />
-      </div>
-      <div>
-        <p class="section-label">About</p>
-        <h2 class="serif">Hi, I’m SK.</h2>
-        <p class="about-lead">I enjoy helping people find easier, better ways of working, bringing creative ideas into being, and teaching people how to use new technology (responsibly).</p>
-        <p>Embodied Work Solutions brings together my experience in technology and organizational change with my curiosity about people. I want to understand what matters to you, how your days actually work, and where my skills could make a useful difference.</p>
-        <p style="margin-top:1.5rem;"><a class="text-link" href="about.html">More about me →</a></p>
-      </div>
+  <div class="wrap split">
+    <div class="photo"><img src="assets/photos/sk.webp" alt="SK smiling, in glasses and a black tank top that reads Be You, They’ll Adjust, in front of a Progress Pride flag" width="720" height="720" loading="lazy" /></div>
+    <div>
+      <p class="eyebrow">A real person in your corner</p>
+      <h2>Hi, I’m SK.</h2>
+      <p class="lede">I’m a business analyst, project manager, and systems thinker. I’ve spent years working between people and technology—listening closely, making sense of complicated needs, asking the questions that uncover what’s actually happening, and turning ambiguity into plans people can use.</p>
+      <p class="muted">I also know that a technically perfect system can fail when it asks too much of the people using it. That’s why I pay attention to your time, capacity, confidence, and the way you actually work—not just what a tool is capable of doing.</p>
+      <p class="muted">I bring that perspective to AI support, technology troubleshooting, workflow design, and project work. I don’t need you to speak in technical language. We can start with your own words, exactly where you are.</p>
+      <ul class="pills skills"><li>Business analysis</li><li>Project management</li><li>Technology translation</li><li>Human-centered systems</li></ul>
     </div>
   </div>
 </section>
 
+<section class="approach">
+  <div class="wrap narrow">
+    <p class="eyebrow">The approach behind the work</p>
+    <h2>People first.<span>Tools second.</span></h2>
+    <p>My work is informed by Regulation-Centered System Design™—an approach that takes real human capacity seriously. We’ll choose solutions you can understand and sustain. If we use AI, I’ll explain how and ask before putting your information into an AI tool. And if a simpler, non-AI solution is better, that’s what I’ll recommend.</p>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap narrow">
+    <p class="eyebrow">A few things you might be wondering</p>
+    <h2>Before we talk.</h2>
+    <details><summary>What if I don’t even know what I need?</summary><p>That’s completely fine. Tell me what’s frustrating, unfinished, or taking more energy than it should. We can figure out the shape of the problem together.</p></details>
+    <details><summary>Do I have to use AI?</summary><p>No. AI is one possible tool, not the point of the work. The point is to solve the right problem in a way that fits you.</p></details>
+    <details><summary>Do I need to prepare for our first call?</summary><p>No presentation or technical explanation required. You can bring a specific question or just start talking about what’s going on.</p></details>
+    <details><summary>How do payment and scheduling work?</summary><p>The first 20-minute Zoom conversation is free. If we decide to work together, we’ll agree on the scope and cost before any paid work begins. Invoices are handled through Wave.</p></details>
+  </div>
+</section>
+
 </main>
-<section class="cta-band" id="contact">
-  <p class="section-label">Let’s begin</p>
-  <h2>Let’s bring your idea to life.</h2>
-  <p class="cta-sub">Tell me about your idea or vision. What do you want to build? Let me help you get there.</p>
-  <p style="margin-bottom:2rem;">It doesn’t need to be polished. A few sentences, rough notes, or an unfinished attempt is plenty to begin.</p>
-  <a href="contact.html" class="btn-white">Let’s bring your idea to life</a>
-  <p class="cta-email">or write to <a href="mailto:connect@embodiedworksolutions.com">connect@embodiedworksolutions.com</a></p>
-</section><footer>
-  <img class="footer-logo" src="assets/logo-light.webp" alt="Embodied Work Solutions — An embodied approach to organizing your work and life." />
-  <ul class="footer-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="offerings.html">Offerings</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="https://cracksandseeds.substack.com/" target="_blank" rel="noopener">Cracks &amp; Seeds</a></li>
-  </ul>
-  <p class="footer-contact">Get in touch: <a href="mailto:connect@embodiedworksolutions.com">connect@embodiedworksolutions.com</a></p>
-  <p class="footer-fine">&copy; 2026 Embodied Work Solutions. All rights reserved.</p>
+
+<section class="final" id="talk">
+  <div class="wrap narrow">
+    <p class="eyebrow">The next step is small</p>
+    <h2>Bring me the thing you’re stuck on.</h2>
+    <p>You don’t need a perfect explanation, a polished idea, or the right terminology. We’ll start with a conversation and see what makes sense from there.</p>
+    <a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation" class="btn light">Let’s figure it out together <span class="arrow">↗</span></a>
+    <ul class="checks"><li>Free 20 minutes</li><li>Zoom</li><li>No commitment</li></ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="wordmark">Embodied Work Solutions</p>
+    <p class="tagline">Practical technology and systems support, built around real people.</p>
+    <div class="foot-row">
+      <a href="mailto:connect@embodiedworksolutions.com">connect@embodiedworksolutions.com</a>
+      <div class="foot-links">
+        <a href="#help">How I help</a><a href="#how">How it works</a><a href="#about">About</a>
+        <a href="https://cracksandseeds.substack.com/" target="_blank" rel="noopener">Writing: Cracks &amp; Seeds</a>
+      </div>
+      <span>© 2026 Embodied Work Solutions · Regulation-Centered System Design™</span>
+    </div>
+  </div>
 </footer>
 </body>
 </html>
