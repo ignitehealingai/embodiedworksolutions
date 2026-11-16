@@ -155,6 +155,13 @@
   .checks { display: flex; justify-content: center; flex-wrap: wrap; gap: .5rem 1.75rem; list-style: none; margin-top: 1.75rem; color: rgba(255,255,255,.8); font-size: 14px; }
   .checks li::before { content: "✓"; color: var(--honey); margin-right: .45rem; }
 
+  .page-top { background: var(--sand); padding-top: 5.5rem; }
+  .page-top h1 { font-size: clamp(2.6rem, 5.6vw, 4rem); margin-bottom: 1.25rem; }
+  .nav-links a[aria-current="page"]:not(.btn) { color: var(--forest); border-bottom: 2px solid var(--terracotta); padding-bottom: 3px; }
+  .contact-extra { text-align: center; }
+  .contact-extra p { color: var(--text-mid); }
+  .contact-extra a { color: var(--forest); font-weight: 700; }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -186,12 +193,12 @@
 
 <nav aria-label="Main">
   <div class="wrap">
-    <a href="#top" class="brand"><img src="assets/leaf.webp" alt="" /><span>Embodied Work<br>Solutions</span></a>
+    <a href="index.html" class="brand"><img src="assets/leaf.webp" alt="" /><span>Embodied Work<br>Solutions</span></a>
     <ul class="nav-links">
-      <li><a href="#help">How I help</a></li>
-      <li><a href="#how">How it works</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation" class="btn">Let’s talk <span class="arrow">↗</span></a></li>
+      <li><a href="help.html">How I help</a></li>
+      <li><a href="how-it-works.html">How it works</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="btn">Let’s talk <span class="arrow">↗</span></a></li>
     </ul>
   </div>
 </nav>
@@ -203,7 +210,7 @@
     <p class="lede">You just know something needs to work better. Maybe it’s a technology problem, a project with too many moving parts, or a tool you know could help if only you had time to figure it out. I help people turn that stuck feeling into a clear, workable next step.</p>
     <div class="actions">
       <a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation" class="btn warm">Let’s figure it out together <span class="arrow">↗</span></a>
-      <a href="#help" class="btn ghost">See how I can help</a>
+      <a href="help.html" class="btn ghost">See how I can help</a>
     </div>
     <p class="micro"><span>Free 20-minute conversation</span><span>On Zoom</span><span>No pressure to commit</span></p>
   </div>
@@ -246,87 +253,6 @@
   </div>
 </section>
 
-<section id="help">
-  <div class="wrap">
-    <p class="eyebrow">What we can work on</p>
-    <h2>Real help for real-world problems.</h2>
-    <p class="lede">I work where technology, people, and projects meet. Here are some of the places we might begin—not boxes you have to fit yourself into.</p>
-    <div class="areas">
-      <article class="area">
-        <img src="assets/photos/ai.webp" alt="Two bees at work side by side on a glowing sunflower" loading="lazy" width="1200" height="750" />
-        <div class="body">
-          <span class="tag">01 / AI &amp; technology support</span>
-          <h3>Make the tools work for you.</h3>
-          <p class="muted">We’ll find the right level of technology for what you’re trying to do, then make it useful in your actual work. That might mean understanding AI, fixing a frustrating setup, or building a repeatable way of getting things done.</p>
-          <ul>
-            <li>Get started with ChatGPT or other AI tools in a practical, confident way</li>
-            <li>Untangle an annoying digital task or technology problem</li>
-            <li>Use AI to organize ideas, draft materials, or simplify recurring work</li>
-            <li>Connect information, documents, and everyday workflows</li>
-          </ul>
-        </div>
-      </article>
-      <article class="area">
-        <img src="assets/photos/systems.webp" alt="Tree roots spreading wide across the forest floor, holding steady" loading="lazy" width="1200" height="750" />
-        <div class="body">
-          <span class="tag">02 / Business systems &amp; project support</span>
-          <h3>Turn the moving pieces into a plan.</h3>
-          <p class="muted">When a project feels too big, a workflow is breaking down, or your business relies on remembering everything yourself, we’ll map what’s happening and make the next steps clearer.</p>
-          <ul>
-            <li>Turn an idea into a project plan you can actually follow</li>
-            <li>Map a process and find where things get stuck</li>
-            <li>Set up organizing tools, responsibilities, and handoffs</li>
-            <li>Move a stalled project toward decisions and deliverables</li>
-          </ul>
-        </div>
-      </article>
-    </div>
-    <p class="note">Not sure which category applies? You don’t need to choose one. That’s what our first conversation is for.</p>
-  </div>
-</section>
-
-<section class="support">
-  <div class="wrap">
-    <p class="eyebrow">What good support looks like</p>
-    <h2>Not another pile of advice.<br>Something you can actually use.</h2>
-    <p class="lede">The exact outcome depends on the problem. But the aim is always the same: less friction, more clarity, and something useful you can carry forward yourself.</p>
-    <div class="trio">
-      <div class="card"><p class="n">01</p><h3>A clearer starting point</h3><p>Understand what matters, what’s in the way, and which next move is worth your time.</p></div>
-      <div class="card"><p class="n">02</p><h3>A workable solution</h3><p>When the scope calls for it, we set up a tool, improve a workflow, or create a practical plan together.</p></div>
-      <div class="card"><p class="n">03</p><h3>Confidence to keep going</h3><p>Clear explanations and a usable handoff—so the result doesn’t depend on keeping me around.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="how">
-  <div class="wrap">
-    <p class="eyebrow">How it works</p>
-    <h2>A simple way from stuck to moving.</h2>
-    <p class="lede">We don’t start with a complicated assessment or a long sales pitch. We start with what you’re trying to accomplish.</p>
-    <div class="steps">
-      <div class="step"><p class="label">01 / TALK</p><h3>Tell me what’s happening.</h3><p>We meet on Zoom for a free 20-minute conversation. You can bring a question, an idea, a tangled situation, or simply the sense that something needs to change.</p></div>
-      <div class="step"><p class="label">02 / FIND THE FIT</p><h3>Choose a first move.</h3><p>I’ll be direct about whether I can help. If it makes sense, we’ll agree on a focused session, a small project, or a longer partnership.</p></div>
-      <div class="step"><p class="label">03 / BUILD</p><h3>Work on the actual thing.</h3><p>We untangle the problem, test possibilities, and build something useful. Your needs—not the newest software—shape the approach.</p></div>
-      <div class="step"><p class="label">04 / HANDOFF</p><h3>Make it yours.</h3><p>We make sure you understand what we’ve created, what to do next, and how to maintain it. No unnecessary complexity or dependency.</p></div>
-    </div>
-    <a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation" class="btn warm">Start with a free conversation <span class="arrow">↗</span></a>
-  </div>
-</section>
-
-<section class="ways">
-  <div class="wrap">
-    <p class="eyebrow">Ways to work together</p>
-    <h2>Just enough support for what you need.</h2>
-    <p class="lede">You might need help with one specific problem or someone alongside you for a longer project. We’ll decide that after we understand what you’re working on.</p>
-    <div class="trio">
-      <div class="card"><span class="tag">Focused help</span><h3>One problem, one session.</h3><p>For a specific tech question, confusing tool, or decision you want to work through together.</p></div>
-      <div class="card"><span class="tag">Build together</span><h3>A small, useful project.</h3><p>For setting up a workflow, making a plan, organizing a system, or learning a tool by using it.</p></div>
-      <div class="card"><span class="tag">Ongoing partnership</span><h3>Support as things evolve.</h3><p>For bigger changes, implementation work, project coordination, or continuing support at an agreed scope.</p></div>
-    </div>
-    <p class="fineprint">Paid work is scoped and agreed upon in advance, with invoices handled through Wave. No need to choose a package before we talk.</p>
-  </div>
-</section>
-
 <section class="reallyfor">
   <div class="wrap split">
     <div>
@@ -339,39 +265,6 @@
       <img src="assets/photos/clarity.webp" alt="Layers of blue mountains rolling out to the horizon under a wide sky" loading="lazy" width="900" height="675" />
       <figcaption class="caption">Good systems should make it easier to be human.</figcaption>
     </figure>
-  </div>
-</section>
-
-<section class="about" id="about">
-  <div class="wrap split">
-    <div class="photo"><img src="assets/photos/sk.webp" alt="SK smiling, in glasses and a black tank top that reads Be You, They’ll Adjust, in front of a Progress Pride flag" width="720" height="720" loading="lazy" /></div>
-    <div>
-      <p class="eyebrow">A real person in your corner</p>
-      <h2>Hi, I’m SK.</h2>
-      <p class="lede">I’m a business analyst, project manager, and systems thinker. I’ve spent years working between people and technology—listening closely, making sense of complicated needs, asking the questions that uncover what’s actually happening, and turning ambiguity into plans people can use.</p>
-      <p class="muted">I also know that a technically perfect system can fail when it asks too much of the people using it. That’s why I pay attention to your time, capacity, confidence, and the way you actually work—not just what a tool is capable of doing.</p>
-      <p class="muted">I bring that perspective to AI support, technology troubleshooting, workflow design, and project work. I don’t need you to speak in technical language. We can start with your own words, exactly where you are.</p>
-      <ul class="pills skills"><li>Business analysis</li><li>Project management</li><li>Technology translation</li><li>Human-centered systems</li></ul>
-    </div>
-  </div>
-</section>
-
-<section class="approach">
-  <div class="wrap narrow">
-    <p class="eyebrow">The approach behind the work</p>
-    <h2>People first.<span>Tools second.</span></h2>
-    <p>My work is informed by Regulation-Centered System Design™—an approach that takes real human capacity seriously. We’ll choose solutions you can understand and sustain. If we use AI, I’ll explain how and ask before putting your information into an AI tool. And if a simpler, non-AI solution is better, that’s what I’ll recommend.</p>
-  </div>
-</section>
-
-<section class="faq">
-  <div class="wrap narrow">
-    <p class="eyebrow">A few things you might be wondering</p>
-    <h2>Before we talk.</h2>
-    <details><summary>What if I don’t even know what I need?</summary><p>That’s completely fine. Tell me what’s frustrating, unfinished, or taking more energy than it should. We can figure out the shape of the problem together.</p></details>
-    <details><summary>Do I have to use AI?</summary><p>No. AI is one possible tool, not the point of the work. The point is to solve the right problem in a way that fits you.</p></details>
-    <details><summary>Do I need to prepare for our first call?</summary><p>No presentation or technical explanation required. You can bring a specific question or just start talking about what’s going on.</p></details>
-    <details><summary>How do payment and scheduling work?</summary><p>The first 20-minute Zoom conversation is free. If we decide to work together, we’ll agree on the scope and cost before any paid work begins. Invoices are handled through Wave.</p></details>
   </div>
 </section>
 
@@ -394,7 +287,7 @@
     <div class="foot-row">
       <a href="mailto:connect@embodiedworksolutions.com">connect@embodiedworksolutions.com</a>
       <div class="foot-links">
-        <a href="#help">How I help</a><a href="#how">How it works</a><a href="#about">About</a>
+        <a href="help.html">How I help</a><a href="how-it-works.html">How it works</a><a href="about.html">About</a>
         <a href="https://cracksandseeds.substack.com/" target="_blank" rel="noopener">Writing: Cracks &amp; Seeds</a>
       </div>
       <span>© 2026 Embodied Work Solutions · Regulation-Centered System Design™</span>

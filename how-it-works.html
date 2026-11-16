@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How it works · Embodied Work Solutions</title>
+<meta name="description" content="A simple way from stuck to moving: talk, find the fit, build, and hand off. Plus ways to work together and common questions." />
+<link rel="icon" type="image/webp" href="assets/leaf.webp" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --forest: #0d4a38; --forest-dark: #083326; --forest-mid: #1a6b52;
+    --forest-light: #e6f0ec; --forest-pale: #f4f8f6;
+    --terracotta: #b85c2c; --terracotta-light: #d4773e; --honey: #e8b44b;
+    --sand: #f8f1e2; --warm-white: #faf9f7; --off-white: #f2f0eb;
+    --text-dark: #1c2b27; --text-mid: #3a4f47; --text-muted: #5f766d;
+    --border: #c8d8d2; --rule: #dde8e4;
+    --serif: 'Cormorant Garamond', Georgia, serif; --sans: 'Lato', system-ui, sans-serif;
+  }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  body { font-family: var(--sans); color: var(--text-dark); background: var(--warm-white); line-height: 1.7; font-size: 17px; }
+  a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--terracotta-light); outline-offset: 3px; }
+  img { display: block; max-width: 100%; height: auto; }
+  .skip { position: absolute; left: -9999px; top: 0; background: var(--forest); color: #fff; padding: .5rem 1rem; z-index: 200; }
+  .skip:focus { left: 1rem; top: .5rem; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
+  .narrow { max-width: 760px; }
+  section { padding: 6rem 0; }
+  .eyebrow { font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 1rem; font-weight: 700; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 500; color: var(--forest); line-height: 1.15; }
+  h2 { font-size: clamp(2.1rem, 4.4vw, 3.2rem); margin-bottom: 1.25rem; }
+  h3 { font-size: 1.55rem; line-height: 1.25; margin-bottom: .6rem; }
+  p.lede { font-size: 1.12rem; color: var(--text-mid); max-width: 680px; }
+  p + p { margin-top: 1rem; }
+  .muted { color: var(--text-muted); }
+
+  .btn { display: inline-flex; align-items: center; gap: .55rem; background: var(--forest); color: #fff; text-decoration: none; padding: .95rem 1.7rem; font-size: 14px; letter-spacing: .06em; font-weight: 700; border-radius: 999px; transition: background .2s; }
+  .btn:hover { background: var(--forest-mid); }
+  .btn.warm { background: var(--terracotta); }
+  .btn.warm:hover { background: var(--terracotta-light); }
+  .btn.ghost { background: transparent; color: var(--forest); border: 1.5px solid var(--forest); }
+  .btn.ghost:hover { background: var(--forest-light); }
+  .btn.light { background: #fff; color: var(--forest-dark); }
+  .btn.light:hover { background: var(--sand); }
+  .arrow { font-family: var(--sans); }
+  .micro { font-size: 13px; color: var(--text-muted); letter-spacing: .03em; margin-top: 1.1rem; }
+  .micro span + span::before { content: "·"; margin: 0 .6rem; color: var(--terracotta-light); }
+
+  /* NAV */
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(250,249,247,.95); backdrop-filter: blur(6px); border-bottom: 1px solid var(--rule); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--forest); font-family: var(--serif); font-size: 1.3rem; line-height: 1.05; font-weight: 600; }
+  .brand img { height: 30px; width: auto; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  .nav-links a { color: var(--text-mid); text-decoration: none; font-size: 14px; }
+  .nav-links a:hover { color: var(--forest); }
+  .nav-links .btn { color: #fff; padding: .6rem 1.2rem; font-size: 13px; }
+
+  /* HERO */
+  .hero { padding: 7rem 0 6rem; background: var(--sand); position: relative; overflow: hidden; }
+  .hero::after { content: ""; position: absolute; right: -120px; top: -80px; width: 460px; height: 460px; border-radius: 50%; background: radial-gradient(circle, rgba(232,180,75,.22), rgba(232,180,75,0) 70%); pointer-events: none; }
+  .hero h1 { font-size: clamp(2.8rem, 6.4vw, 4.8rem); max-width: 820px; margin-bottom: 1.5rem; }
+  .hero h1 em { color: var(--terracotta); }
+  .hero p.lede { font-size: 1.2rem; margin-bottom: 2.25rem; }
+  .hero .actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  /* MESSY MIDDLE */
+  .quotes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin: 2.75rem 0 2rem; }
+  .q { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 1.6rem 1.75rem; display: flex; gap: 1.25rem; align-items: baseline; }
+  .q .n { font-family: var(--serif); font-size: 1.6rem; color: var(--terracotta-light); }
+  .q p { font-family: var(--serif); font-size: 1.45rem; color: var(--forest); line-height: 1.3; font-style: italic; }
+  .bridge { font-family: var(--serif); font-size: 1.4rem; color: var(--forest); }
+  .bridge a { color: var(--terracotta); text-decoration: none; }
+  .pills { display: flex; flex-wrap: wrap; gap: .6rem; list-style: none; margin-top: 1.75rem; }
+  .pills li { font-size: 13px; color: var(--forest); background: var(--forest-light); padding: .45rem 1rem; border-radius: 999px; }
+
+  /* SOUND FAMILIAR */
+  .familiar { background: var(--forest-pale); }
+  .split { display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: start; }
+  .split .photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 16px; }
+  .turn { font-family: var(--serif); font-size: 1.5rem; color: var(--forest); font-style: italic; margin-top: 1.5rem; }
+  .signs { list-style: none; margin-top: 2.25rem; display: grid; gap: 1.1rem; }
+  .signs li { padding-left: 1.4rem; border-left: 2px solid var(--terracotta-light); color: var(--text-mid); }
+  .signs strong { color: var(--forest); }
+
+  /* HELP AREAS */
+  .areas { display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem; margin-top: 3rem; }
+  .area { background: #fff; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+  .area img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+  .area .body { padding: 2rem; }
+  .tag { display: inline-block; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--terracotta); font-weight: 700; margin-bottom: .75rem; }
+  .area ul { list-style: none; margin-top: 1.25rem; border-top: 1px solid var(--rule); }
+  .area li { padding: .7rem 0 .7rem 1.6rem; border-bottom: 1px solid var(--rule); position: relative; color: var(--text-mid); font-size: .97rem; }
+  .area li::before { content: "→"; position: absolute; left: 0; color: var(--terracotta-light); }
+  .note { margin-top: 2rem; font-family: var(--serif); font-size: 1.3rem; color: var(--forest); text-align: center; }
+
+  /* NUMBERED TRIO / STEPS */
+  .support { background: var(--off-white); }
+  .trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  .card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 2rem 1.75rem; }
+  .card .n { font-family: var(--serif); font-size: 2.6rem; line-height: 1; color: var(--terracotta-light); opacity: .7; margin-bottom: 1rem; }
+  .card p { color: var(--text-mid); font-size: .97rem; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin: 3rem 0 2.5rem; }
+  .step { border-top: 2px solid var(--forest); padding-top: 1.25rem; }
+  .step .label { font-size: 11px; letter-spacing: .18em; font-weight: 700; color: var(--terracotta); margin-bottom: .6rem; }
+  .step h3 { font-size: 1.4rem; }
+  .step p { color: var(--text-mid); font-size: .95rem; }
+
+  /* WAYS */
+  .ways { background: var(--forest-pale); }
+  .ways .card h3 { font-size: 1.45rem; }
+  .ways .card .tag { margin-bottom: .4rem; }
+  .fineprint { margin-top: 2rem; color: var(--text-muted); font-size: .95rem; max-width: 720px; }
+
+  /* REALLY FOR */
+  .reallyfor { background: var(--forest); color: #fff; }
+  .reallyfor .eyebrow { color: var(--honey); }
+  .reallyfor h2 { color: #fff; }
+  .reallyfor p { color: rgba(255,255,255,.82); }
+  .reallyfor .split { align-items: center; }
+  .reallyfor .photo img { aspect-ratio: 4 / 3; }
+  .pull { font-family: var(--serif); font-style: italic; font-size: clamp(1.6rem, 3vw, 2.1rem); line-height: 1.3; color: #fff; border-left: 3px solid var(--honey); padding-left: 1.25rem; margin-top: 2rem; }
+  .caption { margin-top: .9rem; font-size: 13px; color: rgba(255,255,255,.65); letter-spacing: .04em; }
+
+  /* ABOUT */
+  .about .split { grid-template-columns: 1fr 1.25fr; align-items: center; }
+  .about .photo img { width: min(100%, 380px); aspect-ratio: 1 / 1; object-fit: cover; border-radius: 50%; margin: 0 auto; }
+  .about .skills { margin-top: 1.75rem; }
+
+  /* APPROACH */
+  .approach { background: var(--sand); text-align: center; }
+  .approach h2 { font-size: clamp(2.4rem, 5vw, 3.6rem); }
+  .approach h2 span { display: block; color: var(--terracotta); font-style: italic; }
+  .approach p { color: var(--text-mid); max-width: 680px; margin: 0 auto; }
+
+  /* FAQ */
+  .faq details { border-bottom: 1px solid var(--rule); padding: 1.25rem 0; }
+  .faq details:first-of-type { border-top: 1px solid var(--rule); margin-top: 2rem; }
+  .faq summary { cursor: pointer; list-style: none; font-family: var(--serif); font-size: 1.45rem; color: var(--forest); display: flex; justify-content: space-between; gap: 1rem; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; color: var(--terracotta); font-family: var(--sans); font-size: 1.4rem; line-height: 1; }
+  .faq details[open] summary::after { content: "–"; }
+  .faq details p { color: var(--text-mid); margin-top: .75rem; max-width: 680px; }
+
+  /* FINAL CTA */
+  .final { background: var(--forest-dark); color: #fff; text-align: center; padding: 6.5rem 0; }
+  .final .eyebrow { color: var(--honey); }
+  .final h2 { color: #fff; font-size: clamp(2.2rem, 5vw, 3.4rem); }
+  .final p { color: rgba(255,255,255,.78); max-width: 620px; margin: 0 auto 2.25rem; }
+  .checks { display: flex; justify-content: center; flex-wrap: wrap; gap: .5rem 1.75rem; list-style: none; margin-top: 1.75rem; color: rgba(255,255,255,.8); font-size: 14px; }
+  .checks li::before { content: "✓"; color: var(--honey); margin-right: .45rem; }
+
+  .page-top { background: var(--sand); padding-top: 5.5rem; }
+  .page-top h1 { font-size: clamp(2.6rem, 5.6vw, 4rem); margin-bottom: 1.25rem; }
+  .nav-links a[aria-current="page"]:not(.btn) { color: var(--forest); border-bottom: 2px solid var(--terracotta); padding-bottom: 3px; }
+  .contact-extra { text-align: center; }
+  .contact-extra p { color: var(--text-mid); }
+  .contact-extra a { color: var(--forest); font-weight: 700; }
+
+  /* FOOTER */
+  footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
+  .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
+  .tagline { font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: var(--honey); margin: .6rem 0 2rem; }
+  .foot-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; border-top: 1px solid rgba(255,255,255,.1); padding-top: 1.75rem; font-size: 14px; }
+  footer a { color: rgba(255,255,255,.85); text-decoration: none; }
+  footer a:hover { color: #fff; }
+  .foot-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
+  @media (max-width: 900px) {
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .split, .about .split { grid-template-columns: 1fr; gap: 2.5rem; }
+    .split .photo img { aspect-ratio: 16 / 10; }
+    .about .photo img { max-width: 280px; }
+  }
+  @media (max-width: 760px) {
+    section { padding: 4.5rem 0; }
+    .wrap { padding: 0 1.25rem; }
+    .nav-links li:not(:last-child) { display: none; }
+    .brand span { display: none; }
+    .quotes, .areas, .trio { grid-template-columns: 1fr; }
+    .hero { padding: 5rem 0 4.5rem; }
+  }
+  @media (max-width: 480px) { .steps { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="assets/leaf.webp" alt="" /><span>Embodied Work<br>Solutions</span></a>
+    <ul class="nav-links">
+      <li><a href="help.html">How I help</a></li>
+      <li><a href="how-it-works.html" aria-current="page">How it works</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="btn">Let’s talk <span class="arrow">↗</span></a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+
+<section class="page-top" id="how">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h1>A simple way from stuck to moving.</h1>
+    <p class="lede">We don’t start with a complicated assessment or a long sales pitch. We start with what you’re trying to accomplish.</p>
+    <div class="steps">
+      <div class="step"><p class="label">01 / TALK</p><h3>Tell me what’s happening.</h3><p>We meet on Zoom for a free 20-minute conversation. You can bring a question, an idea, a tangled situation, or simply the sense that something needs to change.</p></div>
+      <div class="step"><p class="label">02 / FIND THE FIT</p><h3>Choose a first move.</h3><p>I’ll be direct about whether I can help. If it makes sense, we’ll agree on a focused session, a small project, or a longer partnership.</p></div>
+      <div class="step"><p class="label">03 / BUILD</p><h3>Work on the actual thing.</h3><p>We untangle the problem, test possibilities, and build something useful. Your needs—not the newest software—shape the approach.</p></div>
+      <div class="step"><p class="label">04 / HANDOFF</p><h3>Make it yours.</h3><p>We make sure you understand what we’ve created, what to do next, and how to maintain it. No unnecessary complexity or dependency.</p></div>
+    </div>
+    <a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation" class="btn warm">Start with a free conversation <span class="arrow">↗</span></a>
+  </div>
+</section>
+
+<section class="ways">
+  <div class="wrap">
+    <p class="eyebrow">Ways to work together</p>
+    <h2>Just enough support for what you need.</h2>
+    <p class="lede">You might need help with one specific problem or someone alongside you for a longer project. We’ll decide that after we understand what you’re working on.</p>
+    <div class="trio">
+      <div class="card"><span class="tag">Focused help</span><h3>One problem, one session.</h3><p>For a specific tech question, confusing tool, or decision you want to work through together.</p></div>
+      <div class="card"><span class="tag">Build together</span><h3>A small, useful project.</h3><p>For setting up a workflow, making a plan, organizing a system, or learning a tool by using it.</p></div>
+      <div class="card"><span class="tag">Ongoing partnership</span><h3>Support as things evolve.</h3><p>For bigger changes, implementation work, project coordination, or continuing support at an agreed scope.</p></div>
+    </div>
+    <p class="fineprint">Paid work is scoped and agreed upon in advance, with invoices handled through Wave. No need to choose a package before we talk.</p>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap narrow">
+    <p class="eyebrow">A few things you might be wondering</p>
+    <h2>Before we talk.</h2>
+    <details><summary>What if I don’t even know what I need?</summary><p>That’s completely fine. Tell me what’s frustrating, unfinished, or taking more energy than it should. We can figure out the shape of the problem together.</p></details>
+    <details><summary>Do I have to use AI?</summary><p>No. AI is one possible tool, not the point of the work. The point is to solve the right problem in a way that fits you.</p></details>
+    <details><summary>Do I need to prepare for our first call?</summary><p>No presentation or technical explanation required. You can bring a specific question or just start talking about what’s going on.</p></details>
+    <details><summary>How do payment and scheduling work?</summary><p>The first 20-minute Zoom conversation is free. If we decide to work together, we’ll agree on the scope and cost before any paid work begins. Invoices are handled through Wave.</p></details>
+  </div>
+</section>
+
+</main>
+
+<section class="final" id="talk">
+  <div class="wrap narrow">
+    <p class="eyebrow">The next step is small</p>
+    <h2>Bring me the thing you’re stuck on.</h2>
+    <p>You don’t need a perfect explanation, a polished idea, or the right terminology. We’ll start with a conversation and see what makes sense from there.</p>
+    <a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation" class="btn light">Let’s figure it out together <span class="arrow">↗</span></a>
+    <ul class="checks"><li>Free 20 minutes</li><li>Zoom</li><li>No commitment</li></ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="wordmark">Embodied Work Solutions</p>
+    <p class="tagline">Practical technology and systems support, built around real people.</p>
+    <div class="foot-row">
+      <a href="mailto:connect@embodiedworksolutions.com">connect@embodiedworksolutions.com</a>
+      <div class="foot-links">
+        <a href="help.html">How I help</a><a href="how-it-works.html">How it works</a><a href="about.html">About</a>
+        <a href="https://cracksandseeds.substack.com/" target="_blank" rel="noopener">Writing: Cracks &amp; Seeds</a>
+      </div>
+      <span>© 2026 Embodied Work Solutions · Regulation-Centered System Design™</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
