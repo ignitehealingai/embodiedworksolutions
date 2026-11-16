@@ -181,6 +181,35 @@
   @media (max-width: 900px) { .picture-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 560px) { .picture-grid { grid-template-columns: 1fr; } }
 
+  /* PHOTO HEADERS (green overlay) */
+  .photo-head { background-size: cover; background-position: center; color: #fff; text-align: center; padding: 6.5rem 0 5.5rem; }
+  .photo-head .wrap { max-width: 820px; }
+  .photo-head .eyebrow { color: var(--honey); }
+  .photo-head h1 { color: #fff; font-size: clamp(2.6rem, 5.6vw, 4rem); margin-bottom: 1.25rem; }
+  .photo-head h1 em { color: var(--honey); }
+  .photo-head p.lede { color: rgba(255,255,255,.88); margin: 0 auto; }
+  .photo-head .btn { margin-top: 2rem; }
+  .photo-head .checks { margin-top: 1.25rem; }
+  .hero.has-photo { background-size: cover; background-position: center; }
+  .hero.has-photo::after { display: none; }
+  .hero.has-photo h1 { color: #fff; }
+  .hero.has-photo h1 em { color: var(--honey); }
+  .hero.has-photo .eyebrow { color: var(--honey); }
+  .hero.has-photo p.lede { color: rgba(255,255,255,.9); }
+  .hero.has-photo .btn.ghost { color: #fff; border-color: rgba(255,255,255,.8); }
+  .hero.has-photo .btn.ghost:hover { background: rgba(255,255,255,.12); }
+  .hero.has-photo .micro { color: rgba(255,255,255,.78); }
+  .hero.has-photo .micro span + span::before { color: var(--honey); }
+  .page-body { background: var(--sand); padding-top: 4.5rem; }
+  .areas.three { grid-template-columns: repeat(3, 1fr); }
+  .org-note { margin-top: 2.5rem; padding: 1.6rem 2rem; background: #fff; border: 1px solid var(--border); border-radius: 14px; color: var(--text-mid); }
+  .org-note strong { color: var(--forest); }
+  .welcome { margin-top: 2rem; padding: 1.25rem 1.5rem; background: var(--sand); border-radius: 12px; color: var(--text-mid); }
+  .welcome strong { color: var(--forest); }
+  .card.start { border: 2px solid var(--terracotta); }
+  .card .price { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--terracotta); line-height: 1; margin: .2rem 0 .8rem; }
+  @media (max-width: 1000px) { .areas.three { grid-template-columns: 1fr; } }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -224,14 +253,17 @@
 
 <main id="main">
 
-<div class="band"><img src="assets/photos/header-offerings.webp" alt="Maple leaves turning gold and orange against a bright blue sky" width="2000" height="640" /></div>
-
-<section class="page-top" id="help">
+<header class="photo-head" style="background-image:linear-gradient(rgba(8,51,38,0.62),rgba(8,51,38,0.58)),url(assets/photos/header-offerings.webp)">
   <div class="wrap">
     <p class="eyebrow">What we can work on</p>
     <h1>Real help for real-world problems.</h1>
     <p class="lede">I work where technology, people, and projects meet. Here are some of the places we might begin—not boxes you have to fit yourself into.</p>
-    <div class="areas">
+  </div>
+</header>
+
+<section class="page-body" id="help">
+  <div class="wrap">
+    <div class="areas three">
       <article class="area">
         <img src="assets/photos/ai.webp" alt="Two bees at work side by side on a glowing sunflower" loading="lazy" width="1200" height="750" />
         <div class="body">
@@ -260,8 +292,23 @@
           </ul>
         </div>
       </article>
+      <article class="area">
+        <img src="assets/photos/build.webp" alt="A fresh green leaf opening on a slender stem, new growth reaching for light" loading="lazy" width="1200" height="750" />
+        <div class="body">
+          <span class="tag">03 / Personal systems</span>
+          <h3>Make your life easier to run.</h3>
+          <p class="muted">For capable people who are overwhelmed or stretched thin. We’ll find what’s creating friction, get clear on what matters, and build something that fits your real capacity—not an ideal week that never happens.</p>
+          <ul>
+            <li>Get calendars, lists, and reminders working together</li>
+            <li>Set up routines for meals, money, or family logistics</li>
+            <li>Find one place for the things you keep losing track of</li>
+            <li>Design a system that still works on hard days</li>
+          </ul>
+        </div>
+      </article>
     </div>
     <p class="note">Not sure which category applies? You don’t need to choose one. That’s what our first conversation is for.</p>
+    <p class="org-note"><strong>Working with a team or organization?</strong> I also help groups make change stick: clear requirements, realistic rollouts, and systems people can understand, trust, and use.</p>
   </div>
 </section>
 

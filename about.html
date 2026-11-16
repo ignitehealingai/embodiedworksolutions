@@ -191,6 +191,35 @@
   .ai-terms a { color: var(--forest); font-weight: 700; }
   @media (max-width: 900px) { .ai-terms .cols { grid-template-columns: 1fr; gap: 1.5rem; } }
 
+  /* PHOTO HEADERS (green overlay) */
+  .photo-head { background-size: cover; background-position: center; color: #fff; text-align: center; padding: 6.5rem 0 5.5rem; }
+  .photo-head .wrap { max-width: 820px; }
+  .photo-head .eyebrow { color: var(--honey); }
+  .photo-head h1 { color: #fff; font-size: clamp(2.6rem, 5.6vw, 4rem); margin-bottom: 1.25rem; }
+  .photo-head h1 em { color: var(--honey); }
+  .photo-head p.lede { color: rgba(255,255,255,.88); margin: 0 auto; }
+  .photo-head .btn { margin-top: 2rem; }
+  .photo-head .checks { margin-top: 1.25rem; }
+  .hero.has-photo { background-size: cover; background-position: center; }
+  .hero.has-photo::after { display: none; }
+  .hero.has-photo h1 { color: #fff; }
+  .hero.has-photo h1 em { color: var(--honey); }
+  .hero.has-photo .eyebrow { color: var(--honey); }
+  .hero.has-photo p.lede { color: rgba(255,255,255,.9); }
+  .hero.has-photo .btn.ghost { color: #fff; border-color: rgba(255,255,255,.8); }
+  .hero.has-photo .btn.ghost:hover { background: rgba(255,255,255,.12); }
+  .hero.has-photo .micro { color: rgba(255,255,255,.78); }
+  .hero.has-photo .micro span + span::before { color: var(--honey); }
+  .page-body { background: var(--sand); padding-top: 4.5rem; }
+  .areas.three { grid-template-columns: repeat(3, 1fr); }
+  .org-note { margin-top: 2.5rem; padding: 1.6rem 2rem; background: #fff; border: 1px solid var(--border); border-radius: 14px; color: var(--text-mid); }
+  .org-note strong { color: var(--forest); }
+  .welcome { margin-top: 2rem; padding: 1.25rem 1.5rem; background: var(--sand); border-radius: 12px; color: var(--text-mid); }
+  .welcome strong { color: var(--forest); }
+  .card.start { border: 2px solid var(--terracotta); }
+  .card .price { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--terracotta); line-height: 1; margin: .2rem 0 .8rem; }
+  @media (max-width: 1000px) { .areas.three { grid-template-columns: 1fr; } }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -234,18 +263,24 @@
 
 <main id="main">
 
-<div class="band"><img src="assets/photos/header-about.webp" alt="A wide old oak spreading its branches, its leaves just beginning to turn" width="2000" height="640" /></div>
+<header class="photo-head" style="background-image:linear-gradient(rgba(8,51,38,0.62),rgba(8,51,38,0.58)),url(assets/photos/header-about.webp)">
+  <div class="wrap">
+    <p class="eyebrow">About</p>
+    <h1>A real person in your corner.</h1>
+    <p class="lede">People first. Tools second. Online, wherever you are.</p>
+  </div>
+</header>
 
-<section class="page-top about" id="about">
+<section class="page-body about" id="about">
   <div class="wrap split">
     <div class="photo"><img src="assets/photos/sk.webp" alt="SK smiling, in glasses and a black tank top that reads Be You, They’ll Adjust, in front of a Progress Pride flag" width="720" height="720" loading="lazy" /></div>
     <div>
-      <p class="eyebrow">A real person in your corner</p>
-      <h1>Hi, I’m SK.</h1>
+      <h2>Hi, I’m SK.</h2>
       <p class="lede">I’m a business analyst, project manager, and systems thinker. I’ve spent years working between people and technology—listening closely, making sense of complicated needs, asking the questions that uncover what’s actually happening, and turning ambiguity into plans people can use.</p>
       <p class="muted">I also know that a technically perfect system can fail when it asks too much of the people using it. That’s why I pay attention to your time, capacity, confidence, and the way you actually work—not just what a tool is capable of doing.</p>
       <p class="muted">I bring that perspective to AI support, technology troubleshooting, workflow design, and project work. I don’t need you to speak in technical language. We can start with your own words, exactly where you are.</p>
-      <ul class="pills skills"><li>Business analysis</li><li>Project management</li><li>Technology translation</li><li>Human-centered systems</li></ul>
+      <p class="muted">My path here also runs through clinical social work training and years of embodiment and nervous-system work. That’s the “embodied” in Embodied Work Solutions: I notice what a system asks of your body and your energy, not just your calendar.</p>
+      <ul class="pills skills"><li>Business analysis</li><li>Project management</li><li>Technology translation</li><li>Human-centered systems</li><li>Embodiment &amp; nervous-system work</li></ul>
     </div>
   </div>
 </section>

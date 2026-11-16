@@ -181,6 +181,35 @@
   @media (max-width: 900px) { .picture-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 560px) { .picture-grid { grid-template-columns: 1fr; } }
 
+  /* PHOTO HEADERS (green overlay) */
+  .photo-head { background-size: cover; background-position: center; color: #fff; text-align: center; padding: 6.5rem 0 5.5rem; }
+  .photo-head .wrap { max-width: 820px; }
+  .photo-head .eyebrow { color: var(--honey); }
+  .photo-head h1 { color: #fff; font-size: clamp(2.6rem, 5.6vw, 4rem); margin-bottom: 1.25rem; }
+  .photo-head h1 em { color: var(--honey); }
+  .photo-head p.lede { color: rgba(255,255,255,.88); margin: 0 auto; }
+  .photo-head .btn { margin-top: 2rem; }
+  .photo-head .checks { margin-top: 1.25rem; }
+  .hero.has-photo { background-size: cover; background-position: center; }
+  .hero.has-photo::after { display: none; }
+  .hero.has-photo h1 { color: #fff; }
+  .hero.has-photo h1 em { color: var(--honey); }
+  .hero.has-photo .eyebrow { color: var(--honey); }
+  .hero.has-photo p.lede { color: rgba(255,255,255,.9); }
+  .hero.has-photo .btn.ghost { color: #fff; border-color: rgba(255,255,255,.8); }
+  .hero.has-photo .btn.ghost:hover { background: rgba(255,255,255,.12); }
+  .hero.has-photo .micro { color: rgba(255,255,255,.78); }
+  .hero.has-photo .micro span + span::before { color: var(--honey); }
+  .page-body { background: var(--sand); padding-top: 4.5rem; }
+  .areas.three { grid-template-columns: repeat(3, 1fr); }
+  .org-note { margin-top: 2.5rem; padding: 1.6rem 2rem; background: #fff; border: 1px solid var(--border); border-radius: 14px; color: var(--text-mid); }
+  .org-note strong { color: var(--forest); }
+  .welcome { margin-top: 2rem; padding: 1.25rem 1.5rem; background: var(--sand); border-radius: 12px; color: var(--text-mid); }
+  .welcome strong { color: var(--forest); }
+  .card.start { border: 2px solid var(--terracotta); }
+  .card .price { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--terracotta); line-height: 1; margin: .2rem 0 .8rem; }
+  @media (max-width: 1000px) { .areas.three { grid-template-columns: 1fr; } }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -224,20 +253,19 @@
 
 <main id="main">
 
-<div class="band"><img src="assets/photos/header-contact.webp" alt="Ripples moving outward across still, dark water" width="2000" height="640" /></div>
-
-<section class="final" id="talk">
-  <div class="wrap narrow">
-    <p class="eyebrow">The next step is small</p>
-    <h1 style="color:#fff;font-size:clamp(2.4rem,5.4vw,3.8rem);margin-bottom:1.25rem">Bring me the thing you’re stuck on.</h1>
-    <p>You don’t need a perfect explanation, a polished idea, or the right terminology. We’ll start with a conversation and see what makes sense from there.</p>
+<header class="photo-head" id="talk" style="background-image:linear-gradient(rgba(8,51,38,0.62),rgba(8,51,38,0.58)),url(assets/photos/header-contact.webp)">
+  <div class="wrap">
+    <p class="eyebrow">Let’s talk</p>
+    <h1>Bring me the thing you’re stuck on.</h1>
+    <p class="lede">You don’t need a perfect explanation, a polished idea, or the right terminology. We’ll start with a conversation and see what makes sense from there.</p>
     <a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation" class="btn light">Let’s figure it out together <span class="arrow">↗</span></a>
-    <ul class="checks"><li>Free 20 minutes</li><li>Zoom</li><li>No commitment</li></ul>
+    <ul class="checks"><li>Free 20 minutes</li><li>Zoom, wherever you are</li><li>No commitment</li></ul>
   </div>
-</section>
+</header>
 
-<section class="contact-extra">
+<section class="contact-extra" style="padding-bottom:0">
   <div class="wrap narrow">
+    <p>The free call checks whether we’re a fit. If we are, the $199 Untangle Session is where the work starts.</p>
     <p>Prefer email? Write to <a href="mailto:connect@embodiedworksolutions.com">connect@embodiedworksolutions.com</a></p>
   </div>
 </section>
@@ -249,7 +277,9 @@
     <details><summary>What if I don’t even know what I need?</summary><p>That’s completely fine. Tell me what’s frustrating, unfinished, or taking more energy than it should. We can figure out the shape of the problem together.</p></details>
     <details><summary>Do I have to use AI?</summary><p>No. AI is one possible tool, not the point of the work. The point is to solve the right problem in a way that fits you.</p></details>
     <details><summary>Do I need to prepare for our first call?</summary><p>No presentation or technical explanation required. You can bring a specific question or just start talking about what’s going on.</p></details>
-    <details><summary>How do payment and scheduling work?</summary><p>The first 20-minute Zoom conversation is free. If we decide to work together, we’ll agree on the scope and cost before any paid work begins. Invoices are handled through Wave.</p></details>
+    <details><summary>What’s the difference between the free call and the Untangle Session?</summary><p>The free 20 minutes is for seeing whether we’re a good fit. The Untangle Session is where the work starts: we dig into the thing you’re stuck on, and you leave with a fix underway or a clear plan.</p></details>
+    <details><summary>Do I need to be local?</summary><p>No. Everything happens online over Zoom, wherever you are.</p></details>
+    <details><summary>How do payment and scheduling work?</summary><p>The first 20-minute Zoom conversation is free. The Untangle Session is $199. If there’s more to build after that, I’ll quote it up front, and nothing starts until you agree. Invoices are handled through Wave.</p></details>
   </div>
 </section>
 

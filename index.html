@@ -181,6 +181,35 @@
   @media (max-width: 900px) { .picture-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 560px) { .picture-grid { grid-template-columns: 1fr; } }
 
+  /* PHOTO HEADERS (green overlay) */
+  .photo-head { background-size: cover; background-position: center; color: #fff; text-align: center; padding: 6.5rem 0 5.5rem; }
+  .photo-head .wrap { max-width: 820px; }
+  .photo-head .eyebrow { color: var(--honey); }
+  .photo-head h1 { color: #fff; font-size: clamp(2.6rem, 5.6vw, 4rem); margin-bottom: 1.25rem; }
+  .photo-head h1 em { color: var(--honey); }
+  .photo-head p.lede { color: rgba(255,255,255,.88); margin: 0 auto; }
+  .photo-head .btn { margin-top: 2rem; }
+  .photo-head .checks { margin-top: 1.25rem; }
+  .hero.has-photo { background-size: cover; background-position: center; }
+  .hero.has-photo::after { display: none; }
+  .hero.has-photo h1 { color: #fff; }
+  .hero.has-photo h1 em { color: var(--honey); }
+  .hero.has-photo .eyebrow { color: var(--honey); }
+  .hero.has-photo p.lede { color: rgba(255,255,255,.9); }
+  .hero.has-photo .btn.ghost { color: #fff; border-color: rgba(255,255,255,.8); }
+  .hero.has-photo .btn.ghost:hover { background: rgba(255,255,255,.12); }
+  .hero.has-photo .micro { color: rgba(255,255,255,.78); }
+  .hero.has-photo .micro span + span::before { color: var(--honey); }
+  .page-body { background: var(--sand); padding-top: 4.5rem; }
+  .areas.three { grid-template-columns: repeat(3, 1fr); }
+  .org-note { margin-top: 2.5rem; padding: 1.6rem 2rem; background: #fff; border: 1px solid var(--border); border-radius: 14px; color: var(--text-mid); }
+  .org-note strong { color: var(--forest); }
+  .welcome { margin-top: 2rem; padding: 1.25rem 1.5rem; background: var(--sand); border-radius: 12px; color: var(--text-mid); }
+  .welcome strong { color: var(--forest); }
+  .card.start { border: 2px solid var(--terracotta); }
+  .card .price { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--terracotta); line-height: 1; margin: .2rem 0 .8rem; }
+  @media (max-width: 1000px) { .areas.three { grid-template-columns: 1fr; } }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -222,20 +251,18 @@
   </div>
 </nav>
 
-<header class="hero" id="top">
+<header class="hero has-photo" id="top" style="background-image:linear-gradient(rgba(8,51,38,0.6),rgba(8,51,38,0.55)),url(assets/photos/header-home.webp)">
   <div class="wrap">
-    <p class="eyebrow">AI · Technology · Business Systems · Projects</p>
+    <p class="eyebrow">AI · Technology · Systems · Projects · Online</p>
     <h1>You don’t have to know <em>where to start.</em></h1>
-    <p class="lede">You just know something needs to work better. Maybe it’s a technology problem, a project with too many moving parts, or a tool you know could help if only you had time to figure it out. I help people turn that stuck feeling into a clear, workable next step.</p>
+    <p class="lede">You just know something needs to work better. Maybe it’s a technology problem, a project with too many moving parts, or a tool you know could help if only you had time to figure it out. I help people move from overwhelm into clarity and action—without having to override their own needs to get there.</p>
     <div class="actions">
       <a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation" class="btn warm">Let’s figure it out together <span class="arrow">↗</span></a>
       <a href="help.html" class="btn ghost">See how I can help</a>
     </div>
-    <p class="micro"><span>Free 20-minute conversation</span><span>On Zoom</span><span>No pressure to commit</span></p>
+    <p class="micro"><span>Free 20-minute conversation</span><span>On Zoom, wherever you are</span><span>No pressure to commit</span></p>
   </div>
 </header>
-
-<div class="band"><img src="assets/photos/header-home.webp" alt="Sunlight resting on a soft green forest floor between tall, quiet trees" width="2000" height="640" /></div>
 
 <main id="main">
 
@@ -269,6 +296,7 @@
         <li><strong>Good ideas that keep stalling.</strong> The goal makes sense. The steps, ownership, and systems don’t—yet.</li>
         <li><strong>No time to become an expert.</strong> You want a real person to sit alongside you, explain things clearly, and get something moving.</li>
       </ul>
+      <p class="welcome"><strong>If regular productivity systems have never fit you, you’re in the right place.</strong> Neurodivergent folks are especially welcome. We build around how you actually work, not how an app thinks you should.</p>
     </div>
     <div class="photo"><img src="assets/photos/iris.webp" alt="A violet-blue iris in full bloom, its golden center glowing against green" loading="lazy" width="900" height="600" /></div>
   </div>
