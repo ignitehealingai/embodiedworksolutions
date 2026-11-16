@@ -181,6 +181,16 @@
   @media (max-width: 900px) { .picture-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 560px) { .picture-grid { grid-template-columns: 1fr; } }
 
+  .ai-terms .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; margin-top: 2.5rem; }
+  .ai-terms h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+  .ai-terms ul { list-style: none; padding: 0; }
+  .ai-terms li { border-left: 2px solid var(--terracotta); padding: .15rem 0 .15rem 1rem; margin-bottom: 1rem; color: var(--text-mid); }
+  .ai-terms li strong { color: var(--forest); }
+  .ai-terms .honest { margin-top: 2.5rem; padding: 1.75rem 2rem; background: var(--sand); border-radius: 14px; }
+  .ai-terms .honest p { margin: 0; }
+  .ai-terms a { color: var(--forest); font-weight: 700; }
+  @media (max-width: 900px) { .ai-terms .cols { grid-template-columns: 1fr; gap: 1.5rem; } }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -237,6 +247,37 @@
       <p class="muted">I bring that perspective to AI support, technology troubleshooting, workflow design, and project work. I don’t need you to speak in technical language. We can start with your own words, exactly where you are.</p>
       <ul class="pills skills"><li>Business analysis</li><li>Project management</li><li>Technology translation</li><li>Human-centered systems</li></ul>
     </div>
+  </div>
+</section>
+
+<section class="ai-terms">
+  <div class="wrap">
+    <p class="eyebrow">How I think about AI</p>
+    <h2>Using AI on your own terms.</h2>
+    <p class="lede">I don’t teach AI as a magic fix. I teach it the way I approach any system: who does it serve, what does it ask of you, and what are you giving up to use it?</p>
+    <div class="cols">
+      <div>
+        <h3>Where that comes from</h3>
+        <ul>
+          <li><strong>Clinical social work</strong> taught me informed consent, confidentiality, and boundaries.</li>
+          <li><strong>Years building healthcare websites</strong> taught me privacy and accessibility in practice, not just on paper.</li>
+          <li><strong>DEI work</strong> taught me to ask who a system leaves out, or harms.</li>
+          <li><strong>My writing</strong> at <a href="https://cracksandseeds.substack.com/" target="_blank" rel="noopener">Cracks &amp; Seeds</a> works through consent, trust, and dependence on AI, out loud.</li>
+          <li><strong>My own use.</strong> I use these tools myself, so I know what it’s like to catch an AI promising more than it can deliver.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What we’ll actually practice</h3>
+        <ul>
+          <li>What not to paste in, and why.</li>
+          <li>How to check the privacy settings in the tools you already use.</li>
+          <li>How to notice when you’re leaning on AI in a way that doesn’t serve you.</li>
+          <li>How to keep your own voice.</li>
+          <li>When a simpler tool is the better choice.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="honest"><p><strong>What I’m not:</strong> a security or legal expert. I’ll tell you when something is outside what I know. I read each tool’s own privacy pages before I teach it, because they change often. And when I’m unsure, I say so, and we look it up.</p></div>
   </div>
 </section>
 
