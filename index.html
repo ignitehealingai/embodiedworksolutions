@@ -162,6 +162,25 @@
   .contact-extra p { color: var(--text-mid); }
   .contact-extra a { color: var(--forest); font-weight: 700; }
 
+  /* BLEND: photos + feelings */
+  .band { width: 100%; height: clamp(150px, 26vw, 300px); overflow: hidden; background: var(--forest-dark); }
+  .band img { width: 100%; height: 100%; object-fit: cover; }
+  .feel-intro { text-align: center; max-width: 720px; margin: 0 auto; }
+  .feel-intro .pull { margin-left: auto; margin-right: auto; }
+  .picture-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 3rem 0 2rem; }
+  .vignette { background: #fff; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+  .vignette img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .vignette .vt { padding: 1.4rem 1.6rem 1.75rem; }
+  .vignette h3.feel { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; font-size: 2rem; line-height: 1; color: var(--terracotta); margin-bottom: .6rem; }
+  .vignette p { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; line-height: 1.4; color: var(--forest); }
+  .feel-close { text-align: center; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.5rem; color: var(--forest); }
+  .step img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 10px; margin-bottom: 1rem; }
+  .step.has-photo { border-top: 0; padding-top: 0; }
+  .step.has-photo .label { border-top: 2px solid var(--forest); padding-top: 1rem; }
+  .approach .mark { width: min(100%, 360px); aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; margin: 0 auto 2rem; }
+  @media (max-width: 900px) { .picture-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .picture-grid { grid-template-columns: 1fr; } }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -216,6 +235,8 @@
   </div>
 </header>
 
+<div class="band"><img src="assets/photos/header-home.webp" alt="Sunlight resting on a soft green forest floor between tall, quiet trees" width="2000" height="640" /></div>
+
 <main id="main">
 
 <section>
@@ -249,22 +270,20 @@
         <li><strong>No time to become an expert.</strong> You want a real person to sit alongside you, explain things clearly, and get something moving.</li>
       </ul>
     </div>
-    <div class="photo"><img src="assets/photos/ease.webp" alt="A wide, open path through a green forest, sunlight resting on the ground" loading="lazy" width="900" height="675" /></div>
+    <div class="photo"><img src="assets/photos/iris.webp" alt="A violet-blue iris in full bloom, its golden center glowing against green" loading="lazy" width="900" height="600" /></div>
   </div>
 </section>
 
 <section class="reallyfor">
-  <div class="wrap split">
-    <div>
+  <div class="wrap">
+    <div class="feel-intro">
       <p class="eyebrow">What this is really for</p>
       <h2>Make more room for what matters.</h2>
       <p>Getting organized, using AI well, or finishing a stuck project isn’t the whole point. The point is having tools and systems that give you more space for your work, your people, and your actual life.</p>
       <p class="pull">Better systems should support the person using them—not the other way around.</p>
     </div>
-    <figure class="photo">
-      <img src="assets/photos/clarity.webp" alt="Layers of blue mountains rolling out to the horizon under a wide sky" loading="lazy" width="900" height="675" />
-      <figcaption class="caption">Good systems should make it easier to be human.</figcaption>
-    </figure>
+    <div class="picture-grid"><div class="vignette"><img src="assets/photos/pride.webp" alt="A bright orange zinnia, petals flung wide open in the sun" loading="lazy" width="900" height="675" /><div class="vt"><h3 class="feel">Pride</h3><p>The pride and excitement you feel sharing your new website link with a potential client.</p></div></div><div class="vignette"><img src="assets/photos/relief.webp" alt="Sunset clouds glowing gold above the treetops as the day lets go" loading="lazy" width="900" height="675" /><div class="vt"><h3 class="feel">Relief</h3><p>The sigh of relief when you stop by the grocery store and your custom-built shopping list is ready to go, right at your fingertips.</p></div></div><div class="vignette"><img src="assets/photos/ease.webp" alt="A wide, open path through a green forest, sunlight resting on the ground" loading="lazy" width="900" height="675" /><div class="vt"><h3 class="feel">Ease</h3><p>The ease of starting your day knowing you can find whatever you need in one place.</p></div></div><div class="vignette"><img src="assets/photos/thrill.webp" alt="A yellow swallowtail, wings spread wide, landing on fragrant purple blooms" loading="lazy" width="900" height="675" /><div class="vt"><h3 class="feel">Thrill</h3><p>The thrill of excitement you get sharing an Instagram post announcing your upcoming art show.</p></div></div><div class="vignette"><img src="assets/photos/exhale.webp" alt="Autumn leaves drifting on still water, the sky reflected among them" loading="lazy" width="900" height="675" /><div class="vt"><h3 class="feel">Exhale</h3><p>The long exhale when your apps, calendars, and systems finally talk to each other—and nothing lives in three places anymore.</p></div></div><div class="vignette"><img src="assets/photos/clarity.webp" alt="Layers of blue mountains rolling out to the horizon under a wide sky" loading="lazy" width="900" height="675" /><div class="vt"><h3 class="feel">Clarity</h3><p>The clarity of finally making the software decision you’ve been circling for weeks, with the costs and tradeoffs laid out in front of you.</p></div></div></div>
+    <p class="feel-close">Good systems should make it easier to be human.</p>
   </div>
 </section>
 

@@ -162,6 +162,25 @@
   .contact-extra p { color: var(--text-mid); }
   .contact-extra a { color: var(--forest); font-weight: 700; }
 
+  /* BLEND: photos + feelings */
+  .band { width: 100%; height: clamp(150px, 26vw, 300px); overflow: hidden; background: var(--forest-dark); }
+  .band img { width: 100%; height: 100%; object-fit: cover; }
+  .feel-intro { text-align: center; max-width: 720px; margin: 0 auto; }
+  .feel-intro .pull { margin-left: auto; margin-right: auto; }
+  .picture-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 3rem 0 2rem; }
+  .vignette { background: #fff; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+  .vignette img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .vignette .vt { padding: 1.4rem 1.6rem 1.75rem; }
+  .vignette h3.feel { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; font-size: 2rem; line-height: 1; color: var(--terracotta); margin-bottom: .6rem; }
+  .vignette p { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; line-height: 1.4; color: var(--forest); }
+  .feel-close { text-align: center; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.5rem; color: var(--forest); }
+  .step img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 10px; margin-bottom: 1rem; }
+  .step.has-photo { border-top: 0; padding-top: 0; }
+  .step.has-photo .label { border-top: 2px solid var(--forest); padding-top: 1rem; }
+  .approach .mark { width: min(100%, 360px); aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; margin: 0 auto 2rem; }
+  @media (max-width: 900px) { .picture-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .picture-grid { grid-template-columns: 1fr; } }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -204,6 +223,8 @@
 </nav>
 
 <main id="main">
+
+<div class="band"><img src="assets/photos/header-contact.webp" alt="Ripples moving outward across still, dark water" width="2000" height="640" /></div>
 
 <section class="final" id="talk">
   <div class="wrap narrow">

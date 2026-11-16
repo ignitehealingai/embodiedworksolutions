@@ -162,6 +162,25 @@
   .contact-extra p { color: var(--text-mid); }
   .contact-extra a { color: var(--forest); font-weight: 700; }
 
+  /* BLEND: photos + feelings */
+  .band { width: 100%; height: clamp(150px, 26vw, 300px); overflow: hidden; background: var(--forest-dark); }
+  .band img { width: 100%; height: 100%; object-fit: cover; }
+  .feel-intro { text-align: center; max-width: 720px; margin: 0 auto; }
+  .feel-intro .pull { margin-left: auto; margin-right: auto; }
+  .picture-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 3rem 0 2rem; }
+  .vignette { background: #fff; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+  .vignette img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .vignette .vt { padding: 1.4rem 1.6rem 1.75rem; }
+  .vignette h3.feel { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; font-size: 2rem; line-height: 1; color: var(--terracotta); margin-bottom: .6rem; }
+  .vignette p { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; line-height: 1.4; color: var(--forest); }
+  .feel-close { text-align: center; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.5rem; color: var(--forest); }
+  .step img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 10px; margin-bottom: 1rem; }
+  .step.has-photo { border-top: 0; padding-top: 0; }
+  .step.has-photo .label { border-top: 2px solid var(--forest); padding-top: 1rem; }
+  .approach .mark { width: min(100%, 360px); aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; margin: 0 auto 2rem; }
+  @media (max-width: 900px) { .picture-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .picture-grid { grid-template-columns: 1fr; } }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -211,10 +230,10 @@
     <h1>A simple way from stuck to moving.</h1>
     <p class="lede">We don’t start with a complicated assessment or a long sales pitch. We start with what you’re trying to accomplish.</p>
     <div class="steps">
-      <div class="step"><p class="label">01 / TALK</p><h3>Tell me what’s happening.</h3><p>We meet on Zoom for a free 20-minute conversation. You can bring a question, an idea, a tangled situation, or simply the sense that something needs to change.</p></div>
-      <div class="step"><p class="label">02 / FIND THE FIT</p><h3>Choose a first move.</h3><p>I’ll be direct about whether I can help. If it makes sense, we’ll agree on a focused session, a small project, or a longer partnership.</p></div>
-      <div class="step"><p class="label">03 / BUILD</p><h3>Work on the actual thing.</h3><p>We untangle the problem, test possibilities, and build something useful. Your needs—not the newest software—shape the approach.</p></div>
-      <div class="step"><p class="label">04 / HANDOFF</p><h3>Make it yours.</h3><p>We make sure you understand what we’ve created, what to do next, and how to maintain it. No unnecessary complexity or dependency.</p></div>
+      <div class="step has-photo"><img src="assets/photos/q1-problem.webp" alt="A tightly closed pink magnolia bud, holding everything in" loading="lazy" width="600" height="400" /><p class="label">01 / TALK</p><h3>Tell me what’s happening.</h3><p>We meet on Zoom for a free 20-minute conversation. You can bring a question, an idea, a tangled situation, or simply the sense that something needs to change.</p></div>
+      <div class="step has-photo"><img src="assets/photos/q2-happen.webp" alt="The magnolia bud loosening, pink petals beginning to part" loading="lazy" width="600" height="400" /><p class="label">02 / FIND THE FIT</p><h3>Choose a first move.</h3><p>I’ll be direct about whether I can help. If it makes sense, we’ll agree on a focused session, a small project, or a longer partnership.</p></div>
+      <div class="step has-photo"><img src="assets/photos/q3-works.webp" alt="The magnolia unfolding, soft petals opening to the light" loading="lazy" width="600" height="400" /><p class="label">03 / BUILD</p><h3>Work on the actual thing.</h3><p>We untangle the problem, test possibilities, and build something useful. Your needs—not the newest software—shape the approach.</p></div>
+      <div class="step has-photo"><img src="assets/photos/q4-people.webp" alt="The magnolia in full bloom, a new bud already forming beside it" loading="lazy" width="600" height="400" /><p class="label">04 / HANDOFF</p><h3>Make it yours.</h3><p>We make sure you understand what we’ve created, what to do next, and how to maintain it. No unnecessary complexity or dependency.</p></div>
     </div>
     <a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation" class="btn warm">Start with a free conversation <span class="arrow">↗</span></a>
   </div>
