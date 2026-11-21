@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Let’s talk · Embodied Work Solutions</title>
-<meta name="description" content="Bring me the thing you’re stuck on. Free 20 minutes on Zoom, no commitment." />
+<meta name="description" content="Bring me your AI question—or your idea. Free 20 minutes on Zoom, no commitment." />
 <link rel="icon" type="image/webp" href="assets/leaf.webp" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -229,6 +229,28 @@
   .faq .read-more a { color: var(--forest); font-weight: 700; }
   @media (max-width: 900px) { .human .split { grid-template-columns: 1fr; } .first-ai ol { grid-template-columns: 1fr; } }
 
+  /* ALIGN PASS */
+  .newgoogle { background: var(--warm-white); }
+  .newgoogle .split { grid-template-columns: 1.1fr .9fr; gap: 4rem; align-items: start; }
+  .newgoogle ul.good { list-style: none; padding: 0; margin: 0; }
+  .newgoogle ul.good li { border-left: 2px solid var(--honey); padding: .15rem 0 .15rem 1rem; margin-bottom: .9rem; color: var(--text-mid); }
+  .newgoogle h3 { font-size: 1.4rem; margin-bottom: 1rem; }
+  .paths { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
+  .path { background: var(--sand); border-radius: 14px; padding: 2rem 2rem 2.2rem; }
+  .path .tag { display: block; font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: var(--terracotta); margin-bottom: .6rem; }
+  .path h3 { font-size: 1.6rem; margin-bottom: .6rem; }
+  .path p { color: var(--text-mid); margin: 0; }
+  .skeptic-note { margin-top: 1.5rem; text-align: center; color: var(--text-mid); font-style: italic; font-family: var(--serif); font-size: 1.3rem; }
+  .creds { background: var(--warm-white); }
+  .creds .cols3 { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 3rem; margin-top: 2.5rem; }
+  .creds h3 { font-size: 1.35rem; margin-bottom: 1rem; }
+  .creds ul { list-style: none; padding: 0; margin: 0; }
+  .creds li { padding: .55rem 0; border-bottom: 1px solid var(--border); color: var(--text-mid); }
+  .creds li strong { color: var(--forest); display: block; }
+  .creds .role { color: var(--forest); font-weight: 700; margin-bottom: .2rem; }
+  .creds .when { font-size: .9rem; color: var(--text-mid); margin-bottom: .9rem; }
+  @media (max-width: 900px) { .newgoogle .split, .paths, .creds .cols3 { grid-template-columns: 1fr; gap: 1.5rem; } }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -275,8 +297,8 @@
 <header class="photo-head" id="talk" style="background-image:linear-gradient(rgba(8,51,38,0.62),rgba(8,51,38,0.58)),url(assets/photos/header-contact.webp)">
   <div class="wrap">
     <p class="eyebrow">Let’s talk</p>
-    <h1>Bring me the thing you’re stuck on.</h1>
-    <p class="lede">You don’t need a perfect explanation, a polished idea, or the right terminology. We’ll start with a conversation and see what makes sense from there.</p>
+    <h1>Bring me your AI question—or your idea.</h1>
+    <p class="lede">You don’t need the right terminology, a polished idea, or to have made up your mind about AI. We’ll start with a conversation and see what makes sense from there.</p>
     <a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation" class="btn light">Let’s figure it out together <span class="arrow">↗</span></a>
     <ul class="checks"><li>Free 20 minutes</li><li>Zoom, wherever you are</li><li>No commitment</li></ul>
   </div>
@@ -293,10 +315,10 @@
   <div class="wrap narrow">
     <p class="eyebrow">A few things you might be wondering</p>
     <h2>Before we talk.</h2>
-    <details><summary>What if I don’t even know what I need?</summary><p>That’s completely fine. Tell me what’s frustrating, unfinished, or taking more energy than it should. We can figure out the shape of the problem together.</p></details>
-    <details><summary>Do I have to use AI?</summary><p>No. AI is one possible tool, not the point of the work. For the big questions people ask about AI—privacy, trust, bias, climate, jobs—see <a href="how-it-works.html" style="color:var(--forest);font-weight:700">How it works</a>.</p></details>
+    <details><summary>What if I don’t even know what I need?</summary><p>That’s completely fine. Tell me what you’re curious about, worried about, or trying to build. We can figure out the shape of the problem together.</p></details>
+    <details><summary>Do I have to use AI?</summary><p>No. Keeping the human in AI includes deciding where it doesn’t belong. For the big questions people ask about AI—privacy, trust, bias, climate, jobs—see <a href="how-it-works.html" style="color:var(--forest);font-weight:700">How it works</a>.</p></details>
     <details><summary>Do I need to prepare for our first call?</summary><p>No presentation or technical explanation required. You can bring a specific question or just start talking about what’s going on.</p></details>
-    <details><summary>What’s the difference between the free call and Finding the Start Button?</summary><p>The free 20 minutes is for seeing whether we’re a good fit. Finding the Start Button is where the work starts: we dig into the thing you’re stuck on, and you leave with a fix underway or a clear plan.</p></details>
+    <details><summary>What’s the difference between the free call and Finding the Start Button?</summary><p>The free 20 minutes is for seeing whether we’re a good fit. Finding the Start Button is where the work starts: we dig into your question or idea, try it on your real work, and you leave with a clear next step.</p></details>
     <details><summary>Do I need to be local?</summary><p>No. Everything happens online over Zoom, wherever you are.</p></details>
     <details><summary>How do payment and scheduling work?</summary><p>The first 20-minute Zoom conversation is free. Finding the Start Button is a $199 session. If there’s more to build after that, I’ll quote it up front, and nothing starts until you agree. Invoices are handled through Wave.</p></details>
   </div>

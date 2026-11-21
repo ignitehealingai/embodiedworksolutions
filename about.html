@@ -239,6 +239,28 @@
   .faq .read-more a { color: var(--forest); font-weight: 700; }
   @media (max-width: 900px) { .human .split { grid-template-columns: 1fr; } .first-ai ol { grid-template-columns: 1fr; } }
 
+  /* ALIGN PASS */
+  .newgoogle { background: var(--warm-white); }
+  .newgoogle .split { grid-template-columns: 1.1fr .9fr; gap: 4rem; align-items: start; }
+  .newgoogle ul.good { list-style: none; padding: 0; margin: 0; }
+  .newgoogle ul.good li { border-left: 2px solid var(--honey); padding: .15rem 0 .15rem 1rem; margin-bottom: .9rem; color: var(--text-mid); }
+  .newgoogle h3 { font-size: 1.4rem; margin-bottom: 1rem; }
+  .paths { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
+  .path { background: var(--sand); border-radius: 14px; padding: 2rem 2rem 2.2rem; }
+  .path .tag { display: block; font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: var(--terracotta); margin-bottom: .6rem; }
+  .path h3 { font-size: 1.6rem; margin-bottom: .6rem; }
+  .path p { color: var(--text-mid); margin: 0; }
+  .skeptic-note { margin-top: 1.5rem; text-align: center; color: var(--text-mid); font-style: italic; font-family: var(--serif); font-size: 1.3rem; }
+  .creds { background: var(--warm-white); }
+  .creds .cols3 { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 3rem; margin-top: 2.5rem; }
+  .creds h3 { font-size: 1.35rem; margin-bottom: 1rem; }
+  .creds ul { list-style: none; padding: 0; margin: 0; }
+  .creds li { padding: .55rem 0; border-bottom: 1px solid var(--border); color: var(--text-mid); }
+  .creds li strong { color: var(--forest); display: block; }
+  .creds .role { color: var(--forest); font-weight: 700; margin-bottom: .2rem; }
+  .creds .when { font-size: .9rem; color: var(--text-mid); margin-bottom: .9rem; }
+  @media (max-width: 900px) { .newgoogle .split, .paths, .creds .cols3 { grid-template-columns: 1fr; gap: 1.5rem; } }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -297,9 +319,9 @@
       <h2>Hi, I’m SK.</h2>
       <p class="lede">I’m a business analyst, project manager, change leader, and systems thinker. For more than 20 years, I’ve been helping colleagues, friends, and family learn new technology—customized to them, and without shame. I listen closely, make sense of complicated needs, ask the questions that uncover what’s actually happening, and turn ambiguity into plans people can use.</p>
       <p class="muted">I also know that a technically perfect system can fail when it asks too much of the people using it. That’s why I pay attention to your time, capacity, confidence, and the way you actually work—not just what a tool is capable of doing.</p>
-      <p class="muted">I bring that perspective to AI support, technology troubleshooting, workflow design, and project work. I don’t need you to speak in technical language. We can start with your own words, exactly where you are.</p>
+      <p class="muted">Today I bring that to AI: helping people try it for the first time, use it to grow ideas they already have, and design AI-supported workflows built for clarity, trust, and sustainable use. I don’t need you to speak in technical language. We can start with your own words, exactly where you are.</p>
       <p class="muted">My path here also runs through clinical social work training and years of embodiment and nervous-system work. That’s the “embodied” in Embodied Work Solutions: I notice what a system asks of your body and your energy, not just your calendar.</p>
-      <ul class="pills skills"><li>Business analysis</li><li>Project management</li><li>Change leadership</li><li>Technology translation</li><li>Human-centered systems</li><li>Embodiment &amp; nervous-system work</li></ul>
+      <ul class="pills skills"><li>Business analysis</li><li>Project management</li><li>Change leadership</li><li>Responsible AI</li><li>Technology translation</li><li>Human-centered systems</li><li>Embodiment &amp; nervous-system work</li></ul>
     </div>
   </div>
 </section>
@@ -313,6 +335,7 @@
       <div>
         <h3>Where that comes from</h3>
         <ul>
+          <li><strong>Responsible AI training</strong> through the University of Michigan and IBM grounded me in the risks, ethics, and accountability questions around generative AI.</li>
           <li><strong>Change leadership</strong> taught me that new tools don’t change anything on their own. People do—when they understand why, feel supported, and have room to learn.</li>
           <li><strong>Clinical social work</strong> taught me informed consent, confidentiality, and boundaries.</li>
           <li><strong>Years building healthcare websites</strong> taught me privacy and accessibility in practice, not just on paper.</li>
@@ -336,12 +359,50 @@
   </div>
 </section>
 
+<section class="creds">
+  <div class="wrap">
+    <p class="eyebrow">Training &amp; experience</p>
+    <h2>What I bring to the table.</h2>
+    <div class="cols3">
+      <div>
+        <h3>Applied AI</h3>
+        <p class="role">Founder &amp; Principal Consultant, Embodied Work Solutions, LLC</p>
+        <p class="when">2025–present</p>
+        <ul>
+          <li>Design AI-supported workflows and light automation built for clarity, trust, and sustainable adoption</li>
+          <li>Look at how people actually use their tools, and where things get stuck, to improve systems and processes</li>
+          <li>Create templates, documentation, and repeatable project tools that make delivery easier</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Certifications</h3>
+        <ul>
+          <li><strong>Responsible Generative AI Specialization</strong>University of Michigan</li>
+          <li><strong>Generative AI for Project Managers</strong>IBM</li>
+          <li><strong>Organizational Development &amp; Change Leadership</strong>Executive Certificate, Georgetown University</li>
+          <li><strong>Diversity, Equity &amp; Inclusion</strong>Executive Certificate, Georgetown University</li>
+          <li><strong>Certified ScrumMaster</strong> (CSM®)</li>
+          <li><strong>Certified Diversity Executive</strong> (CDE®)</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Education</h3>
+        <ul>
+          <li><strong>MSW, Clinical Social Work</strong>University of North Carolina at Chapel Hill</li>
+          <li><strong>BS, Business Administration</strong>University of North Carolina at Chapel Hill</li>
+          <li><strong>BA, Psychology</strong>University of North Carolina at Chapel Hill</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="approach">
   <div class="wrap narrow">
     <img class="mark" src="assets/photos/rcsd-mushrooms.webp" alt="A cluster of small mushrooms rising together from damp leaves, connected underground" loading="lazy" width="900" height="675" />
     <p class="eyebrow">The approach behind the work</p>
     <h2>People first.<span>Tools second.</span></h2>
-    <p>My work is informed by Regulation-Centered System Design™—an approach that takes real human capacity seriously. We’ll choose solutions you can understand and sustain. If we use AI, I’ll explain how and ask before putting your information into an AI tool. And if a simpler, non-AI solution is better, that’s what I’ll recommend.</p>
+    <p>My work is informed by Regulation-Centered System Design™—an approach that takes real human capacity seriously. We’ll choose solutions you can understand and sustain. If we use AI, I’ll explain how and ask before putting your information into an AI tool. And if a simpler, non-AI solution is better, that’s what I’ll recommend. AI can be part of the work. Judgment, consent, and care stay human.</p>
   </div>
 </section>
 
@@ -350,8 +411,8 @@
 <section class="final" id="talk">
   <div class="wrap narrow">
     <p class="eyebrow">The next step is small</p>
-    <h2>Bring me the thing you’re stuck on.</h2>
-    <p>You don’t need a perfect explanation, a polished idea, or the right terminology. We’ll start with a conversation and see what makes sense from there.</p>
+    <h2>Bring me your AI question—or your idea.</h2>
+    <p>You don’t need the right terminology, a polished idea, or to have made up your mind about AI. We’ll start with a conversation and see what makes sense from there.</p>
     <a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation" class="btn light">Let’s figure it out together <span class="arrow">↗</span></a>
     <ul class="checks"><li>Free 20 minutes</li><li>Zoom</li><li>No commitment</li></ul>
   </div>
