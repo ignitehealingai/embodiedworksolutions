@@ -4,19 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>How I help · Embodied Work Solutions</title>
-<meta name="description" content="AI and technology support, business systems and project support — real help for real-world problems." />
+<meta name="description" content="Getting started with AI on your own terms, and building systems that fit your life and work." />
 <link rel="icon" type="image/webp" href="assets/leaf.webp" />
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Embodied Work Solutions" />
-<meta property="og:title" content="How I help · Embodied Work Solutions" />
-<meta property="og:description" content="AI and technology support, business systems and project support — real help for real-world problems." />
-<meta property="og:url" content="https://embodiedworksolutions.com/help.html" />
-<meta property="og:image" content="https://embodiedworksolutions.com/assets/share.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="A green seedling breaking up through cracked pavement" />
-<meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
@@ -221,6 +210,25 @@
   .card .price { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--terracotta); line-height: 1; margin: .2rem 0 .8rem; }
   @media (max-width: 1000px) { .areas.three { grid-template-columns: 1fr; } }
 
+  /* HUMAN IN AI */
+  .human { background: var(--warm-white); }
+  .human .split { grid-template-columns: .8fr 1.2fr; align-items: center; }
+  .human .portrait img { width: min(100%, 360px); aspect-ratio: 1 / 1; object-fit: cover; border-radius: 50%; margin: 0 auto; }
+  .human h2 em { color: var(--terracotta); }
+  .human ul.terms { list-style: none; padding: 0; margin: 1.5rem 0; }
+  .human ul.terms li { border-left: 2px solid var(--terracotta); padding: .1rem 0 .1rem 1rem; margin-bottom: .8rem; color: var(--text-mid); }
+  .human .pull { margin: 1.25rem 0; color: var(--forest); border-left-color: var(--terracotta); }
+  .human a.more { color: var(--forest); font-weight: 700; }
+  .first-ai { background: var(--warm-white); }
+  .first-ai ol { list-style: none; padding: 0; counter-reset: f; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 2.5rem; }
+  .first-ai li { counter-increment: f; background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem 1.6rem 1.5rem 4.2rem; position: relative; color: var(--text-mid); }
+  .first-ai li::before { content: counter(f, decimal-leading-zero); position: absolute; left: 1.4rem; top: 1.3rem; font-family: var(--serif); font-size: 1.6rem; color: var(--terracotta-light); }
+  .first-ai li strong { display: block; color: var(--forest); font-family: var(--serif); font-size: 1.3rem; font-weight: 500; margin-bottom: .3rem; }
+  .faq h3.group { font-size: .85rem; letter-spacing: .16em; text-transform: uppercase; font-family: 'Lato', sans-serif; font-weight: 700; color: var(--terracotta); margin: 2.5rem 0 .5rem; }
+  .faq .read-more { margin-top: 1.25rem; color: var(--text-mid); }
+  .faq .read-more a { color: var(--forest); font-weight: 700; }
+  @media (max-width: 900px) { .human .split { grid-template-columns: 1fr; } .first-ai ol { grid-template-columns: 1fr; } }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -267,52 +275,40 @@
 <header class="photo-head" style="background-image:linear-gradient(rgba(8,51,38,0.62),rgba(8,51,38,0.58)),url(assets/photos/header-offerings.webp)">
   <div class="wrap">
     <p class="eyebrow">What we can work on</p>
-    <h1>Real help for real-world problems.</h1>
-    <p class="lede">I work where technology, people, and projects meet. Here are some of the places we might begin—not boxes you have to fit yourself into.</p>
+    <h1>AI help, with a human in the loop.</h1>
+    <p class="lede">Most of my work starts with AI. Some of it is about the systems around it. Either way, you’re the one deciding. These are places we might begin—not boxes you have to fit yourself into.</p>
   </div>
 </header>
 
 <section class="page-body" id="help">
   <div class="wrap">
-    <div class="areas three">
+    <div class="areas">
       <article class="area">
         <img src="assets/photos/ai.webp" alt="Two bees at work side by side on a glowing sunflower" loading="lazy" width="1200" height="750" />
         <div class="body">
-          <span class="tag">01 / AI &amp; technology support</span>
-          <h3>Make the tools work for you.</h3>
-          <p class="muted">We’ll find the right level of technology for what you’re trying to do, then make it useful in your actual work. That might mean understanding AI, fixing a frustrating setup, or building a repeatable way of getting things done.</p>
+          <span class="tag">01 / Getting started with AI</span>
+          <h3>AI on your own terms.</h3>
+          <p class="muted">We’ll find out what AI is actually good for in your work—and what it isn’t. You’ll try it on real tasks, with someone beside you, and leave knowing what to use, what to skip, and what to keep to yourself.</p>
           <ul>
-            <li>Get started with ChatGPT or other AI tools in a practical, confident way</li>
-            <li>Untangle an annoying digital task or technology problem</li>
-            <li>Use AI to organize ideas, draft materials, or simplify recurring work</li>
-            <li>Connect information, documents, and everyday workflows</li>
+            <li>Get started with ChatGPT, Claude, or the AI already built into your tools</li>
+            <li>Find the tasks where AI actually saves you time</li>
+            <li>Check privacy settings and learn what not to paste in</li>
+            <li>Keep your own voice in what you write</li>
+            <li>Decide when a simpler tool is the better choice</li>
           </ul>
         </div>
       </article>
       <article class="area">
         <img src="assets/photos/systems.webp" alt="Tree roots spreading wide across the forest floor, holding steady" loading="lazy" width="1200" height="750" />
         <div class="body">
-          <span class="tag">02 / Business systems &amp; project support</span>
+          <span class="tag">02 / Systems that fit your life and work</span>
           <h3>Turn the moving pieces into a plan.</h3>
-          <p class="muted">When a project feels too big, a workflow is breaking down, or your business relies on remembering everything yourself, we’ll map what’s happening and make the next steps clearer.</p>
+          <p class="muted">When a project feels too big, a workflow is breaking down, or your life and business rely on you remembering everything, we’ll map what’s happening and build something that fits your real capacity.</p>
           <ul>
             <li>Turn an idea into a project plan you can actually follow</li>
-            <li>Map a process and find where things get stuck</li>
-            <li>Set up organizing tools, responsibilities, and handoffs</li>
-            <li>Move a stalled project toward decisions and deliverables</li>
-          </ul>
-        </div>
-      </article>
-      <article class="area">
-        <img src="assets/photos/build.webp" alt="A fresh green leaf opening on a slender stem, new growth reaching for light" loading="lazy" width="1200" height="750" />
-        <div class="body">
-          <span class="tag">03 / Personal systems</span>
-          <h3>Make your life easier to run.</h3>
-          <p class="muted">For capable people who are overwhelmed or stretched thin. We’ll find what’s creating friction, get clear on what matters, and build something that fits your real capacity—not an ideal week that never happens.</p>
-          <ul>
             <li>Get calendars, lists, and reminders working together</li>
+            <li>Map a process and find where things get stuck</li>
             <li>Set up routines for meals, money, or family logistics</li>
-            <li>Find one place for the things you keep losing track of</li>
             <li>Design a system that still works on hard days</li>
           </ul>
         </div>
@@ -351,7 +347,7 @@
 <footer>
   <div class="wrap">
     <p class="wordmark">Embodied Work Solutions</p>
-    <p class="tagline">Practical technology and systems support, built around real people.</p>
+    <p class="tagline">Keeping the human in AI. Practical help, built around real people.</p>
     <div class="foot-row">
       <a href="mailto:connect@embodiedworksolutions.com">connect@embodiedworksolutions.com</a>
       <div class="foot-links">

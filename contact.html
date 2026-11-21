@@ -6,17 +6,6 @@
 <title>Let’s talk · Embodied Work Solutions</title>
 <meta name="description" content="Bring me the thing you’re stuck on. Free 20 minutes on Zoom, no commitment." />
 <link rel="icon" type="image/webp" href="assets/leaf.webp" />
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Embodied Work Solutions" />
-<meta property="og:title" content="Let’s talk · Embodied Work Solutions" />
-<meta property="og:description" content="Bring me the thing you’re stuck on. Free 20 minutes on Zoom, no commitment." />
-<meta property="og:url" content="https://embodiedworksolutions.com/contact.html" />
-<meta property="og:image" content="https://embodiedworksolutions.com/assets/share.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="A green seedling breaking up through cracked pavement" />
-<meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
@@ -221,6 +210,25 @@
   .card .price { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--terracotta); line-height: 1; margin: .2rem 0 .8rem; }
   @media (max-width: 1000px) { .areas.three { grid-template-columns: 1fr; } }
 
+  /* HUMAN IN AI */
+  .human { background: var(--warm-white); }
+  .human .split { grid-template-columns: .8fr 1.2fr; align-items: center; }
+  .human .portrait img { width: min(100%, 360px); aspect-ratio: 1 / 1; object-fit: cover; border-radius: 50%; margin: 0 auto; }
+  .human h2 em { color: var(--terracotta); }
+  .human ul.terms { list-style: none; padding: 0; margin: 1.5rem 0; }
+  .human ul.terms li { border-left: 2px solid var(--terracotta); padding: .1rem 0 .1rem 1rem; margin-bottom: .8rem; color: var(--text-mid); }
+  .human .pull { margin: 1.25rem 0; color: var(--forest); border-left-color: var(--terracotta); }
+  .human a.more { color: var(--forest); font-weight: 700; }
+  .first-ai { background: var(--warm-white); }
+  .first-ai ol { list-style: none; padding: 0; counter-reset: f; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 2.5rem; }
+  .first-ai li { counter-increment: f; background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem 1.6rem 1.5rem 4.2rem; position: relative; color: var(--text-mid); }
+  .first-ai li::before { content: counter(f, decimal-leading-zero); position: absolute; left: 1.4rem; top: 1.3rem; font-family: var(--serif); font-size: 1.6rem; color: var(--terracotta-light); }
+  .first-ai li strong { display: block; color: var(--forest); font-family: var(--serif); font-size: 1.3rem; font-weight: 500; margin-bottom: .3rem; }
+  .faq h3.group { font-size: .85rem; letter-spacing: .16em; text-transform: uppercase; font-family: 'Lato', sans-serif; font-weight: 700; color: var(--terracotta); margin: 2.5rem 0 .5rem; }
+  .faq .read-more { margin-top: 1.25rem; color: var(--text-mid); }
+  .faq .read-more a { color: var(--forest); font-weight: 700; }
+  @media (max-width: 900px) { .human .split { grid-template-columns: 1fr; } .first-ai ol { grid-template-columns: 1fr; } }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -286,7 +294,7 @@
     <p class="eyebrow">A few things you might be wondering</p>
     <h2>Before we talk.</h2>
     <details><summary>What if I don’t even know what I need?</summary><p>That’s completely fine. Tell me what’s frustrating, unfinished, or taking more energy than it should. We can figure out the shape of the problem together.</p></details>
-    <details><summary>Do I have to use AI?</summary><p>No. AI is one possible tool, not the point of the work. The point is to solve the right problem in a way that fits you.</p></details>
+    <details><summary>Do I have to use AI?</summary><p>No. AI is one possible tool, not the point of the work. For the big questions people ask about AI—privacy, trust, bias, climate, jobs—see <a href="how-it-works.html" style="color:var(--forest);font-weight:700">How it works</a>.</p></details>
     <details><summary>Do I need to prepare for our first call?</summary><p>No presentation or technical explanation required. You can bring a specific question or just start talking about what’s going on.</p></details>
     <details><summary>What’s the difference between the free call and Finding the Start Button?</summary><p>The free 20 minutes is for seeing whether we’re a good fit. Finding the Start Button is where the work starts: we dig into the thing you’re stuck on, and you leave with a fix underway or a clear plan.</p></details>
     <details><summary>Do I need to be local?</summary><p>No. Everything happens online over Zoom, wherever you are.</p></details>
@@ -299,7 +307,7 @@
 <footer>
   <div class="wrap">
     <p class="wordmark">Embodied Work Solutions</p>
-    <p class="tagline">Practical technology and systems support, built around real people.</p>
+    <p class="tagline">Keeping the human in AI. Practical help, built around real people.</p>
     <div class="foot-row">
       <a href="mailto:connect@embodiedworksolutions.com">connect@embodiedworksolutions.com</a>
       <div class="foot-links">

@@ -4,19 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>How it works · Embodied Work Solutions</title>
-<meta name="description" content="A simple way from stuck to moving: talk, find the fit, build, and hand off. Plus ways to work together and common questions." />
+<meta name="description" content="How working together goes, what a first AI session looks like, and honest answers to the biggest concerns about AI." />
 <link rel="icon" type="image/webp" href="assets/leaf.webp" />
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Embodied Work Solutions" />
-<meta property="og:title" content="How it works · Embodied Work Solutions" />
-<meta property="og:description" content="A simple way from stuck to moving: talk, find the fit, build, and hand off. Plus ways to work together and common questions." />
-<meta property="og:url" content="https://embodiedworksolutions.com/how-it-works.html" />
-<meta property="og:image" content="https://embodiedworksolutions.com/assets/share.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="A green seedling breaking up through cracked pavement" />
-<meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
@@ -221,6 +210,25 @@
   .card .price { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--terracotta); line-height: 1; margin: .2rem 0 .8rem; }
   @media (max-width: 1000px) { .areas.three { grid-template-columns: 1fr; } }
 
+  /* HUMAN IN AI */
+  .human { background: var(--warm-white); }
+  .human .split { grid-template-columns: .8fr 1.2fr; align-items: center; }
+  .human .portrait img { width: min(100%, 360px); aspect-ratio: 1 / 1; object-fit: cover; border-radius: 50%; margin: 0 auto; }
+  .human h2 em { color: var(--terracotta); }
+  .human ul.terms { list-style: none; padding: 0; margin: 1.5rem 0; }
+  .human ul.terms li { border-left: 2px solid var(--terracotta); padding: .1rem 0 .1rem 1rem; margin-bottom: .8rem; color: var(--text-mid); }
+  .human .pull { margin: 1.25rem 0; color: var(--forest); border-left-color: var(--terracotta); }
+  .human a.more { color: var(--forest); font-weight: 700; }
+  .first-ai { background: var(--warm-white); }
+  .first-ai ol { list-style: none; padding: 0; counter-reset: f; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 2.5rem; }
+  .first-ai li { counter-increment: f; background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem 1.6rem 1.5rem 4.2rem; position: relative; color: var(--text-mid); }
+  .first-ai li::before { content: counter(f, decimal-leading-zero); position: absolute; left: 1.4rem; top: 1.3rem; font-family: var(--serif); font-size: 1.6rem; color: var(--terracotta-light); }
+  .first-ai li strong { display: block; color: var(--forest); font-family: var(--serif); font-size: 1.3rem; font-weight: 500; margin-bottom: .3rem; }
+  .faq h3.group { font-size: .85rem; letter-spacing: .16em; text-transform: uppercase; font-family: 'Lato', sans-serif; font-weight: 700; color: var(--terracotta); margin: 2.5rem 0 .5rem; }
+  .faq .read-more { margin-top: 1.25rem; color: var(--text-mid); }
+  .faq .read-more a { color: var(--forest); font-weight: 700; }
+  @media (max-width: 900px) { .human .split { grid-template-columns: 1fr; } .first-ai ol { grid-template-columns: 1fr; } }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -284,6 +292,20 @@
   </div>
 </section>
 
+<section class="first-ai">
+  <div class="wrap">
+    <p class="eyebrow">If you bring an AI question</p>
+    <h2>What a first session looks like.</h2>
+    <p class="lede">No jargon, no pressure to sign up for anything. Just your real work, and time that gets you moving.</p>
+    <ol>
+      <li><strong>Look at what you already use.</strong>Your email, documents, phone, and the AI that may already be built in. We start there.</li>
+      <li><strong>Check the settings together.</strong>What does this tool keep? What does it learn from? We look, so you know.</li>
+      <li><strong>Try one real task from your week.</strong>Something you’d actually do on Tuesday—not a demo.</li>
+      <li><strong>Leave with a plan.</strong>What to use, what to skip, what not to paste in, and one next step you can take on your own.</li>
+    </ol>
+  </div>
+</section>
+
 <section class="ways">
   <div class="wrap">
     <p class="eyebrow">Ways to work together</p>
@@ -301,9 +323,20 @@
 <section class="faq">
   <div class="wrap narrow">
     <p class="eyebrow">A few things you might be wondering</p>
-    <h2>Before we talk.</h2>
+    <h2>Questions people ask.</h2>
+    <h3 class="group">The real concerns about AI</h3>
+    <details><summary>Do I have to use AI?</summary><p>No. AI is one possible tool, not the point of the work. The point is to solve the right problem in a way that fits you—and sometimes that’s a simpler tool.</p></details>
+    <details><summary>What happens to what I type into AI?</summary><p>With most commercial tools, what you type may be kept or used to train future models. So I won’t promise “safe.” What I will do: show you how to check what a tool keeps, help you decide what you’re willing to offer and what should stay yours, and point you to tools that run on your own computer when the work is tender or unfinished. And I always ask before putting your information into an AI tool. The question isn’t whether these tools watch us. It’s whether we’re awake while we use them.</p></details>
+    <details><summary>Can I trust what it tells me?</summary><p>Not blindly. AI can be wrong and sound completely sure, and it isn’t good at knowing when to stop. You’ll practice checking it, so the judgment about how much to trust it stays with you.</p></details>
+    <details><summary>Won’t it make everyone think the same way?</summary><p>That risk is real. When one model answers millions of questions, it pulls toward the most common answer. The antidote isn’t refusing the tool. It’s noticing when you’re using it to confirm what you already think instead of to question it—and bringing your own judgment into the conversation, not handing it over.</p></details>
+    <details><summary>What about bias?</summary><p>Bias in AI isn’t a future problem, and it isn’t a glitch. It reflects whose stories got recorded and whose didn’t. We’ll practice noticing where a tool flattens or misses people, and pushing back when it does.</p></details>
+    <details><summary>Will it make me worse at thinking or writing?</summary><p>It can, if you use it to avoid thinking instead of to sharpen it. We use it to support your judgment and keep your own voice in what you make.</p></details>
+    <details><summary>What about the climate cost?</summary><p>It’s real, and if you’re paying attention to it, good. Using AI with care includes deciding where it’s worth the cost and where it isn’t. Opting out entirely doesn’t shrink the footprint; it removes your voice from the conversation about what it should be.</p></details>
+    <details><summary>Is AI going to take jobs?</summary><p>Some, yes—and not equally. I won’t smooth that over. What helps is learning the tools with intention and leaning into what only people can do: read a room, catch what the model missed, and make judgment calls that depend on the whole human context.</p></details>
+    <details><summary>I’m skeptical of AI. Is this for me?</summary><p>Yes. Especially you. The future needs more than people who adopt AI—it needs accountability. The people who feel what’s wrong before they can name it are exactly who should be in the room.</p></details>
+    <p class="read-more">I wrote more about all of this in <a href="https://cracksandseeds.substack.com/p/cracks-and-seeds-23-before-you-decide" target="_blank" rel="noopener">Before You Decide You’re Against AI</a>.</p>
+    <h3 class="group">Working together</h3>
     <details><summary>What if I don’t even know what I need?</summary><p>That’s completely fine. Tell me what’s frustrating, unfinished, or taking more energy than it should. We can figure out the shape of the problem together.</p></details>
-    <details><summary>Do I have to use AI?</summary><p>No. AI is one possible tool, not the point of the work. The point is to solve the right problem in a way that fits you.</p></details>
     <details><summary>Do I need to prepare for our first call?</summary><p>No presentation or technical explanation required. You can bring a specific question or just start talking about what’s going on.</p></details>
     <details><summary>What’s the difference between the free call and Finding the Start Button?</summary><p>The free 20 minutes is for seeing whether we’re a good fit. Finding the Start Button is where the work starts: we dig into the thing you’re stuck on, and you leave with a fix underway or a clear plan.</p></details>
     <details><summary>Do I need to be local?</summary><p>No. Everything happens online over Zoom, wherever you are.</p></details>
@@ -326,7 +359,7 @@
 <footer>
   <div class="wrap">
     <p class="wordmark">Embodied Work Solutions</p>
-    <p class="tagline">Practical technology and systems support, built around real people.</p>
+    <p class="tagline">Keeping the human in AI. Practical help, built around real people.</p>
     <div class="foot-row">
       <a href="mailto:connect@embodiedworksolutions.com">connect@embodiedworksolutions.com</a>
       <div class="foot-links">
