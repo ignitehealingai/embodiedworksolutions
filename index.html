@@ -213,7 +213,10 @@
   /* HUMAN IN AI */
   .human { background: var(--warm-white); }
   .human .split { grid-template-columns: .8fr 1.2fr; align-items: center; }
+  .human .portrait { margin: 0; }
   .human .portrait img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 18px; margin: 0 auto; }
+  .human .portrait figcaption { font-size: .8rem; color: var(--text-muted); margin-top: .6rem; }
+  .human .portrait figcaption a { color: inherit; }
   .human h2 em { color: var(--terracotta); }
   .human ul.terms { list-style: none; padding: 0; margin: 1.5rem 0; }
   .human ul.terms li { border-left: 2px solid var(--terracotta); padding: .1rem 0 .1rem 1rem; margin-bottom: .8rem; color: var(--text-mid); }
@@ -316,7 +319,11 @@
 <main id="main">
 
 <section class="human">
-  <div class="wrap narrow">
+  <div class="wrap split">
+    <figure class="portrait">
+      <img src="assets/photos/home-ageing-better.webp" alt="An older woman with short white hair and round glasses laughs into her phone at a wooden garden table, one hand resting on her open laptop, green leaves glowing behind her" loading="lazy" width="960" height="1200" />
+      <figcaption>Photo by <a href="https://unsplash.com/@ageing_better?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Centre for Ageing Better</a> on <a href="https://unsplash.com/photos/a-woman-on-her-phone-while-sitting-at-a-table-with-a-laptop-gT6u3vEVSUg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Unsplash</a></figcaption>
+    </figure>
     <div>
       <p class="eyebrow">Keeping the human in AI</p>
       <h2>AI is showing up in everything. <em>You still get to decide.</em></h2>
