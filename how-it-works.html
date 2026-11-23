@@ -251,6 +251,18 @@
   .creds .when { font-size: .9rem; color: var(--text-mid); margin-bottom: .9rem; }
   @media (max-width: 900px) { .newgoogle .split, .paths, .creds .cols3 { grid-template-columns: 1fr; gap: 1.5rem; } }
 
+  /* COMPACT CREDS + RESOURCES */
+  .creds2 { background: var(--warm-white); padding: 4.5rem 0; }
+  .creds2 .lede { max-width: 760px; }
+  .cred-list { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: .1rem 3rem; }
+  .cred-list li { padding: .6rem 0; border-bottom: 1px solid var(--border); color: var(--text-mid); font-size: .98rem; }
+  .cred-list li strong { color: var(--forest); }
+  .resources { background: var(--warm-white); }
+  .res-list { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 2.5rem; }
+  .res-list li { border-left: 2px solid var(--honey); padding: .2rem 0 .2rem 1rem; color: var(--text-mid); }
+  .res-list a { color: var(--forest); font-weight: 700; }
+  @media (max-width: 900px) { .cred-list, .res-list { grid-template-columns: 1fr; } }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -348,6 +360,7 @@
     <h2>Questions people ask.</h2>
     <h3 class="group">The real concerns about AI</h3>
     <details><summary>Do I have to use AI?</summary><p>No. Keeping the human in AI includes deciding where it doesn’t belong. Sometimes the best answer is a simpler tool, or no tool at all. You’re always the one deciding.</p></details>
+    <details><summary>What qualifies you to help me?</summary><p>I’ve used AI every day at work for more than three years—Copilot, ChatGPT, Claude, Gemini, and others—for everything from research and writing to planning and building tools. I’ve trained in responsible generative AI (University of Michigan) and generative AI for project managers (IBM). And I bring 20+ years of helping people learn new technology without shame, plus training in change leadership and clinical social work. What I’m not: a security or legal expert. I’ll tell you when something is outside what I know.</p></details>
     <details><summary>Why learn AI at all?</summary><p>Because it’s becoming the new Google. When search was new, people had real fears about it—and some of them were right. Now “Did you google it?” is the first question we ask. AI is moving the same way. It has real problems and real benefits. Understanding how it works is how you get a say, in your own life and in the bigger conversation.</p></details>
     <details><summary>I already have an idea. Can you help me grow it with AI?</summary><p>Yes—that’s half of what I do. We’ll use AI to research, draft, plan, or build, and you stay the one making the calls.</p></details>
     <details><summary>What happens to what I type into AI?</summary><p>With most commercial tools, what you type may be kept or used to train future models. So I won’t promise “safe.” What I will do: show you how to check what a tool keeps, help you decide what you’re willing to offer and what should stay yours, and point you to tools that run on your own computer when the work is tender or unfinished. And I always ask before putting your information into an AI tool. The question isn’t whether these tools watch us. It’s whether we’re awake while we use them.</p></details>
@@ -369,6 +382,22 @@
 </section>
 
 </main>
+
+<section class="resources" id="learn-on-your-own">
+  <div class="wrap">
+    <p class="eyebrow">Prefer to learn on your own?</p>
+    <h2>Free places to start.</h2>
+    <p class="lede">Not everyone wants a person beside them, and that’s okay. These are free, and they’re good.</p>
+    <ul class="res-list">
+      <li><a href="https://www.elementsofai.com/" target="_blank" rel="noopener">Elements of AI</a> — University of Helsinki. What AI is and isn’t, with no math or coding.</li>
+      <li><a href="https://www.anthropic.com/ai-fluency" target="_blank" rel="noopener">AI Fluency: Framework &amp; Foundations</a> — Anthropic. Working with AI effectively and ethically, about 3–4 hours.</li>
+      <li><a href="https://academy.openai.com/" target="_blank" rel="noopener">OpenAI Academy</a> — Courses and videos for getting started with ChatGPT.</li>
+      <li><a href="https://www.microsoft.com/microsoft-365/copilot-learning-center" target="_blank" rel="noopener">Copilot Learning Center</a> — Microsoft. Quick ways to start with Copilot, plus free live help.</li>
+      <li><a href="https://www.humanetech.com/" target="_blank" rel="noopener">Center for Humane Technology</a> — For the bigger questions about AI and what it’s doing to us.</li>
+      <li><a href="https://cracksandseeds.substack.com/" target="_blank" rel="noopener">Cracks &amp; Seeds</a> — My own writing on staying human with AI.</li>
+    </ul>
+  </div>
+</section>
 
 <section class="final" id="talk">
   <div class="wrap narrow">

@@ -261,6 +261,20 @@
   .creds .when { font-size: .9rem; color: var(--text-mid); margin-bottom: .9rem; }
   @media (max-width: 900px) { .newgoogle .split, .paths, .creds .cols3 { grid-template-columns: 1fr; gap: 1.5rem; } }
 
+  /* COMPACT CREDS + RESOURCES */
+  .creds2 { background: var(--warm-white); padding: 3.25rem 0; }
+  .creds2 h2 { margin-bottom: .75rem; }
+  .creds2 .lede { max-width: 760px; }
+  .creds-split { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; }
+  .cred-list { list-style: none; padding: 0; margin: 0; }
+  .cred-list li { padding: .4rem 0; border-bottom: 1px solid var(--border); color: var(--text-mid); font-size: .98rem; }
+  .cred-list li strong { color: var(--forest); }
+  .resources { background: var(--warm-white); }
+  .res-list { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 2.5rem; }
+  .res-list li { border-left: 2px solid var(--honey); padding: .2rem 0 .2rem 1rem; color: var(--text-mid); }
+  .res-list a { color: var(--forest); font-weight: 700; }
+  @media (max-width: 900px) { .creds-split, .res-list { grid-template-columns: 1fr; gap: 1.5rem; } }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -341,7 +355,7 @@
           <li><strong>Years building healthcare websites</strong> taught me privacy and accessibility in practice, not just on paper.</li>
           <li><strong>DEI work</strong> taught me to ask who a system leaves out, or harms.</li>
           <li><strong>My writing</strong> at <a href="https://cracksandseeds.substack.com/" target="_blank" rel="noopener">Cracks &amp; Seeds</a> works through consent, trust, and dependence on AI, out loud.</li>
-          <li><strong>My own use.</strong> I use these tools myself, so I know what it’s like to catch an AI promising more than it can deliver.</li>
+          <li><strong>My own use.</strong> I’ve used AI every day at work for more than three years, so I know what it’s like to catch it promising more than it can deliver.</li>
         </ul>
       </div>
       <div>
@@ -359,41 +373,23 @@
   </div>
 </section>
 
-<section class="creds">
-  <div class="wrap">
-    <p class="eyebrow">Training &amp; experience</p>
-    <h2>What I bring to the table.</h2>
-    <div class="cols3">
-      <div>
-        <h3>Applied AI</h3>
-        <p class="role">Founder &amp; Principal Consultant, Embodied Work Solutions, LLC</p>
-        <p class="when">2025–present</p>
-        <ul>
-          <li>Design AI-supported workflows and light automation built for clarity, trust, and sustainable adoption</li>
-          <li>Look at how people actually use their tools, and where things get stuck, to improve systems and processes</li>
-          <li>Create templates, documentation, and repeatable project tools that make delivery easier</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Certifications</h3>
-        <ul>
-          <li><strong>Responsible Generative AI Specialization</strong>University of Michigan</li>
-          <li><strong>Generative AI for Project Managers</strong>IBM</li>
-          <li><strong>Organizational Development &amp; Change Leadership</strong>Executive Certificate, Georgetown University</li>
-          <li><strong>Diversity, Equity &amp; Inclusion</strong>Executive Certificate, Georgetown University</li>
-          <li><strong>Certified ScrumMaster</strong> (CSM®)</li>
-          <li><strong>Certified Diversity Executive</strong> (CDE®)</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Education</h3>
-        <ul>
-          <li><strong>MSW, Clinical Social Work</strong>University of North Carolina at Chapel Hill</li>
-          <li><strong>BS, Business Administration</strong>University of North Carolina at Chapel Hill</li>
-          <li><strong>BA, Psychology</strong>University of North Carolina at Chapel Hill</li>
-        </ul>
-      </div>
+<section class="creds2">
+  <div class="wrap creds-split">
+    <div>
+    <p class="eyebrow">What I bring to the table</p>
+    <h2>Seeing the connections.</h2>
+    <p class="lede">I see the connections between where you’re stuck and where you want to go, and suggest ways to move you forward—with AI as one possible tool. We’ll talk through the pros and cons of using it in your process, and you keep control of your voice and the final output.</p>
     </div>
+    <ul class="cred-list">
+      <li><strong>3+ years of daily AI use at work</strong> · Copilot, ChatGPT, Claude, Gemini</li>
+      <li><strong>Responsible Generative AI</strong> · University of Michigan</li>
+      <li><strong>Generative AI for Project Managers</strong> · IBM</li>
+      <li><strong>Change Leadership &amp; Org Development</strong> · Georgetown</li>
+      <li><strong>Diversity, Equity &amp; Inclusion</strong> · Georgetown · CDE®</li>
+      <li><strong>Certified ScrumMaster</strong> (CSM®)</li>
+      <li><strong>MSW, BS Business, BA Psychology</strong> · UNC-Chapel Hill</li>
+      <li><strong>Founder</strong> · Embodied Work Solutions, LLC</li>
+    </ul>
   </div>
 </section>
 
