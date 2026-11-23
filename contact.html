@@ -254,6 +254,16 @@
   .final p.messy, .photo-head p.messy { font-family: var(--serif); font-style: italic; font-size: clamp(1.5rem, 2.6vw, 1.9rem); color: var(--honey); margin-top: 1.25rem; }
   .final .wrap > p + p { margin-top: .9rem; }
 
+  .grounded { background: var(--forest); color: #fff; }
+  .grounded .eyebrow { color: var(--honey); }
+  .grounded h2 { color: #fff; }
+  .grounded p { color: rgba(255,255,255,.88); max-width: 720px; }
+  .grounded ul { list-style: none; padding: 0; margin: 1.75rem 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  .grounded li { border-left: 2px solid var(--honey); padding: .2rem 0 .2rem 1rem; color: rgba(255,255,255,.88); }
+  .grounded li strong { display: block; color: #fff; font-family: var(--serif); font-size: 1.3rem; font-weight: 500; }
+  .footnote { font-size: .9rem; color: var(--text-muted); margin-top: .5rem; }
+  @media (max-width: 900px) { .grounded ul { grid-template-columns: 1fr; } }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -304,7 +314,8 @@
     <p class="lede">Maybe it’s an AI question. Maybe it’s a frustrating task, a messy process, or a sense that there has to be an easier way. Tell me what you’re trying to do, what isn’t working, or where you’re getting stuck. We’ll figure out the next step together.</p>
     <p class="messy">Bring me the messy middle.</p>
     <a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation" class="btn light">Let’s figure it out together <span class="arrow">↗</span></a>
-    <ul class="checks"><li>Free 20 minutes</li><li>Zoom, wherever you are</li><li>No commitment</li></ul>
+    <ul class="checks"><li>Free 20 minutes</li><li>Zoom, or in person around the Triangle*</li><li>No commitment</li></ul>
+    <p class="footnote" style="color:rgba(255,255,255,.75)">*In-person sessions have an additional travel fee.</p>
   </div>
 </header>
 
@@ -326,7 +337,8 @@
     <details><summary>What qualifies you to help me?</summary><p>I’ve used AI every day at work for more than three years—Copilot, ChatGPT, Claude, Gemini, and others—for everything from research and writing to planning and building tools. I’ve trained in responsible generative AI (University of Michigan) and generative AI for project managers (IBM). And I bring 20+ years of helping people learn new technology without shame, plus training in change leadership and clinical social work. What I’m not: a security or legal expert. I’ll tell you when something is outside what I know.</p></details>
     <details><summary>Do I need to prepare for our first call?</summary><p>No presentation or technical explanation required. You can bring a specific question or just start talking about what’s going on.</p></details>
     <details><summary>What’s the difference between the free call and Finding the Start Button?</summary><p>The free 20 minutes is for seeing whether we’re a good fit. Finding the Start Button is where the work starts: we dig into whatever’s tangled, try things on your real work, and you leave with a clear next step.</p></details>
-    <details><summary>Do I need to be local?</summary><p>No. Everything happens online over Zoom, wherever you are.</p></details>
+    <details><summary>Do I need to be local?</summary><p>No. Everything can happen online over Zoom, wherever you are. If you’re around the Triangle in North Carolina, I can also come to you in person.*</p><p class="footnote">*In-person sessions have an additional travel fee.</p></details>
+    <details><summary>Why do we start with breathing?</summary><p>Because learning something new and solving problems are hard to do from a rushed, braced body. A few minutes of grounding helps you think clearly, take in new information, and notice what you actually need. You don’t need any experience with breathing or meditation.</p></details>
     <details><summary>How do payment and scheduling work?</summary><p>The first 20-minute Zoom conversation is free. Finding the Start Button is a $199 session. If there’s more to build after that, I’ll quote it up front, and nothing starts until you agree. Invoices are handled through Wave.</p></details>
   </div>
 </section>
