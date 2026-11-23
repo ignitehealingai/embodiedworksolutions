@@ -254,6 +254,13 @@
   .final p.messy, .photo-head p.messy { font-family: var(--serif); font-style: italic; font-size: clamp(1.5rem, 2.6vw, 1.9rem); color: var(--honey); margin-top: 1.25rem; }
   .final .wrap > p + p { margin-top: .9rem; }
 
+  .support-split { display: grid; grid-template-columns: 440px 1fr; gap: 3.5rem; align-items: center; margin-bottom: 1rem; }
+  .support-photo { margin: 0; }
+  .support-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 18px; }
+  .support-photo figcaption { font-size: .8rem; color: var(--text-muted); margin-top: .6rem; }
+  .support-photo figcaption a { color: inherit; }
+  @media (max-width: 900px) { .support-split { grid-template-columns: 1fr; gap: 1.5rem; } }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -346,9 +353,17 @@
 
 <section class="support">
   <div class="wrap">
-    <p class="eyebrow">What good support looks like</p>
-    <h2>Not another pile of advice.<br>Something you can actually use.</h2>
-    <p class="lede">The exact outcome depends on the problem. But the aim is always the same: less friction, more clarity, and something useful you can carry forward yourself.</p>
+    <div class="support-split">
+      <figure class="support-photo">
+        <img src="assets/photos/help-ageing-better.webp" alt="A woman with short white hair and a lanyard leans toward a colleague and points at a computer screen, explaining something as they look at it together" loading="lazy" width="1000" height="750" />
+        <figcaption>Photo by <a href="https://unsplash.com/@ageing_better?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Centre for Ageing Better</a> on <a href="https://unsplash.com/photos/a-man-pointing-at-a-woman-wkFRvw2lTAg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Unsplash</a></figcaption>
+      </figure>
+      <div>
+        <p class="eyebrow">What good support looks like</p>
+        <h2>Not another pile of advice. Something you can actually use.</h2>
+        <p class="lede">The exact outcome depends on the problem. But the aim is always the same: less friction, more clarity, and something useful you can carry forward yourself.</p>
+      </div>
+    </div>
     <div class="trio">
       <div class="card"><p class="n">01</p><h3>A grounded starting point</h3><p>We begin by getting present in our bodies. Then we sort out what matters, what’s in the way, and which next move is worth your time.</p></div>
       <div class="card"><p class="n">02</p><h3>A workable solution</h3><p>When the scope calls for it, we set up an AI tool or workflow, build something, or make a practical plan together.</p></div>
