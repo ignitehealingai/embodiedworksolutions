@@ -266,6 +266,9 @@
   .res-group + .res-list, .res-note + .res-list { margin-top: 1.1rem; }
   @media (max-width: 900px) { .cred-list, .res-list { grid-template-columns: 1fr; } }
 
+  .final p.messy, .photo-head p.messy { font-family: var(--serif); font-style: italic; font-size: clamp(1.5rem, 2.6vw, 1.9rem); color: var(--honey); margin-top: 1.25rem; }
+  .final .wrap > p + p { margin-top: .9rem; }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -320,7 +323,7 @@
 <section class="page-body" id="how">
   <div class="wrap">
     <div class="steps">
-      <div class="step has-photo"><img src="assets/photos/q1-problem.webp" alt="A tightly closed pink magnolia bud, holding everything in" loading="lazy" width="600" height="400" /><p class="label">01 / TALK</p><h3>Tell me what’s happening.</h3><p>We meet on Zoom for a free 20-minute conversation. You can bring an AI question, an idea you want to grow, a worry, or simple curiosity.</p></div>
+      <div class="step has-photo"><img src="assets/photos/q1-problem.webp" alt="A tightly closed pink magnolia bud, holding everything in" loading="lazy" width="600" height="400" /><p class="label">01 / TALK</p><h3>Tell me what’s happening.</h3><p>We meet on Zoom for a free 20-minute conversation. You can bring an AI question, a frustrating task, a messy process, an idea, or just the feeling that there has to be an easier way.</p></div>
       <div class="step has-photo"><img src="assets/photos/q2-happen.webp" alt="The magnolia bud loosening, pink petals beginning to part" loading="lazy" width="600" height="400" /><p class="label">02 / FIND THE FIT</p><h3>Choose a first move.</h3><p>I’ll be direct about whether I can help. If it makes sense, we’ll agree on a Finding the Start Button session, a small project, or a longer partnership.</p></div>
       <div class="step has-photo"><img src="assets/photos/q3-works.webp" alt="The magnolia unfolding, soft petals opening to the light" loading="lazy" width="600" height="400" /><p class="label">03 / BUILD</p><h3>Work on the actual thing.</h3><p>We try things on your real work, notice what AI gets right and wrong, and build something useful. Your needs—not the newest tool—shape the approach.</p></div>
       <div class="step has-photo"><img src="assets/photos/q4-people.webp" alt="The magnolia in full bloom, a new bud already forming beside it" loading="lazy" width="600" height="400" /><p class="label">04 / HANDOFF</p><h3>Make it yours.</h3><p>You leave understanding what we built, how to check it, and how to keep going on your own. No unnecessary complexity—and no dependence on me or on AI.</p></div>
@@ -349,7 +352,7 @@
     <h2>Just enough support for what you need.</h2>
     <p class="lede">You might need help with one specific problem or someone alongside you for a longer project. We’ll decide that after we understand what you’re working on.</p>
     <div class="trio">
-      <div class="card start"><span class="tag">Your first session</span><h3>Finding the Start Button.</h3><p class="price">$199</p><p>Bring your AI question or the idea that feels too tangled to start. We’ll try it on your real work, and you’ll leave with a clear next step—plus what to use, what to skip, and what to keep to yourself.</p></div>
+      <div class="card start"><span class="tag">Your first session</span><h3>Finding the Start Button.</h3><p class="price">$199</p><p>Bring the task, process, question, or idea that feels too tangled to start. We’ll try it on your real work, and you’ll leave with a clear next step—plus what to use, what to skip, and what to keep to yourself.</p></div>
       <div class="card"><span class="tag">Build together</span><h3>A small, useful project.</h3><p>For setting up an AI-supported workflow, building a simple tool or website, or learning a tool by using it.</p></div>
       <div class="card"><span class="tag">Ongoing partnership</span><h3>Support as things evolve.</h3><p>For bigger builds, team adoption, or continuing support as AI—and your needs—keep changing.</p></div>
     </div>
@@ -376,9 +379,9 @@
     <details><summary>I’m skeptical of AI. Is this for me?</summary><p>Yes. Especially you. The future needs more than people who adopt AI—it needs accountability. The people who feel what’s wrong before they can name it are exactly who should be in the room.</p></details>
     <p class="read-more">I wrote more about all of this in <a href="https://cracksandseeds.substack.com/p/cracks-and-seeds-23-before-you-decide" target="_blank" rel="noopener">Before You Decide You’re Against AI</a>.</p>
     <h3 class="group">Working together</h3>
-    <details><summary>What if I don’t even know what I need?</summary><p>That’s completely fine. Tell me what you’re curious about, worried about, or trying to build. We can figure out the shape of the problem together.</p></details>
+    <details><summary>What if I don’t even know what I need?</summary><p>That’s completely fine. Tell me what you’re trying to do, what isn’t working, or where you’re getting stuck. We can figure out the shape of the problem together.</p></details>
     <details><summary>Do I need to prepare for our first call?</summary><p>No presentation or technical explanation required. You can bring a specific question or just start talking about what’s going on.</p></details>
-    <details><summary>What’s the difference between the free call and Finding the Start Button?</summary><p>The free 20 minutes is for seeing whether we’re a good fit. Finding the Start Button is where the work starts: we dig into your question or idea, try it on your real work, and you leave with a clear next step.</p></details>
+    <details><summary>What’s the difference between the free call and Finding the Start Button?</summary><p>The free 20 minutes is for seeing whether we’re a good fit. Finding the Start Button is where the work starts: we dig into whatever’s tangled, try things on your real work, and you leave with a clear next step.</p></details>
     <details><summary>Do I need to be local?</summary><p>No. Everything happens online over Zoom, wherever you are.</p></details>
     <details><summary>How do payment and scheduling work?</summary><p>The first 20-minute Zoom conversation is free. Finding the Start Button is a $199 session. If there’s more to build after that, I’ll quote it up front, and nothing starts until you agree. Invoices are handled through Wave.</p></details>
   </div>
@@ -411,8 +414,10 @@
 <section class="final" id="talk">
   <div class="wrap narrow">
     <p class="eyebrow">The next step is small</p>
-    <h2>Bring me your AI question—or your idea.</h2>
-    <p>You don’t need the right terminology, a polished idea, or to have made up your mind about AI. We’ll start with a conversation and see what makes sense from there.</p>
+    <h2>You don’t need to know what to ask.</h2>
+    <p>Maybe you have an AI question. Maybe you have a frustrating task, a messy process, or something you keep thinking there has to be an easier way to do. Bring me that.</p>
+    <p>You don’t need to know which tool you need—or whether AI is even the right solution. Tell me what you’re trying to do, what isn’t working, or where you’re getting stuck. We’ll figure out the next step together.</p>
+    <p class="messy">Bring me the messy middle.</p>
     <a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation" class="btn light">Let’s figure it out together <span class="arrow">↗</span></a>
     <ul class="checks"><li>Free 20 minutes</li><li>Zoom</li><li>No commitment</li></ul>
   </div>

@@ -275,6 +275,9 @@
   .res-list a { color: var(--forest); font-weight: 700; }
   @media (max-width: 900px) { .creds-split, .res-list { grid-template-columns: 1fr; gap: 1.5rem; } }
 
+  .final p.messy, .photo-head p.messy { font-family: var(--serif); font-style: italic; font-size: clamp(1.5rem, 2.6vw, 1.9rem); color: var(--honey); margin-top: 1.25rem; }
+  .final .wrap > p + p { margin-top: .9rem; }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -407,8 +410,10 @@
 <section class="final" id="talk">
   <div class="wrap narrow">
     <p class="eyebrow">The next step is small</p>
-    <h2>Bring me your AI question—or your idea.</h2>
-    <p>You don’t need the right terminology, a polished idea, or to have made up your mind about AI. We’ll start with a conversation and see what makes sense from there.</p>
+    <h2>You don’t need to know what to ask.</h2>
+    <p>Maybe you have an AI question. Maybe you have a frustrating task, a messy process, or something you keep thinking there has to be an easier way to do. Bring me that.</p>
+    <p>You don’t need to know which tool you need—or whether AI is even the right solution. Tell me what you’re trying to do, what isn’t working, or where you’re getting stuck. We’ll figure out the next step together.</p>
+    <p class="messy">Bring me the messy middle.</p>
     <a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation" class="btn light">Let’s figure it out together <span class="arrow">↗</span></a>
     <ul class="checks"><li>Free 20 minutes</li><li>Zoom</li><li>No commitment</li></ul>
   </div>
