@@ -261,6 +261,9 @@
   .res-list { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 2.5rem; }
   .res-list li { border-left: 2px solid var(--honey); padding: .2rem 0 .2rem 1rem; color: var(--text-mid); }
   .res-list a { color: var(--forest); font-weight: 700; }
+  .res-group { font-family: 'Lato', sans-serif; font-size: .85rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: var(--terracotta); margin: 2.5rem 0 0; }
+  .res-note { color: var(--text-mid); font-style: italic; margin: .4rem 0 0; }
+  .res-group + .res-list, .res-note + .res-list { margin-top: 1.1rem; }
   @media (max-width: 900px) { .cred-list, .res-list { grid-template-columns: 1fr; } }
 
   /* FOOTER */
@@ -388,13 +391,19 @@
     <p class="eyebrow">Prefer to learn on your own?</p>
     <h2>Free places to start.</h2>
     <p class="lede">Not everyone wants a person beside them, and that’s okay. These are free, and they’re good.</p>
+    <h3 class="res-group">Independent &amp; responsible AI</h3>
     <ul class="res-list">
       <li><a href="https://www.elementsofai.com/" target="_blank" rel="noopener">Elements of AI</a> — University of Helsinki. What AI is and isn’t, with no math or coding.</li>
-      <li><a href="https://www.anthropic.com/ai-fluency" target="_blank" rel="noopener">AI Fluency: Framework &amp; Foundations</a> — Anthropic. Working with AI effectively and ethically, about 3–4 hours.</li>
-      <li><a href="https://academy.openai.com/" target="_blank" rel="noopener">OpenAI Academy</a> — Courses and videos for getting started with ChatGPT.</li>
-      <li><a href="https://www.microsoft.com/microsoft-365/copilot-learning-center" target="_blank" rel="noopener">Copilot Learning Center</a> — Microsoft. Quick ways to start with Copilot, plus free live help.</li>
-      <li><a href="https://www.humanetech.com/" target="_blank" rel="noopener">Center for Humane Technology</a> — For the bigger questions about AI and what it’s doing to us.</li>
+      <li><a href="https://www.humanetech.com/" target="_blank" rel="noopener">Center for Humane Technology</a> — Nonprofit. The bigger questions about AI and what it’s doing to us.</li>
+      <li><a href="https://aiforgood.itu.int/" target="_blank" rel="noopener">AI for Good</a> — United Nations (ITU). Free talks and content on using AI to serve people and the planet.</li>
       <li><a href="https://cracksandseeds.substack.com/" target="_blank" rel="noopener">Cracks &amp; Seeds</a> — My own writing on staying human with AI.</li>
+    </ul>
+    <h3 class="res-group">From the companies that make the tools</h3>
+    <p class="res-note">Good beginner courses—just know they also teach their own products.</p>
+    <ul class="res-list">
+      <li><a href="https://www.anthropic.com/ai-fluency" target="_blank" rel="noopener">AI Fluency: Framework &amp; Foundations</a> — Anthropic (Claude). Working with AI effectively and ethically, about 3–4 hours.</li>
+      <li><a href="https://academy.openai.com/" target="_blank" rel="noopener">OpenAI Academy</a> — OpenAI (ChatGPT). Courses and videos for getting started.</li>
+      <li><a href="https://www.microsoft.com/microsoft-365/copilot-learning-center" target="_blank" rel="noopener">Copilot Learning Center</a> — Microsoft. Quick ways to start with Copilot, plus free live help.</li>
     </ul>
   </div>
 </section>
