@@ -307,6 +307,16 @@
   .final.compact h2 { font-size: clamp(1.9rem, 3.6vw, 2.6rem); margin-bottom: .6rem; }
   .final.compact p.messy { margin: 0 auto 1.5rem; text-align: center; max-width: none; }
 
+  .stories { background: var(--sand); }
+  .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+  .story { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 1.8rem 1.9rem; }
+  .story h3 { font-size: 1.5rem; margin-bottom: .6rem; }
+  .story p { color: var(--text-mid); }
+  .story a { color: var(--forest); font-weight: 700; }
+  .story .foryou { margin: 1rem 0 0; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--forest); }
+  .story .foryou span { display: block; font-size: .75rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--terracotta); margin-bottom: .3rem; }
+  @media (max-width: 900px) { .story-grid { grid-template-columns: 1fr; } }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -366,6 +376,20 @@
       <h2>AI is showing up in everything. <em>You still get to decide.</em></h2>
       <p class="lede">I’m here to keep a human in the process—you, and me—and to bridge the gap for people who want to get started but don’t know how. Not with blind trust. With your eyes open and your values leading.</p>
       <p class="pull">AI can be part of the work. Judgment, consent, and care stay human.</p>
+    </div>
+  </div>
+</section>
+
+<section class="stories">
+  <div class="wrap">
+    <p class="eyebrow">How I use it in my own life</p>
+    <h2>Real examples, not promises.</h2>
+    <p class="lede">I don’t just teach AI. I use it every day, in my work and at home. Here’s what that looks like—and what it could look like for you.</p>
+    <div class="story-grid">
+      <div class="story"><h3>Learning new instruments</h3><p>When I started learning new instruments, AI became a patient practice partner. It explained what I didn’t understand, as many times as I needed, and helped me plan practice around the time I actually had.</p><p class="foryou"><span>For you</span>Learning anything new—a language, a craft, a skill for work—with a guide that never runs out of patience.</p></div>
+      <div class="story"><h3>Tools for my kids’ schoolwork</h3><p>I’ve built simple, custom tools to help my kids with schoolwork, including a math practice app made for how one of my kids actually learns. I wrote about it on <a href="https://cracksandseeds.substack.com/" target="_blank" rel="noopener">Cracks &amp; Seeds</a>.</p><p class="foryou"><span>For you</span>A tool shaped around one person’s needs, instead of making them fit a generic app.</p></div>
+      <div class="story"><h3>My own habit-tracking app</h3><p>I built my own app to track habits I’m changing, designed around how my brain and body actually work.</p><p class="foryou"><span>For you</span>A tracker, checklist, or small tool that fits you—instead of bending yourself to fit an app.</p></div>
+      <div class="story"><h3>Getting unstuck in a brainstorm</h3><p>When I’m stuck, I use AI as a thinking partner. I talk through the tangle, ask it to reflect back what it hears, and push on ideas I’m not sure about. The ideas stay mine; it helps me see them.</p><p class="foryou"><span>For you</span>Getting past the blank page on a plan, a project, or a big decision.</p></div>
     </div>
   </div>
 </section>
