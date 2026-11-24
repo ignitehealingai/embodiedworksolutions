@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Using AI · Embodied Work Solutions</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Embodied Work Solutions" />
+  <meta property="og:title" content="Embodied Work Solutions · From idea to solution" />
+  <meta property="og:description" content="What have you been putting off because you don’t know where to start? I’ll help you turn that vision into concrete steps." />
+  <meta property="og:image" content="http://embodiedworksolutions.com/assets/share-forest-2.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Embodied Work Solutions — From idea to solution, over a sunlit green forest" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="http://embodiedworksolutions.com/assets/share-forest-2.jpg" />
+  <meta name="description" content="How I use AI, why I teach it, and how to use it on your own terms—plus honest answers to the real concerns and free places to start." />
+<link rel="icon" type="image/webp" href="assets/leaf.webp" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --forest: #0d4a38; --forest-dark: #083326; --forest-mid: #1a6b52;
+    --forest-light: #e6f0ec; --forest-pale: #f4f8f6;
+    --terracotta: #b85c2c; --terracotta-light: #d4773e; --honey: #e8b44b;
+    --sand: #f8f1e2; --warm-white: #faf9f7; --off-white: #f2f0eb;
+    --text-dark: #1c2b27; --text-mid: #3a4f47; --text-muted: #5f766d;
+    --border: #c8d8d2; --rule: #dde8e4;
+    --serif: 'Cormorant Garamond', Georgia, serif; --sans: 'Lato', system-ui, sans-serif;
+  }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  body { font-family: var(--sans); color: var(--text-dark); background: var(--warm-white); line-height: 1.7; font-size: 17px; }
+  a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--terracotta-light); outline-offset: 3px; }
+  img { display: block; max-width: 100%; height: auto; }
+  .skip { position: absolute; left: -9999px; top: 0; background: var(--forest); color: #fff; padding: .5rem 1rem; z-index: 200; }
+  .skip:focus { left: 1rem; top: .5rem; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
+  .narrow { max-width: 760px; }
+  section { padding: 6rem 0; }
+  .eyebrow { font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 1rem; font-weight: 700; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 500; color: var(--forest); line-height: 1.15; }
+  h2 { font-size: clamp(2.1rem, 4.4vw, 3.2rem); margin-bottom: 1.25rem; }
+  h3 { font-size: 1.55rem; line-height: 1.25; margin-bottom: .6rem; }
+  p.lede { font-size: 1.12rem; color: var(--text-mid); max-width: 680px; }
+  p + p { margin-top: 1rem; }
+  .muted { color: var(--text-muted); }
+
+  .btn { display: inline-flex; align-items: center; gap: .55rem; background: var(--forest); color: #fff; text-decoration: none; padding: .95rem 1.7rem; font-size: 14px; letter-spacing: .06em; font-weight: 700; border-radius: 999px; transition: background .2s; }
+  .btn:hover { background: var(--forest-mid); }
+  .btn.warm { background: var(--terracotta); }
+  .btn.warm:hover { background: var(--terracotta-light); }
+  .btn.ghost { background: transparent; color: var(--forest); border: 1.5px solid var(--forest); }
+  .btn.ghost:hover { background: var(--forest-light); }
+  .btn.light { background: #fff; color: var(--forest-dark); }
+  .btn.light:hover { background: var(--sand); }
+  .arrow { font-family: var(--sans); }
+  .micro { font-size: 13px; color: var(--text-muted); letter-spacing: .03em; margin-top: 1.1rem; }
+  .micro span + span::before { content: "·"; margin: 0 .6rem; color: var(--terracotta-light); }
+
+  /* NAV */
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(250,249,247,.95); backdrop-filter: blur(6px); border-bottom: 1px solid var(--rule); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--forest); font-family: var(--serif); font-size: 1.3rem; line-height: 1.05; font-weight: 600; }
+  .brand img { height: 30px; width: auto; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  .nav-links a { color: var(--text-mid); text-decoration: none; font-size: 14px; }
+  .nav-links a:hover { color: var(--forest); }
+  .nav-links .btn { color: #fff; padding: .6rem 1.2rem; font-size: 13px; }
+
+  /* HERO */
+  .hero { padding: 7rem 0 6rem; background: var(--sand); position: relative; overflow: hidden; }
+  .hero::after { content: ""; position: absolute; right: -120px; top: -80px; width: 460px; height: 460px; border-radius: 50%; background: radial-gradient(circle, rgba(232,180,75,.22), rgba(232,180,75,0) 70%); pointer-events: none; }
+  .hero h1 { font-size: clamp(2.8rem, 6.4vw, 4.8rem); max-width: 820px; margin-bottom: 1.5rem; }
+  .hero h1 em { color: var(--terracotta); }
+  .hero p.lede { font-size: 1.2rem; margin-bottom: 2.25rem; }
+  .hero .actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  /* MESSY MIDDLE */
+  .quotes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin: 2.75rem 0 2rem; }
+  .q { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 1.6rem 1.75rem; display: flex; gap: 1.25rem; align-items: baseline; }
+  .q .n { font-family: var(--serif); font-size: 1.6rem; color: var(--terracotta-light); }
+  .q p { font-family: var(--serif); font-size: 1.45rem; color: var(--forest); line-height: 1.3; font-style: italic; }
+  .bridge { font-family: var(--serif); font-size: 1.4rem; color: var(--forest); }
+  .bridge a { color: var(--terracotta); text-decoration: none; }
+  .pills { display: flex; flex-wrap: wrap; gap: .6rem; list-style: none; margin-top: 1.75rem; }
+  .pills li { font-size: 13px; color: var(--forest); background: var(--forest-light); padding: .45rem 1rem; border-radius: 999px; }
+
+  /* SOUND FAMILIAR */
+  .familiar { background: var(--forest-pale); }
+  .split { display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: start; }
+  .split .photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 16px; }
+  .turn { font-family: var(--serif); font-size: 1.5rem; color: var(--forest); font-style: italic; margin-top: 1.5rem; }
+  .signs { list-style: none; margin-top: 2.25rem; display: grid; gap: 1.1rem; }
+  .signs li { padding-left: 1.4rem; border-left: 2px solid var(--terracotta-light); color: var(--text-mid); }
+  .signs strong { color: var(--forest); }
+
+  /* HELP AREAS */
+  .areas { display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem; margin-top: 3rem; }
+  .area { background: #fff; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+  .area img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+  .area .body { padding: 2rem; }
+  .tag { display: inline-block; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--terracotta); font-weight: 700; margin-bottom: .75rem; }
+  .area ul { list-style: none; margin-top: 1.25rem; border-top: 1px solid var(--rule); }
+  .area li { padding: .7rem 0 .7rem 1.6rem; border-bottom: 1px solid var(--rule); position: relative; color: var(--text-mid); font-size: .97rem; }
+  .area li::before { content: "→"; position: absolute; left: 0; color: var(--terracotta-light); }
+  .note { margin-top: 2rem; font-family: var(--serif); font-size: 1.3rem; color: var(--forest); text-align: center; }
+
+  /* NUMBERED TRIO / STEPS */
+  .support { background: var(--off-white); }
+  .trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  .card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 2rem 1.75rem; }
+  .card .n { font-family: var(--serif); font-size: 2.6rem; line-height: 1; color: var(--terracotta-light); opacity: .7; margin-bottom: 1rem; }
+  .card p { color: var(--text-mid); font-size: .97rem; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin: 3rem 0 2.5rem; }
+  .step { border-top: 2px solid var(--forest); padding-top: 1.25rem; }
+  .step .label { font-size: 11px; letter-spacing: .18em; font-weight: 700; color: var(--terracotta); margin-bottom: .6rem; }
+  .step h3 { font-size: 1.4rem; }
+  .step p { color: var(--text-mid); font-size: .95rem; }
+
+  /* WAYS */
+  .ways { background: var(--forest-pale); }
+  .ways .card h3 { font-size: 1.45rem; }
+  .ways .card .tag { margin-bottom: .4rem; }
+  .fineprint { margin-top: 2rem; color: var(--text-muted); font-size: .95rem; max-width: 720px; }
+
+  /* REALLY FOR */
+  .reallyfor { background: var(--forest); color: #fff; }
+  .reallyfor .eyebrow { color: var(--honey); }
+  .reallyfor h2 { color: #fff; }
+  .reallyfor p { color: rgba(255,255,255,.82); }
+  .reallyfor .split { align-items: center; }
+  .reallyfor .photo img { aspect-ratio: 4 / 3; }
+  .pull { font-family: var(--serif); font-style: italic; font-size: clamp(1.6rem, 3vw, 2.1rem); line-height: 1.3; color: #fff; border-left: 3px solid var(--honey); padding-left: 1.25rem; margin-top: 2rem; }
+  .caption { margin-top: .9rem; font-size: 13px; color: rgba(255,255,255,.65); letter-spacing: .04em; }
+
+  /* ABOUT */
+  .about .split { grid-template-columns: 1fr 1.25fr; align-items: center; }
+  .about .photo img { width: min(100%, 380px); aspect-ratio: 1 / 1; object-fit: cover; border-radius: 50%; margin: 0 auto; }
+  .about .skills { margin-top: 1.75rem; }
+
+  /* APPROACH */
+  .approach { background: var(--sand); text-align: center; }
+  .approach h2 { font-size: clamp(2.4rem, 5vw, 3.6rem); }
+  .approach h2 span { display: block; color: var(--terracotta); font-style: italic; }
+  .approach p { color: var(--text-mid); max-width: 680px; margin: 0 auto; }
+
+  /* FAQ */
+  .faq details { border-bottom: 1px solid var(--rule); padding: 1.25rem 0; }
+  .faq details:first-of-type { border-top: 1px solid var(--rule); margin-top: 2rem; }
+  .faq summary { cursor: pointer; list-style: none; font-family: var(--serif); font-size: 1.45rem; color: var(--forest); display: flex; justify-content: space-between; gap: 1rem; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; color: var(--terracotta); font-family: var(--sans); font-size: 1.4rem; line-height: 1; }
+  .faq details[open] summary::after { content: "–"; }
+  .faq details p { color: var(--text-mid); margin-top: .75rem; max-width: 680px; }
+
+  /* FINAL CTA */
+  .final { background: var(--forest-dark); color: #fff; text-align: center; padding: 6.5rem 0; }
+  .final .eyebrow { color: var(--honey); }
+  .final h2 { color: #fff; font-size: clamp(2.2rem, 5vw, 3.4rem); }
+  .final p { color: rgba(255,255,255,.78); max-width: 620px; margin: 0 auto 2.25rem; }
+  .checks { display: flex; justify-content: center; flex-wrap: wrap; gap: .5rem 1.75rem; list-style: none; margin-top: 1.75rem; color: rgba(255,255,255,.8); font-size: 14px; }
+  .checks li::before { content: "✓"; color: var(--honey); margin-right: .45rem; }
+
+  .page-top { background: var(--sand); padding-top: 5.5rem; }
+  .page-top h1 { font-size: clamp(2.6rem, 5.6vw, 4rem); margin-bottom: 1.25rem; }
+  .nav-links a[aria-current="page"]:not(.btn) { color: var(--forest); border-bottom: 2px solid var(--terracotta); padding-bottom: 3px; }
+  .contact-extra { text-align: center; }
+  .contact-extra p { color: var(--text-mid); }
+  .contact-extra a { color: var(--forest); font-weight: 700; }
+
+  /* BLEND: photos + feelings */
+  .band { width: 100%; height: clamp(150px, 26vw, 300px); overflow: hidden; background: var(--forest-dark); }
+  .band img { width: 100%; height: 100%; object-fit: cover; }
+  .feel-intro { text-align: center; max-width: 720px; margin: 0 auto; }
+  .feel-intro .pull { margin-left: auto; margin-right: auto; }
+  .picture-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 3rem 0 2rem; }
+  .vignette { background: #fff; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+  .vignette img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .vignette .vt { padding: 1.4rem 1.6rem 1.75rem; }
+  .vignette h3.feel { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; font-size: 2rem; line-height: 1; color: var(--terracotta); margin-bottom: .6rem; }
+  .vignette p { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; line-height: 1.4; color: var(--forest); }
+  .feel-close { text-align: center; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.5rem; color: var(--forest); }
+  .step img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 10px; margin-bottom: 1rem; }
+  .step.has-photo { border-top: 0; padding-top: 0; }
+  .step.has-photo .label { border-top: 2px solid var(--forest); padding-top: 1rem; }
+  .approach .mark { width: min(100%, 360px); aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; margin: 0 auto 2rem; }
+  @media (max-width: 900px) { .picture-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .picture-grid { grid-template-columns: 1fr; } }
+
+  .ai-terms .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; margin-top: 2.5rem; }
+  .ai-terms h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+  .ai-terms ul { list-style: none; padding: 0; }
+  .ai-terms li { border-left: 2px solid var(--terracotta); padding: .15rem 0 .15rem 1rem; margin-bottom: 1rem; color: var(--text-mid); }
+  .ai-terms li strong { color: var(--forest); }
+  .ai-terms .honest { margin-top: 2.5rem; padding: 1.75rem 2rem; background: var(--sand); border-radius: 14px; }
+  .ai-terms .honest p { margin: 0; }
+  .ai-terms a { color: var(--forest); font-weight: 700; }
+  @media (max-width: 900px) { .ai-terms .cols { grid-template-columns: 1fr; gap: 1.5rem; } }
+
+  /* PHOTO HEADERS (green overlay) */
+  .photo-head { background-size: cover; background-position: center; color: #fff; text-align: center; padding: 6.5rem 0 5.5rem; }
+  .photo-head .wrap { max-width: 820px; }
+  .photo-head .eyebrow { color: var(--honey); }
+  .photo-head h1 { color: #fff; font-size: clamp(2.6rem, 5.6vw, 4rem); margin-bottom: 1.25rem; }
+  .photo-head h1 em { color: var(--honey); }
+  .photo-head p.lede { color: rgba(255,255,255,.88); margin: 0 auto; }
+  .photo-head .btn { margin-top: 2rem; }
+  .photo-head .checks { margin-top: 1.25rem; }
+  .hero.has-photo { background-size: cover; background-position: center; }
+  .hero.has-photo::after { display: none; }
+  .hero.has-photo h1 { color: #fff; }
+  .hero.has-photo h1 em { color: var(--honey); }
+  .hero.has-photo .eyebrow { color: var(--honey); }
+  .hero.has-photo p.lede { color: rgba(255,255,255,.9); }
+  .hero.has-photo .btn.ghost { color: #fff; border-color: rgba(255,255,255,.8); }
+  .hero.has-photo .btn.ghost:hover { background: rgba(255,255,255,.12); }
+  .hero.has-photo .micro { color: rgba(255,255,255,.78); }
+  .hero.has-photo .micro span + span::before { color: var(--honey); }
+  .page-body { background: var(--sand); padding-top: 4.5rem; }
+  .areas.three { grid-template-columns: repeat(3, 1fr); }
+  .org-note { margin-top: 2.5rem; padding: 1.6rem 2rem; background: #fff; border: 1px solid var(--border); border-radius: 14px; color: var(--text-mid); }
+  .org-note strong { color: var(--forest); }
+  .welcome { margin-top: 2rem; padding: 1.25rem 1.5rem; background: var(--sand); border-radius: 12px; color: var(--text-mid); }
+  .welcome strong { color: var(--forest); }
+  .card.start { border: 2px solid var(--terracotta); }
+  .card .price { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--terracotta); line-height: 1; margin: .2rem 0 .8rem; }
+  @media (max-width: 1000px) { .areas.three { grid-template-columns: 1fr; } }
+
+  /* HUMAN IN AI */
+  .human { background: var(--warm-white); }
+  .human .split { grid-template-columns: .8fr 1.2fr; align-items: center; }
+  .human .portrait img { width: min(100%, 360px); aspect-ratio: 1 / 1; object-fit: cover; border-radius: 50%; margin: 0 auto; }
+  .human h2 em { color: var(--terracotta); }
+  .human ul.terms { list-style: none; padding: 0; margin: 1.5rem 0; }
+  .human ul.terms li { border-left: 2px solid var(--terracotta); padding: .1rem 0 .1rem 1rem; margin-bottom: .8rem; color: var(--text-mid); }
+  .human .pull { margin: 1.25rem 0; color: var(--forest); border-left-color: var(--terracotta); }
+  .human a.more { color: var(--forest); font-weight: 700; }
+  .first-ai { background: var(--warm-white); }
+  .first-ai ol { list-style: none; padding: 0; counter-reset: f; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 2.5rem; }
+  .first-ai li { counter-increment: f; background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem 1.6rem 1.5rem 4.2rem; position: relative; color: var(--text-mid); }
+  .first-ai li::before { content: counter(f, decimal-leading-zero); position: absolute; left: 1.4rem; top: 1.3rem; font-family: var(--serif); font-size: 1.6rem; color: var(--terracotta-light); }
+  .first-ai li strong { display: block; color: var(--forest); font-family: var(--serif); font-size: 1.3rem; font-weight: 500; margin-bottom: .3rem; }
+  .faq h3.group { font-size: .85rem; letter-spacing: .16em; text-transform: uppercase; font-family: 'Lato', sans-serif; font-weight: 700; color: var(--terracotta); margin: 2.5rem 0 .5rem; }
+  .faq .read-more { margin-top: 1.25rem; color: var(--text-mid); }
+  .faq .read-more a { color: var(--forest); font-weight: 700; }
+  @media (max-width: 900px) { .human .split { grid-template-columns: 1fr; } .first-ai ol { grid-template-columns: 1fr; } }
+
+  /* ALIGN PASS */
+  .newgoogle { background: var(--warm-white); }
+  .newgoogle .split { grid-template-columns: 1.1fr .9fr; gap: 4rem; align-items: start; }
+  .newgoogle ul.good { list-style: none; padding: 0; margin: 0; }
+  .newgoogle ul.good li { border-left: 2px solid var(--honey); padding: .15rem 0 .15rem 1rem; margin-bottom: .9rem; color: var(--text-mid); }
+  .newgoogle h3 { font-size: 1.4rem; margin-bottom: 1rem; }
+  .paths { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
+  .path { background: var(--sand); border-radius: 14px; padding: 2rem 2rem 2.2rem; }
+  .path .tag { display: block; font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: var(--terracotta); margin-bottom: .6rem; }
+  .path h3 { font-size: 1.6rem; margin-bottom: .6rem; }
+  .path p { color: var(--text-mid); margin: 0; }
+  .skeptic-note { margin-top: 1.5rem; text-align: center; color: var(--text-mid); font-style: italic; font-family: var(--serif); font-size: 1.3rem; }
+  .creds { background: var(--warm-white); }
+  .creds .cols3 { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 3rem; margin-top: 2.5rem; }
+  .creds h3 { font-size: 1.35rem; margin-bottom: 1rem; }
+  .creds ul { list-style: none; padding: 0; margin: 0; }
+  .creds li { padding: .55rem 0; border-bottom: 1px solid var(--border); color: var(--text-mid); }
+  .creds li strong { color: var(--forest); display: block; }
+  .creds .role { color: var(--forest); font-weight: 700; margin-bottom: .2rem; }
+  .creds .when { font-size: .9rem; color: var(--text-mid); margin-bottom: .9rem; }
+  @media (max-width: 900px) { .newgoogle .split, .paths, .creds .cols3 { grid-template-columns: 1fr; gap: 1.5rem; } }
+
+  /* COMPACT CREDS + RESOURCES */
+  .creds2 { background: var(--warm-white); padding: 3.25rem 0; }
+  .creds2 h2 { margin-bottom: .75rem; }
+  .creds2 .lede { max-width: 760px; }
+  .creds-split { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; }
+  .cred-list { list-style: none; padding: 0; margin: 0; }
+  .cred-list li { padding: .4rem 0; border-bottom: 1px solid var(--border); color: var(--text-mid); font-size: .98rem; }
+  .cred-list li strong { color: var(--forest); }
+  .resources { background: var(--warm-white); }
+  .res-list { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 2.5rem; }
+  .res-list li { border-left: 2px solid var(--honey); padding: .2rem 0 .2rem 1rem; color: var(--text-mid); }
+  .res-list a { color: var(--forest); font-weight: 700; }
+  @media (max-width: 900px) { .creds-split, .res-list { grid-template-columns: 1fr; gap: 1.5rem; } }
+
+  .final p.messy, .photo-head p.messy { font-family: var(--serif); font-style: italic; font-size: clamp(1.5rem, 2.6vw, 1.9rem); color: var(--honey); margin-top: 1.25rem; }
+  .final .wrap > p + p { margin-top: .9rem; }
+
+  .different { background: var(--forest); color: #fff; }
+  .different .eyebrow { color: var(--honey); }
+  .different h2 { color: #fff; max-width: 820px; }
+  .different h2 em { color: var(--honey); }
+  .different p.lede { color: rgba(255,255,255,.88); max-width: 760px; }
+  .pillars { list-style: none; padding: 0; margin: 2.25rem 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .pillars li { border-left: 2px solid var(--honey); padding: .2rem 0 .2rem 1.1rem; color: rgba(255,255,255,.86); }
+  .pillars li strong { display: block; color: #fff; font-family: var(--serif); font-size: 1.4rem; font-weight: 500; margin-bottom: .3rem; }
+  .different a.more { display: inline-block; margin-top: 2rem; color: var(--honey); font-weight: 700; }
+  @media (max-width: 900px) { .pillars { grid-template-columns: 1fr; } }
+
+  .res-group { font-family: 'Lato', sans-serif; font-size: .85rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: var(--terracotta); margin: 2.5rem 0 0; }
+  .res-note { color: var(--text-mid); font-style: italic; margin: .4rem 0 0; }
+  .res-group + .res-list, .res-note + .res-list { margin-top: 1.1rem; }
+
+  /* FOOTER */
+  footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
+  .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
+  .tagline { font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: var(--honey); margin: .6rem 0 2rem; }
+  .foot-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; border-top: 1px solid rgba(255,255,255,.1); padding-top: 1.75rem; font-size: 14px; }
+  footer a { color: rgba(255,255,255,.85); text-decoration: none; }
+  footer a:hover { color: #fff; }
+  .foot-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
+  @media (max-width: 900px) {
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .split, .about .split { grid-template-columns: 1fr; gap: 2.5rem; }
+    .split .photo img { aspect-ratio: 16 / 10; }
+    .about .photo img { max-width: 280px; }
+  }
+  @media (max-width: 760px) {
+    section { padding: 4.5rem 0; }
+    .wrap { padding: 0 1.25rem; }
+    .nav-links li:not(:last-child) { display: none; }
+    .brand span { display: none; }
+    .quotes, .areas, .trio { grid-template-columns: 1fr; }
+    .hero { padding: 5rem 0 4.5rem; }
+  }
+  @media (max-width: 480px) { .steps { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="assets/leaf.webp" alt="" /><span>Embodied Work<br>Solutions</span></a>
+    <ul class="nav-links">
+      <li><a href="help.html">How I help</a></li>
+      <li><a href="how-it-works.html">How it works</a></li>
+      <li><a href="ai.html" aria-current="page">Using AI</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="btn">Let’s talk <span class="arrow">↗</span></a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+
+<header class="photo-head" style="background-image:linear-gradient(rgba(8,51,38,0.62),rgba(8,51,38,0.58)),url(assets/photos/ai.webp)">
+  <div class="wrap">
+    <p class="eyebrow">Using AI</p>
+    <h1>Keeping the human in AI.</h1>
+    <p class="lede">Teaching people to use AI is one of the two things I do. Here’s how I see it, how I use it, and how I teach it—plus honest answers to the hard questions.</p>
+  </div>
+</header>
+
+<section class="human">
+  <div class="wrap narrow">
+    <div>
+      <p class="eyebrow">How I see it</p>
+      <h2>AI is showing up in everything. <em>You still get to decide.</em></h2>
+      <p class="lede">I’m here to keep a human in the process—you, and me—and to bridge the gap for people who want to get started but don’t know how. Not with blind trust. With your eyes open and your values leading.</p>
+      <p class="pull">AI can be part of the work. Judgment, consent, and care stay human.</p>
+    </div>
+  </div>
+</section>
+
+<section class="newgoogle">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <p class="eyebrow">Why learn it</p>
+        <h2>AI is becoming the new Google.</h2>
+        <p class="lede">When Google was new, people had real fears about it—and some of them were right. Now “Did you google it?” is the first thing we ask when someone doesn’t know how to do something.</p>
+        <p class="muted">AI is moving the same way. It has real problems. It also has real benefits. You don’t have to love it to learn how it works—and learning how it works is how you get a say in it.</p>
+      </div>
+      <div>
+        <h3>What it’s actually good for, used well</h3>
+        <ul class="good">
+          <li>Getting past a blank page</li>
+          <li>Turning a messy pile of notes into a plan</li>
+          <li>Explaining something confusing in plain language—as many times as you need</li>
+          <li>Drafting the email you’ve been avoiding</li>
+          <li>Building a simple website, tool, or prototype faster than you thought possible</li>
+        </ul>
+      </div>
+    </div>
+    <p class="skeptic-note">Against it, or not sure? You’re still welcome. Skeptics ask the best questions.</p>
+  </div>
+</section>
+
+<section class="ai-terms">
+  <div class="wrap">
+    <p class="eyebrow">How I use it, and how I teach it</p>
+    <h2>Using AI on your own terms.</h2>
+    <p class="lede">I don’t teach AI as a magic fix. I teach it the way I approach any system: who does it serve, what does it ask of you, and what are you giving up to use it?</p>
+    <div class="cols">
+      <div>
+        <h3>Where that comes from</h3>
+        <ul>
+          <li><strong>Responsible AI training</strong> through the University of Michigan and IBM grounded me in the risks, ethics, and accountability questions around generative AI.</li>
+          <li><strong>Change leadership</strong> taught me that new tools don’t change anything on their own. People do—when they understand why, feel supported, and have room to learn.</li>
+          <li><strong>Clinical social work</strong> taught me informed consent, confidentiality, and boundaries.</li>
+          <li><strong>Years building healthcare websites</strong> taught me privacy and accessibility in practice, not just on paper.</li>
+          <li><strong>DEI work</strong> taught me to ask who a system leaves out, or harms.</li>
+          <li><strong>My writing</strong> at <a href="https://cracksandseeds.substack.com/" target="_blank" rel="noopener">Cracks &amp; Seeds</a> works through consent, trust, and dependence on AI, out loud.</li>
+          <li><strong>My own use.</strong> I’ve used AI every day at work for more than three years—Copilot, ChatGPT, Claude, Gemini, and others—for research, writing, planning, and building tools. I know what it’s like to catch it promising more than it can deliver.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What we’ll actually practice</h3>
+        <ul>
+          <li>What not to paste in, and why.</li>
+          <li>How to check the privacy settings in the tools you already use.</li>
+          <li>How to notice when you’re leaning on AI in a way that doesn’t serve you.</li>
+          <li>How to keep your own voice.</li>
+          <li>When a simpler tool is the better choice.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="honest"><p><strong>What I’m not:</strong> a security or legal expert. I’ll tell you when something is outside what I know. I read each tool’s own privacy pages before I teach it, because they change often. And when I’m unsure, I say so, and we look it up.</p></div>
+  </div>
+</section>
+
+<section class="faq" id="ai-questions">
+  <div class="wrap narrow">
+    <p class="eyebrow">The real concerns</p>
+    <h2>Questions people ask about AI.</h2>
+    <details><summary>Do I have to use AI?</summary><p>No. Keeping the human in AI includes deciding where it doesn’t belong. Sometimes the best answer is a simpler tool, or no tool at all. You’re always the one deciding.</p></details>
+    <details><summary>What happens to what I type into AI?</summary><p>With most commercial tools, what you type may be kept or used to train future models. So I won’t promise “safe.” What I will do: show you how to check what a tool keeps, help you decide what you’re willing to offer and what should stay yours, and point you to tools that run on your own computer when the work is tender or unfinished. And I always ask before putting your information into an AI tool. The question isn’t whether these tools watch us. It’s whether we’re awake while we use them.</p></details>
+    <details><summary>Can I trust what it tells me?</summary><p>Not blindly. AI can be wrong and sound completely sure, and it isn’t good at knowing when to stop. You’ll practice checking it, so the judgment about how much to trust it stays with you.</p></details>
+    <details><summary>What about bias, and everyone thinking the same way?</summary><p>Bias in AI isn’t a future problem, and it isn’t a glitch. It reflects whose stories got recorded and whose didn’t. We’ll practice noticing where a tool flattens or misses people, and pushing back when it does.</p><p>That risk is real. When one model answers millions of questions, it pulls toward the most common answer. The antidote isn’t refusing the tool. It’s noticing when you’re using it to confirm what you already think instead of to question it—and bringing your own judgment into the conversation, not handing it over.</p></details>
+    <details><summary>Will it make me worse at thinking or writing?</summary><p>It can, if you use it to avoid thinking instead of to sharpen it. We use it to support your judgment and keep your own voice in what you make.</p></details>
+    <details><summary>What about the climate cost, and jobs?</summary><p>It’s real, and if you’re paying attention to it, good. Using AI with care includes deciding where it’s worth the cost and where it isn’t. Opting out entirely doesn’t shrink the footprint; it removes your voice from the conversation about what it should be.</p><p>Some, yes—and not equally. I won’t smooth that over. What helps is learning the tools with intention and leaning into what only people can do: read a room, catch what the model missed, and make judgment calls that depend on the whole human context.</p></details>
+    <details><summary>I’m skeptical of AI. Is this for me?</summary><p>Yes. Especially you. The future needs more than people who adopt AI—it needs accountability. The people who feel what’s wrong before they can name it are exactly who should be in the room.</p></details>
+    <p class="read-more">I wrote more about all of this in <a href="https://cracksandseeds.substack.com/p/cracks-and-seeds-23-before-you-decide" target="_blank" rel="noopener">Before You Decide You’re Against AI</a>.</p>
+  </div>
+</section>
+
+<section class="resources" id="learn-on-your-own">
+  <div class="wrap">
+    <p class="eyebrow">Prefer to learn on your own?</p>
+    <h2>Free places to start.</h2>
+    <p class="lede">Not everyone wants a person beside them, and that’s okay. These are free, and they’re good.</p>
+    <h3 class="res-group">Independent &amp; responsible AI</h3>
+    <ul class="res-list">
+      <li><a href="https://www.elementsofai.com/" target="_blank" rel="noopener">Elements of AI</a> — University of Helsinki. What AI is and isn’t, with no math or coding.</li>
+      <li><a href="https://www.humanetech.com/" target="_blank" rel="noopener">Center for Humane Technology</a> — Nonprofit. The bigger questions about AI and what it’s doing to us.</li>
+      <li><a href="https://aiforgood.itu.int/" target="_blank" rel="noopener">AI for Good</a> — United Nations (ITU). Free talks and content on using AI to serve people and the planet.</li>
+      <li><a href="https://cracksandseeds.substack.com/" target="_blank" rel="noopener">Cracks &amp; Seeds</a> — My own writing on staying human with AI.</li>
+    </ul>
+    <h3 class="res-group">From the companies that make the tools</h3>
+    <p class="res-note">Good beginner courses—just know they also teach their own products.</p>
+    <ul class="res-list">
+      <li><a href="https://www.anthropic.com/ai-fluency" target="_blank" rel="noopener">AI Fluency: Framework &amp; Foundations</a> — Anthropic (Claude). Working with AI effectively and ethically, about 3–4 hours.</li>
+      <li><a href="https://academy.openai.com/" target="_blank" rel="noopener">OpenAI Academy</a> — OpenAI (ChatGPT). Courses and videos for getting started.</li>
+      <li><a href="https://www.microsoft.com/microsoft-365/copilot-learning-center" target="_blank" rel="noopener">Copilot Learning Center</a> — Microsoft. Quick ways to start with Copilot, plus free live help.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<section class="final" id="talk">
+  <div class="wrap narrow">
+    <p class="eyebrow">The next step is small</p>
+    <h2>You don’t need to know what to ask.</h2>
+    <p>Maybe it’s something you’ve wanted to do forever. Maybe it’s an AI question, a frustrating task, a messy process, or something you keep thinking there has to be an easier way to do. Bring me that.</p>
+    <p>You don’t need to know which tool you need—or whether AI is even the right solution. Tell me what you’re trying to do, what isn’t working, or where you’re getting stuck. We’ll figure out the next step together.</p>
+    <p class="messy">Bring me the messy middle.</p>
+    <a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation" class="btn light">Let’s figure it out together <span class="arrow">↗</span></a>
+    <ul class="checks"><li>Free 20 minutes</li><li>Zoom</li><li>No commitment</li></ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="wordmark">Embodied Work Solutions</p>
+    <p class="tagline">From idea to solution. Practical help, built around real people.</p>
+    <div class="foot-row">
+      <a href="mailto:connect@embodiedworksolutions.com">connect@embodiedworksolutions.com</a>
+      <div class="foot-links">
+        <a href="help.html">How I help</a><a href="how-it-works.html">How it works</a><a href="ai.html">Using AI</a><a href="about.html">About</a>
+        <a href="https://cracksandseeds.substack.com/" target="_blank" rel="noopener">Writing: Cracks &amp; Seeds</a>
+      </div>
+      <span>© 2026 Embodied Work Solutions · Regulation-Centered System Design™</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

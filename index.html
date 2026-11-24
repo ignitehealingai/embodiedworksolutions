@@ -306,6 +306,22 @@
   .different a.more { display: inline-block; margin-top: 2rem; color: var(--honey); font-weight: 700; }
   @media (max-width: 900px) { .pillars { grid-template-columns: 1fr; } }
 
+  .two-head { display: grid; grid-template-columns: 1fr 380px; gap: 3.5rem; align-items: center; }
+  .two-photo { margin: 0; }
+  .two-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 18px; }
+  .two-photo figcaption { font-size: .8rem; color: var(--text-muted); margin-top: .6rem; }
+  .two-photo figcaption a { color: inherit; }
+  @media (max-width: 900px) { .two-head { grid-template-columns: 1fr; gap: 1.5rem; } }
+
+  .different.soft { background: var(--sand); color: var(--text); }
+  .different.soft .eyebrow { color: var(--terracotta); }
+  .different.soft h2 { color: var(--forest); }
+  .different.soft p.lede { color: var(--text-mid); }
+  .different.soft p.lede strong { color: var(--forest); }
+  .different.soft .pillars li { border-left-color: var(--terracotta); color: var(--text-mid); }
+  .different.soft .pillars li strong { color: var(--forest); }
+  .different.soft a.more { color: var(--forest); }
+
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
   .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); color: #fff; line-height: 1; }
@@ -341,6 +357,7 @@
     <ul class="nav-links">
       <li><a href="help.html">How I help</a></li>
       <li><a href="how-it-works.html">How it works</a></li>
+      <li><a href="ai.html">Using AI</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="btn">Let’s talk <span class="arrow">↗</span></a></li>
     </ul>
@@ -364,8 +381,16 @@
 
 <section class="projects">
   <div class="wrap">
-    <p class="eyebrow">Two ways I help</p>
-    <h2>Move a project forward, or learn to use AI your way.</h2>
+    <div class="two-head">
+      <div>
+        <p class="eyebrow">Two ways I help</p>
+        <h2>Move a project forward, or learn to use AI your way.</h2>
+      </div>
+      <figure class="two-photo">
+        <img src="assets/photos/help-ageing-better.webp" alt="A woman with short white hair and a lanyard leans toward a colleague and points at a computer screen, explaining something as they look at it together" loading="lazy" width="1000" height="750" />
+        <figcaption>Photo by <a href="https://unsplash.com/@ageing_better?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Centre for Ageing Better</a> on <a href="https://unsplash.com/photos/a-man-pointing-at-a-woman-wkFRvw2lTAg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Unsplash</a></figcaption>
+      </figure>
+    </div>
     <div class="proj-grid two">
       <div class="proj">
         <span class="n">01 · Help with a project</span>
@@ -390,16 +415,15 @@
         </ul>
       </div>
     </div>
-    <div class="examples"><p>Projects we might take on</p><ul><li>Write your book</li><li>Start a side gig</li><li>Plan your next chapter after retirement</li><li>Make a meal plan</li><li>Coordinate care for an aging parent</li><li>Organize old family photos</li><li>Set up your personal knowledge system</li><li>Organize your ebooks</li></ul></div>
     <a class="more" href="help.html">See how I can help →</a>
   </div>
 </section>
 
-<section class="different">
+<section class="different soft">
   <div class="wrap">
     <p class="eyebrow">What makes this different</p>
     <h2>Embodiment meets systems.</h2>
-    <p class="lede"><strong style="color:#fff">External systems fail when they don’t align with our nervous systems.</strong> A planner, an app, or a workflow can look perfect on paper and still fall apart the moment you’re tired, stressed, or overwhelmed. That’s not a willpower problem. It’s a design problem.</p>
+    <p class="lede"><strong>External systems fail when they don’t align with our nervous systems.</strong> A planner, an app, or a workflow can look perfect on paper and still fall apart the moment you’re tired, stressed, or overwhelmed. That’s not a willpower problem. It’s a design problem.</p>
     <p class="lede">My approach, Regulation-Centered System Design™, combines embodiment with systems thinking, so the plans, tools, and habits we build work with your nervous system—not against it.</p>
     <ul class="pillars">
       <li><strong>Start in the body.</strong>Every session begins grounded, and we pay attention to body signals as we work.</li>
@@ -410,98 +434,12 @@
   </div>
 </section>
 
-<section class="human">
-  <div class="wrap split">
-    <figure class="portrait">
-      <img src="assets/photos/help-ageing-better.webp" alt="A woman with short white hair and a lanyard leans toward a colleague and points at a computer screen, explaining something as they look at it together" loading="lazy" width="1000" height="750" />
-      <figcaption>Photo by <a href="https://unsplash.com/@ageing_better?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Centre for Ageing Better</a> on <a href="https://unsplash.com/photos/a-man-pointing-at-a-woman-wkFRvw2lTAg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Unsplash</a></figcaption>
-    </figure>
-    <div>
-      <p class="eyebrow">Learning to use AI</p>
-      <h2>AI is showing up in everything. <em>You still get to decide.</em></h2>
-      <p class="lede">I’m here to keep a human in the process—you, and me—and to bridge the gap for people who want to get started but don’t know how. Not with blind trust. With your eyes open and your values leading.</p>
-      <p class="muted">For more than 20 years, I’ve been helping colleagues, friends, and family learn new technology—customized to them, and without shame.</p>
-      <ul class="terms">
-        <li>What’s worth trying, and what you can skip</li>
-        <li>What not to paste in, and how to check a tool’s privacy settings</li>
-        <li>How to keep your own voice—and notice when you’re leaning too hard</li>
-        <li>When a simpler, non-AI tool is the better choice</li>
-      </ul>
-      <p class="pull">AI can be part of the work. Judgment, consent, and care stay human.</p>
-      <a class="more" href="about.html">How I think about AI →</a>
-    </div>
-  </div>
-</section>
-
-<section class="newgoogle">
-  <div class="wrap">
-    <div class="split">
-      <div>
-        <p class="eyebrow">Why now</p>
-        <h2>AI is becoming the new Google.</h2>
-        <p class="lede">When Google was new, people had real fears about it—and some of them were right. Now “Did you google it?” is the first thing we ask when someone doesn’t know how to do something.</p>
-        <p class="muted">AI is moving the same way. It has real problems. It also has real benefits. You don’t have to love it to learn how it works—and learning how it works is how you get a say in it.</p>
-      </div>
-      <div>
-        <h3>What it’s actually good for, used well</h3>
-        <ul class="good">
-          <li>Getting past a blank page</li>
-          <li>Turning a messy pile of notes into a plan</li>
-          <li>Explaining something confusing in plain language—as many times as you need</li>
-          <li>Drafting the email you’ve been avoiding</li>
-          <li>Building a simple website, tool, or prototype faster than you thought possible</li>
-        </ul>
-      </div>
-    </div>
-    <p class="skeptic-note">Against it, or not sure? You’re still welcome. Skeptics ask the best questions.</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <p class="eyebrow">Bring me the messy middle</p>
-    <h2>Start with whatever’s tangled.</h2>
-    <div class="quotes">
-      <div class="q"><span class="n">01</span><p>“I know there has to be an easier way to do this.”</p></div>
-      <div class="q"><span class="n">02</span><p>“I have five tools and none of them are working together.”</p></div>
-      <div class="q"><span class="n">03</span><p>“Could AI do this for me?”</p></div>
-      <div class="q"><span class="n">04</span><p>“I’ve been meaning to start this for years.”</p></div>
-      <div class="q"><span class="n">05</span><p>“I’m worried about what happens to my information.”</p></div>
-      <div class="q"><span class="n">06</span><p>“I need help, and I don’t even know what to ask.”</p></div>
-    </div>
-    <p class="bridge">You bring the tangle. We’ll find the start button. <a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation">→</a></p>
-    <ul class="pills">
-      <li>Grounded first</li><li>Plain language</li><li>Your real work</li><li>Your pace</li><li>Tools you can actually use</li>
-    </ul>
-  </div>
-</section>
-
-<section class="familiar">
-  <div class="wrap split">
-    <div>
-      <p class="eyebrow">Sound familiar?</p>
-      <h2>You’re capable.<br />The pieces just aren’t connected yet.</h2>
-      <p class="lede">You’ve tried figuring it out yourself. You’ve watched the videos, downloaded the apps, maybe opened the chatbot. And the project is still sitting there.</p>
-      <p class="turn">It doesn’t have to stay that complicated.<br>We can start with the problem as it is.</p>
-      <ul class="signs">
-        <li><strong>AI curiosity, with real questions.</strong> You want to know what actually helps, what’s worth learning, and what to avoid.</li>
-        <li><strong>Scattered systems.</strong> Your information lives in too many places, and nothing talks to each other.</li>
-        <li><strong>An idea that’s bigger than your time.</strong> You can see what you want to build. You can’t see how to get there alone.</li>
-        <li><strong>No time to become an expert.</strong> You want a real person to sit alongside you, explain things clearly, and get something moving.</li>
-      </ul>
-      <p class="welcome"><strong>If regular productivity systems have never fit you, you’re in the right place.</strong> Neurodivergent folks are especially welcome. We build around how you actually work, not how an app thinks you should.</p>
-    </div>
-    <div class="photo"><img src="assets/photos/iris.webp" alt="A violet-blue iris in full bloom, its golden center glowing against green" loading="lazy" width="900" height="600" /></div>
-  </div>
-</section>
-
 <section class="reallyfor">
   <div class="wrap">
     <div class="feel-intro">
-      <p class="eyebrow">What this is really for</p>
+      <p class="eyebrow">Where you’ll end up</p>
       <h2>Make more room for what matters.</h2>
       <p>Finishing the project isn’t the whole point. The point is having tools that give you more space for your work, your people, and your actual life.</p>
-      <p class="pull">Technology should support the person using it—not the other way around.</p>
     </div>
     <div class="picture-grid"><div class="vignette"><img src="assets/photos/pride.webp" alt="A bright orange zinnia, petals flung wide open in the sun" loading="lazy" width="900" height="675" /><div class="vt"><h3 class="feel">Pride</h3><p>The pride of finally launching the thing you’ve been putting off for years.</p></div></div><div class="vignette"><img src="assets/photos/relief.webp" alt="Sunset clouds glowing gold above the treetops as the day lets go" loading="lazy" width="900" height="675" /><div class="vt"><h3 class="feel">Relief</h3><p>The relief of seeing the whole project laid out in steps you can actually take.</p></div></div><div class="vignette"><img src="assets/photos/ease.webp" alt="A wide, open path through a green forest, sunlight resting on the ground" loading="lazy" width="900" height="675" /><div class="vt"><h3 class="feel">Ease</h3><p>The ease of asking AI the question you’d have spent an hour googling—and knowing how to check the answer.</p></div></div><div class="vignette"><img src="assets/photos/thrill.webp" alt="A yellow swallowtail, wings spread wide, landing on fragrant purple blooms" loading="lazy" width="900" height="675" /><div class="vt"><h3 class="feel">Yours</h3><p>Hearing your own voice in the email you send, even though AI helped you draft it.</p></div></div><div class="vignette"><img src="assets/photos/exhale.webp" alt="Autumn leaves drifting on still water, the sky reflected among them" loading="lazy" width="900" height="675" /><div class="vt"><h3 class="feel">Exhale</h3><p>The long exhale when your apps, calendars, and systems finally talk to each other—and nothing lives in three places anymore.</p></div></div><div class="vignette"><img src="assets/photos/clarity.webp" alt="Layers of blue mountains rolling out to the horizon under a wide sky" loading="lazy" width="900" height="675" /><div class="vt"><h3 class="feel">Clarity</h3><p>The clarity of knowing which AI tool is worth paying for, and which one you can skip.</p></div></div></div>
     <p class="feel-close">Good tools should make it easier to be human.</p>
@@ -529,7 +467,7 @@
     <div class="foot-row">
       <a href="mailto:connect@embodiedworksolutions.com">connect@embodiedworksolutions.com</a>
       <div class="foot-links">
-        <a href="help.html">How I help</a><a href="how-it-works.html">How it works</a><a href="about.html">About</a>
+        <a href="help.html">How I help</a><a href="how-it-works.html">How it works</a><a href="ai.html">Using AI</a><a href="about.html">About</a>
         <a href="https://cracksandseeds.substack.com/" target="_blank" rel="noopener">Writing: Cracks &amp; Seeds</a>
       </div>
       <span>© 2026 Embodied Work Solutions · Regulation-Centered System Design™</span>
