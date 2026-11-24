@@ -281,8 +281,14 @@
   .proj h3 { font-size: 1.4rem; margin-bottom: .5rem; }
   .proj p { color: var(--text-mid); margin: 0; font-size: .98rem; }
   .projects a.more { display: inline-block; margin-top: 1.75rem; color: var(--forest); font-weight: 700; }
+  .proj-grid.two { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .proj-grid.two .proj { padding: 2rem 2rem 2.2rem; }
+  .proj-grid.two .n { font-family: 'Lato', sans-serif; font-size: .8rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--terracotta); }
+  .proj-grid.two h3 { font-size: 1.7rem; }
+  .proj ul { list-style: none; padding: 0; margin: 1.1rem 0 0; }
+  .proj li { border-left: 2px solid var(--terracotta); padding: .1rem 0 .1rem .9rem; margin-bottom: .6rem; color: var(--text-mid); font-size: .98rem; }
   @media (max-width: 1000px) { .proj-grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 600px) { .proj-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 760px) { .proj-grid, .proj-grid.two { grid-template-columns: 1fr; } }
 
   /* FOOTER */
   footer { background: var(--forest-dark); border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.6); padding: 4rem 0 3rem; }
@@ -342,13 +348,31 @@
 
 <section class="projects">
   <div class="wrap">
-    <p class="eyebrow">Where we might begin</p>
-    <h2>At heart, I’m a project manager. I help people move from idea to solution.</h2>
-    <div class="proj-grid">
-      <div class="proj"><span class="n">01</span><h3>Turn a vision into a plan.</h3><p>The thing you’ve wanted to do forever, broken into clear, doable steps toward the goal.</p></div>
-      <div class="proj"><span class="n">02</span><h3>Connect your scattered systems.</h3><p>Email, calendars, files, notes, and apps that finally work together—so nothing lives in three places.</p></div>
-      <div class="proj"><span class="n">03</span><h3>Make repeat tasks easier.</h3><p>A simple, reliable way to handle the things you do over and over, so they stop eating your week.</p></div>
-      <div class="proj"><span class="n">04</span><h3>Use AI in your day-to-day life.</h3><p>Find where AI actually helps, try it on real tasks, and keep your voice and your privacy.</p></div>
+    <p class="eyebrow">Two ways I help</p>
+    <h2>Move a project forward, or learn to use AI your way.</h2>
+    <div class="proj-grid two">
+      <div class="proj">
+        <span class="n">01 · Help with a project</span>
+        <h3>Turn what you’ve been putting off into a plan.</h3>
+        <p>I’m a project manager at heart. We’ll get clear on the end goal, break it into concrete steps, and get it moving.</p>
+        <ul>
+          <li>Start a business, a creative project, or a big change</li>
+          <li>Connect your scattered systems so nothing lives in three places</li>
+          <li>Make the tasks you do over and over easier</li>
+          <li>Build a website, a tool, or a simple app</li>
+        </ul>
+      </div>
+      <div class="proj">
+        <span class="n">02 · Learn to use AI</span>
+        <h3>Use AI in your day-to-day life—on your terms.</h3>
+        <p>Hands-on, shame-free teaching, starting wherever you are.</p>
+        <ul>
+          <li>Find where AI actually helps, and what to skip</li>
+          <li>Choose the right tool and customize its settings</li>
+          <li>Learn what not to paste in, and how to protect your privacy</li>
+          <li>Keep your own voice in what you write</li>
+        </ul>
+      </div>
     </div>
     <a class="more" href="help.html">See how I can help →</a>
   </div>
