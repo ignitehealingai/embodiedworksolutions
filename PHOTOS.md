@@ -5,6 +5,29 @@ photo below has a reserved spot. Until the file exists, the page shows a
 stand-in (one of SK's nature photos or a credited Centre for Ageing Better /
 Unsplash photo) or quietly hides that spot. Nothing looks broken.
 
+## ⚠️ Reference images in use right now (replace or license before going live)
+
+These nine files were cropped from the visual-inspiration page in SK's brief so
+the preview shows the intended look. **They aren't SK's photos, and their
+licenses are unknown.** The hero image is credited there to elevify.com. Before
+merging to `main`, either replace each one with your own photo (same filename)
+or confirm you have a license to use it.
+
+| File | Where |
+|---|---|
+| `hero-team-collaboration.webp` | Home hero |
+| `entrepreneur-messy-middle.webp` | Home: overwhelmed entrepreneur card |
+| `scattered-systems.webp` | Home: scattered systems card |
+| `organizational-change-team.webp` | Home: organizational leader card |
+| `approachable-ai-learning.webp` | Home AI card + How I can help → AI |
+| `experience-recognition.webp` | Home: "You need a team" (experience strip) |
+| `experience-perspective.webp` | Home: "Let's bring your vision into focus" |
+| `experience-action.webp` | Home: "Now let's get to work" |
+| `finally-able-to-exhale.webp` | Home: experience strip + exhale section |
+
+The four `experience-*` / exhale images are small (about 230 px wide), so they're
+fine as thumbnails but will look soft if used larger.
+
 ## How to add a photo (no code changes needed)
 
 1. Export the photo as **WebP** at the size listed (or close to it). Free:

@@ -408,32 +408,66 @@ function ewsImg(i) {
   </div>
 </nav>
 
-<!-- A · HERO ─ photo slot: assets/photos/hero-team-collaboration.webp (falls back to the credited Unsplash photo until it exists) -->
-<header class="hero2" id="top">
-  <div class="wrap has-slot">
-    <div>
-      <p class="eyebrow">Business, technology &amp; AI support · Online and around the Triangle, NC</p>
-      <h1>You need a team. <em>You don’t need to hire an entire one.</em></h1>
-      <p class="lede">When you’re in the trenches of running your business, it’s hard to see the bigger picture. I bring a wide-angle view, practical business and technology experience, and hands-on help, so we can bring your vision into focus and get it done.</p>
-      <p class="promise">An outside perspective. A practical plan. A partner in getting it done.</p>
-      <div class="actions">
-        <a href="contact.html" class="btn warm">Let’s talk about what you need <span class="arrow">↗</span></a>
-        <a href="#accomplish" class="btn ghost">See what we could accomplish together</a>
+<!-- A · HERO
+     Photo: assets/photos/hero-team-collaboration.webp
+     REFERENCE IMAGE from SK's visual-inspiration page (credited there to elevify.com).
+     License it or replace it with SK's own photo before going live. -->
+<header class="hero3" id="top">
+  <div class="wrap">
+    <p class="eyebrow">Embodied Work Solutions · Business, technology &amp; AI support · Online and around the Triangle, NC</p>
+    <h1>You need a team. <em>You don’t need to hire an entire one.</em></h1>
+    <div class="hero3-grid has-slot">
+      <figure class="slot">
+        <img src="assets/photos/hero-team-collaboration.webp" onerror="ewsImg(this)"
+          data-fallback="assets/photos/help-ageing-better.webp"
+          data-fallback-alt="A woman with short white hair and a lanyard points at a computer screen while a colleague leans in, the two of them working something out together"
+          alt="Two people side by side at a table, leaning over an open notebook and a laptop, working something out together"
+          width="1282" height="755" fetchpriority="high" />
+        <figcaption class="credit">Photo by <a href="https://unsplash.com/@ageing_better?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Centre for Ageing Better</a> on <a href="https://unsplash.com/photos/a-man-pointing-at-a-woman-wkFRvw2lTAg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Unsplash</a></figcaption>
+      </figure>
+      <div>
+        <p class="lede">When you’re in the trenches of running your business, it’s difficult to see the bigger picture. You’re juggling responsibilities, navigating technology, managing information, and trying to find time for the things that would actually move you forward.</p>
+        <p class="lede">I bring a wide-angle perspective, practical business and technology expertise, and hands-on support to help you bring your vision into focus, and make it happen.</p>
+        <p class="promise">An outside perspective. A practical plan. A partner in getting it done.</p>
+        <div class="actions">
+          <a href="contact.html" class="btn warm">Let’s talk about what you need <span class="arrow">↗</span></a>
+          <a href="#accomplish" class="btn ghost">See what we could accomplish</a>
+        </div>
+        <p class="micro"><span>Free 20-minute conversation</span><span>Zoom or in person</span><span>No pressure</span></p>
       </div>
-      <p class="micro"><span>Free 20-minute conversation</span><span>Zoom or in person</span><span>No pressure to commit</span></p>
     </div>
-    <figure class="slot">
-      <img src="assets/photos/hero-team-collaboration.webp" onerror="ewsImg(this)"
-        data-fallback="assets/photos/help-ageing-better.webp"
-        data-fallback-alt="A woman with short white hair and a lanyard points at a computer screen while a colleague leans in, the two of them working something out together"
-        alt="SK and a client side by side at a table, reviewing a laptop and notebook together"
-        width="1600" height="1200" fetchpriority="high" />
-      <figcaption class="credit">Photo by <a href="https://unsplash.com/@ageing_better?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Centre for Ageing Better</a> on <a href="https://unsplash.com/photos/a-man-pointing-at-a-woman-wkFRvw2lTAg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Unsplash</a></figcaption>
-    </figure>
   </div>
 </header>
 
 <main id="main">
+
+<!-- THE EXPERIENCE OF WORKING TOGETHER: recognition → perspective → action → relief.
+     Images are REFERENCE IMAGES from SK's inspiration page: license or replace before launch. -->
+<section class="journey" id="experience">
+  <div class="wrap">
+    <p class="eyebrow">The experience of working together</p>
+    <h2 class="sr-only">The experience of working together</h2>
+    <ol class="beats">
+      <li class="beat">
+        <img src="assets/photos/experience-recognition.webp" alt="A woman at a desk covered in papers rests her head in her hand, laptop open, overwhelmed" loading="lazy" width="232" height="295" />
+        <div><p class="stage">Recognition</p><h3>You need a team.</h3><p>You’ve been trying to be the visionary, strategist, administrator, technology specialist, and implementation team. What could you accomplish with another person in your corner?</p><a class="more" href="#who">Find yourself here →</a></div>
+      </li>
+      <li class="beat">
+        <img src="assets/photos/experience-perspective.webp" alt="A hand holding a round lens in front of a blurry mountain landscape; through the lens, the peaks are sharp and clear" loading="lazy" width="232" height="295" />
+        <div><p class="stage">Perspective</p><h3>Let’s bring your vision into focus.</h3><p>When you’re immersed in the day-to-day of your business, it’s hard to see the bigger picture. I bring a wide-angle perspective to help you see what’s possible.</p><a class="more" href="#lens">A different lens →</a></div>
+      </li>
+      <li class="beat">
+        <img src="assets/photos/experience-action.webp" alt="Two women at a table with a laptop and notebook, one explaining and gesturing while the other takes notes" loading="lazy" width="232" height="293" />
+        <div><p class="stage">Action</p><h3>Now let’s get to work.</h3><p>We turn scattered ideas into plans, disconnected technology into systems you can use, and unfinished projects into real progress.</p><a class="more" href="#accomplish">What we could accomplish →</a></div>
+      </li>
+      <li class="beat">
+        <img src="assets/photos/finally-able-to-exhale.webp" alt="A smiling woman in a striped shirt closes her laptop at the end of a productive day" loading="lazy" width="232" height="295" />
+        <div><p class="stage">Relief</p><h3>Imagine being able to exhale.</h3><p>More mental space. More capacity. More time for the work you love and the life you want to live.</p><a class="more" href="#exhale">Imagine it →</a></div>
+      </li>
+    </ol>
+    <p class="illustrative">Photos on this site are illustrative, not actual clients.</p>
+  </div>
+</section>
 
 <!-- B · YOU NEED A TEAM + FOUR PATHWAYS -->
 <section class="team" id="who">
@@ -458,13 +492,13 @@ function ewsImg(i) {
           <img src="assets/photos/entrepreneur-messy-middle.webp" onerror="ewsImg(this)" loading="lazy"
             data-fallback="assets/photos/build.webp"
             data-fallback-alt="A fresh green leaf opening on a slender stem, new growth reaching for light"
-            alt="A person at a kitchen table with a laptop, open notebooks, and scattered notes, thinking about what to do next"
+            alt="A woman at a kitchen table, hand to her temple, writing on a stack of papers beside her laptop and phone"
             width="1200" height="675" />
         </figure>
         <div class="pbody">
-          <p class="who">Entrepreneurs &amp; creators</p>
+          <p class="who">The overwhelmed entrepreneur</p>
+          <h3>What could you accomplish if you didn’t have to do it all yourself?</h3>
           <blockquote>“I have so many ideas, but I can’t seem to move any of them forward.”</blockquote>
-          <p>For people with a business, side business, or idea that matters deeply, and never enough time or support to build it.</p>
           <p class="how"><strong>How I help:</strong> we turn the vision into an actionable plan, sort out what matters most, and work through the steps together, so it stops living only in your notebook.</p>
           <a class="more" href="help.html#entrepreneurs">Turn your vision into a plan →</a>
         </div>
@@ -475,13 +509,13 @@ function ewsImg(i) {
           <img src="assets/photos/scattered-systems.webp" onerror="ewsImg(this)" loading="lazy"
             data-fallback="assets/photos/systems.webp"
             data-fallback-alt="Tree roots spreading and tangling across the forest floor"
-            alt="A business owner at a desk with a laptop, phone, papers, and a wall calendar, searching for something across several tools"
+            alt="A frustrated woman at a table juggling her phone, a notebook, a tablet, papers, and a laptop"
             width="1200" height="675" />
         </figure>
         <div class="pbody">
-          <p class="who">Business owners</p>
+          <p class="who">The business owner with scattered systems</p>
+          <h3>Are your tools working together, or are you the person holding everything together?</h3>
           <blockquote>“I’m spending too much time managing the systems that are supposed to make my life easier.”</blockquote>
-          <p>For businesses that have outgrown their email, calendars, files, spreadsheets, and apps.</p>
           <p class="how"><strong>How I help:</strong> we connect scattered tools, organize your information so you can find it, simplify the workflows, and automate the repetitive parts.</p>
           <a class="more" href="help.html#systems">Get your systems working together →</a>
         </div>
@@ -492,13 +526,13 @@ function ewsImg(i) {
           <img src="assets/photos/organizational-change-team.webp" onerror="ewsImg(this)" loading="lazy"
             data-fallback="assets/photos/ai.webp"
             data-fallback-alt="Two bees working side by side on a glowing sunflower"
-            alt="A small group of colleagues around a table mapping out a process together on paper and a laptop"
+            alt="Three colleagues standing around a table covered in sticky notes and a tablet, mapping out a process together"
             width="1200" height="675" />
         </figure>
         <div class="pbody">
-          <p class="who">Teams &amp; organizations</p>
+          <p class="who">The organizational leader</p>
+          <h3>Technology only creates value when people can actually use it.</h3>
           <blockquote>“We need to introduce new technology, but our people are struggling to keep up.”</blockquote>
-          <p>For leaders bringing in AI, new software, or new processes, who know the technology is only half of it.</p>
           <p class="how"><strong>How I help:</strong> requirements, stakeholder engagement, rollout planning, training, and the human side of change, so what you invested in actually gets used.</p>
           <a class="more" href="help.html#organizations">Bring your people along →</a>
         </div>
@@ -509,20 +543,20 @@ function ewsImg(i) {
           <img src="assets/photos/approachable-ai-learning.webp" onerror="ewsImg(this)" loading="lazy"
             data-fallback="assets/photos/home-ageing-better.webp"
             data-fallback-alt="A woman with white hair and glasses smiles while talking on the phone at an outdoor table, her laptop open in front of her"
-            alt="SK and an older adult looking at a laptop together, exploring an AI tool and smiling as something clicks"
+            alt="Two women with grey and blonde hair sit together at a laptop, one pointing at the screen as the other smiles"
             width="1200" height="675" />
           <figcaption class="credit">Photo by <a href="https://unsplash.com/@ageing_better?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Centre for Ageing Better</a> on <a href="https://unsplash.com/photos/a-woman-on-her-phone-while-sitting-at-a-table-with-a-laptop-gT6u3vEVSUg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Unsplash</a></figcaption>
         </figure>
         <div class="pbody">
-          <p class="who">Curious about AI</p>
+          <p class="who">The AI-curious individual</p>
+          <h3>Let’s take the mystery out of AI.</h3>
           <blockquote>“I keep hearing about AI, but I don’t know what it can actually do for me.”</blockquote>
-          <p>For anyone who wants someone patient and knowledgeable beside them, not another tutorial.</p>
           <p class="how"><strong>How I help:</strong> hands-on sessions using examples from your own life or work, with honest conversation about privacy, limits, and when a simpler tool is better.</p>
           <a class="more" href="help.html#ai">Take the mystery out of AI →</a>
         </div>
       </article>
     </div>
-    <p class="illustrative">These are illustrative scenarios, not client testimonials.</p>
+    <p class="illustrative">These are illustrative scenarios and photos, not actual clients or testimonials.</p>
     <p class="note">Not sure which one is you? You don’t need to choose. That’s what our first conversation is for.</p>
   </div>
 </section>
@@ -632,6 +666,30 @@ function ewsImg(i) {
   </div>
 </section>
 
+<!-- READY · Cheryl: "Are you ready to finally get to the thing you've been wanting to do?" -->
+<section class="ready" id="ready">
+  <div class="wrap">
+    <div class="ready-grid">
+      <div>
+        <p class="eyebrow">Let’s move from thinking about it to doing it</p>
+        <h2>Are you ready to finally make it happen?</h2>
+        <p class="lede">What have you been wanting to accomplish for years? What would you love to stop talking about and start doing?</p>
+        <p>You don’t need to know exactly what you want. Most people who reach out just know what they don’t want anymore.</p>
+        <p class="pledge">If you know you’re ready to change, I’ll be the best team member you’ve ever hired.</p>
+      </div>
+      <ul class="no-more" aria-label="What people are ready to leave behind">
+        <li>Waking up already feeling overwhelmed</li>
+        <li>Repeating the same frustrating patterns</li>
+        <li>Spending hours searching for information</li>
+        <li>Staying stuck on the same project</li>
+        <li>Struggling with technology, again</li>
+        <li>Never being able to mentally switch off</li>
+      </ul>
+    </div>
+    <p class="ready-note">You bring the willingness to engage, experiment, and decide. I bring the bigger picture, the structure, and the hands-on help. Your life and your business stay yours; you just don’t have to carry them alone.</p>
+  </div>
+</section>
+
 <!-- G · FINDING THE START BUTTON ─ photo slot: assets/photos/finding-the-start-button.webp -->
 <section class="startbtn" id="start">
   <div class="wrap cols has-slot">
@@ -705,19 +763,20 @@ function ewsImg(i) {
     <div class="cols has-slot">
       <div>
         <p>Even when you’re not working, part of your brain is still tracking appointments, unfinished projects, emails, client requests, things you need to find, systems you need to fix, and ideas you haven’t had time for. You can take a vacation from your desk without ever taking one from your business.</p>
-        <p>We can change some of that. Together we find what’s eating your time and attention, simplify the systems creating extra work, and set up structures that hold things for you, so there’s less to keep track of in your head.</p>
+        <p><strong style="color:var(--forest)">What if we could change some of that?</strong> Together we find what’s eating your time and attention, simplify the systems creating extra work, and set up structures that hold things for you, so there’s less to keep track of in your head. The goal isn’t simply to get more done. It’s more room for the work and life you actually want.</p>
         <figure class="slot" style="margin-top:1.75rem">
           <img src="assets/photos/finally-able-to-exhale.webp" onerror="ewsImg(this)" loading="lazy"
-            alt="A person leaning back from their desk, laptop closed, smiling with relief after finishing something"
-            width="1200" height="800" style="aspect-ratio:3/2" />
+            alt="A smiling woman in a striped shirt closes her laptop at the end of a productive day"
+            width="232" height="295" style="aspect-ratio:4/5;max-width:300px" />
         </figure>
       </div>
       <ul class="wonder">
-        <li>What would you do with the time you spend searching for things?</li>
-        <li>What would become possible if your technology actually supported your work?</li>
-        <li>What could you create if someone helped you hold the bigger picture?</li>
+        <li>Do you wake up already feeling behind?</li>
+        <li>Do you go to bed thinking about everything you didn’t get done?</li>
+        <li>Even when you’re not working, are you still working in your head?</li>
+        <li>How much of your day is spent remembering what you need to remember?</li>
         <li>What would it feel like to close your laptop and actually feel finished?</li>
-        <li>What would you rather be doing with your energy?</li>
+        <li>What would you do with the mental space you’re spending on managing everything?</li>
       </ul>
     </div>
     <div class="feelings">
