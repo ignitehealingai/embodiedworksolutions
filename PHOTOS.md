@@ -16,14 +16,14 @@ or confirm you have a license to use it.
 | File | Where |
 |---|---|
 | `hero-team-collaboration.webp` | Home hero |
-| `entrepreneur-messy-middle.webp` | Home: overwhelmed entrepreneur card |
-| `scattered-systems.webp` | Home: scattered systems card |
-| `organizational-change-team.webp` | Home: organizational leader card |
+| `entrepreneur-messy-middle.webp` | Home card + How I can help → Entrepreneurs |
+| `scattered-systems.webp` | Home card + How I can help → Business owners |
+| `organizational-change-team.webp` | Home card + How I can help → Organizations |
 | `approachable-ai-learning.webp` | Home AI card + How I can help → AI |
-| `experience-recognition.webp` | Home: "You need a team" (experience strip) |
-| `experience-perspective.webp` | Home: "Let's bring your vision into focus" |
-| `experience-action.webp` | Home: "Now let's get to work" |
-| `finally-able-to-exhale.webp` | Home: experience strip + exhale section |
+| `experience-recognition.webp` | Home experience strip + How it works step 1 |
+| `experience-perspective.webp` | Home experience strip + How it works step 2 |
+| `experience-action.webp` | Home experience strip + How it works step 3 + Contact header |
+| `finally-able-to-exhale.webp` | Home experience strip + exhale section + How it works step 4 |
 
 The four `experience-*` / exhale images are small (about 230 px wide), so they're
 fine as thumbnails but will look soft if used larger.
@@ -78,9 +78,9 @@ sticky notes or taking notes (`hands-on-problem-solving.webp`).
   and comes into focus as you scroll to it. People who've set their device to
   reduce motion see it sharp from the start.
 - **Exhale feelings:** `relief.webp`, `pride.webp`, `thrill.webp`.
-- **Magnolia sequence** (`q1`–`q4`) on How it works; `q2` stands in for Finding the Start Button.
+- **Magnolia bud** (`q2`) stands in for Finding the Start Button. The other magnolia photos are still in the repo; the How it works steps now use the four "experience" photos.
 - **About:** `rcsd-mushrooms.webp` and the page header.
-- **Headers:** all page headers are still your photos.
+- **Headers:** every inner page header still uses your nature photo as its background (green overlay kept), with a people photo or your headshot set into it.
 
 ## One efficient photo session
 

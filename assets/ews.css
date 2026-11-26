@@ -313,3 +313,48 @@ a.more { color: var(--forest); font-weight: 700; text-decoration-thickness: 1px;
 .no-more li::before { content: "✕"; position: absolute; left: 0; color: var(--honey); font-size: .85rem; top: .8rem; }
 .ready-note { margin-top: 2.25rem; max-width: 780px; border-top: 1px solid rgba(255,255,255,.18); padding-top: 1.5rem; }
 @media (max-width: 900px) { .ready-grid { grid-template-columns: 1fr; gap: 2rem; } }
+
+/* ---------- Inner-page hero (matches the homepage: sand ground, people photos) ---------- */
+.page-hero { background: var(--sand); padding: 3.75rem 0 4rem; }
+.page-hero .wrap { max-width: 1180px; }
+.ph-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 3rem; align-items: center; }
+.page-hero.no-photo .ph-grid { grid-template-columns: 1fr; max-width: 860px; }
+.page-hero h1 { font-size: clamp(2.4rem, 5vw, 3.7rem); line-height: 1.06; margin-bottom: 1.2rem; }
+.page-hero h1 em { color: var(--terracotta); }
+.page-hero .lede { font-size: 1.1rem; color: var(--text-mid); }
+.page-hero .slot img { aspect-ratio: 4 / 3; box-shadow: 0 24px 60px -28px rgba(8,51,38,.45); }
+.page-hero .slot.portrait { max-width: 320px; justify-self: center; }
+.page-hero .slot.portrait img { aspect-ratio: 4 / 5; }
+.page-hero .slot.round { max-width: 340px; justify-self: center; }
+.page-hero .slot.round img { aspect-ratio: 1 / 1; border-radius: 50%; }
+.page-hero .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.6rem; }
+.page-hero .messy { font-family: var(--serif); font-style: italic; font-size: 1.6rem; color: var(--terracotta); margin-top: .5rem; }
+.page-hero .checks { justify-content: flex-start; color: var(--text-mid); margin-top: 1.25rem; }
+.page-hero .checks li::before { color: var(--terracotta); }
+.page-hero .footnote { color: var(--text-muted); }
+.page-hero .jump { justify-content: flex-start; margin: 1.75rem 0 0; }
+.page-hero .jump a { background: #fff; border-color: var(--border); color: var(--forest); font-weight: 700; }
+.page-hero .jump a:hover { border-color: var(--terracotta-light); background: #fff; }
+@media (max-width: 900px) { .ph-grid { grid-template-columns: 1fr; gap: 2rem; } .page-hero { padding: 2.75rem 0 3rem; } }
+
+/* How it works: experience photos on the four steps */
+.steps .step.has-photo img { aspect-ratio: 1 / 1; object-position: center 30%; }
+
+/* Inner-page hero on SK's nature photos (green overlay kept, people photo inset) */
+.page-hero.nature { background-size: cover; background-position: center; color: #fff; padding: 4.5rem 0 4.75rem; }
+.page-hero.nature .eyebrow { color: var(--honey); }
+.page-hero.nature h1 { color: #fff; }
+.page-hero.nature h1 em { color: var(--honey); }
+.page-hero.nature .lede { color: rgba(255,255,255,.92); }
+.page-hero.nature .messy { color: var(--honey); }
+.page-hero.nature .checks { color: rgba(255,255,255,.85); }
+.page-hero.nature .checks li::before { color: var(--honey); }
+.page-hero.nature .footnote { color: rgba(255,255,255,.78); }
+.page-hero.nature .btn.light-ghost { color: #fff; border-color: rgba(255,255,255,.8); }
+.page-hero.nature .btn.light-ghost:hover { background: rgba(255,255,255,.12); }
+.page-hero.nature .jump a { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.5); color: #fff; }
+.page-hero.nature .jump a:hover { background: rgba(255,255,255,.24); }
+.page-hero.nature .slot img { box-shadow: 0 24px 60px -20px rgba(0,0,0,.55); border: 4px solid rgba(255,255,255,.9); }
+.page-hero.nature .slot.round img { border-width: 5px; }
+.page-hero.nature .slot .credit { color: rgba(255,255,255,.78); }
+.page-hero.nature:focus-within a:focus-visible { outline-color: var(--honey); }
