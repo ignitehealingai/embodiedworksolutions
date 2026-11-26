@@ -388,7 +388,6 @@ function ewsImg(i) {
   <div class="wrap">
     <a href="index.html" class="brand" aria-label="Embodied Work Solutions, home"><img src="assets/leaf.webp" alt="" width="96" height="109" /><span>Embodied Work<br>Solutions</span></a>
     <ul class="nav-links">
-      <li><a href="help.html">How I can help</a></li>
       <li><a href="how-it-works.html">How it works</a></li>
       <li><a href="ai.html">Using AI</a></li>
       <li><a href="about.html">About</a></li>
@@ -399,7 +398,6 @@ function ewsImg(i) {
   <div class="mobile-menu" id="mobile-menu" hidden>
     <ul>
       <li><a href="index.html" aria-current="page">Home</a></li>
-      <li><a href="help.html">How I can help</a></li>
       <li><a href="how-it-works.html">How it works</a></li>
       <li><a href="ai.html">Using AI</a></li>
       <li><a href="about.html">About</a></li>
@@ -412,7 +410,7 @@ function ewsImg(i) {
      Photo: assets/photos/hero-team-collaboration.webp
      REFERENCE IMAGE from SK's visual-inspiration page (credited there to elevify.com).
      License it or replace it with SK's own photo before going live. -->
-<header class="hero3" id="top">
+<header class="hero3 nature" id="top" style="background-image:linear-gradient(rgba(8,51,38,0.55),rgba(8,51,38,0.5)),url(assets/photos/header-home.webp)">
   <div class="wrap">
     <p class="eyebrow">Embodied Work Solutions · Business, technology &amp; AI support · Online and around the Triangle, NC</p>
     <h1>You need a team. <em>You don’t need to hire an entire one.</em></h1>
@@ -431,7 +429,7 @@ function ewsImg(i) {
         <p class="promise">An outside perspective. A practical plan. A partner in getting it done.</p>
         <div class="actions">
           <a href="contact.html" class="btn warm">Let’s talk about what you need <span class="arrow">↗</span></a>
-          <a href="#accomplish" class="btn ghost">See what we could accomplish</a>
+          <a href="#accomplish" class="btn ghost light-ghost">See what we could accomplish</a>
         </div>
         <p class="micro"><span>Free 20-minute conversation</span><span>Zoom or in person</span><span>No pressure</span></p>
       </div>
@@ -485,7 +483,7 @@ function ewsImg(i) {
       </div>
     </div>
 
-    <div class="pathways">
+    <div class="pathways" id="help">
       <article class="pathway" id="path-entrepreneur">
         <figure class="slot">
           <img src="assets/photos/entrepreneur-messy-middle.webp" onerror="ewsImg(this)" loading="lazy"
@@ -499,7 +497,7 @@ function ewsImg(i) {
           <h3>What could you accomplish if you didn’t have to do it all yourself?</h3>
           <blockquote>“I have so many ideas, but I can’t seem to move any of them forward.”</blockquote>
           <p class="how"><strong>How I help:</strong> we turn the vision into an actionable plan, sort out what matters most, and work through the steps together, so it stops living only in your notebook.</p>
-          <a class="more" href="help.html#entrepreneurs">Turn your vision into a plan →</a>
+          <a class="more" href="#accomplish">What we could build together →</a>
         </div>
       </article>
 
@@ -516,7 +514,7 @@ function ewsImg(i) {
           <h3>Are your tools working together, or are you the person holding everything together?</h3>
           <blockquote>“I’m spending too much time managing the systems that are supposed to make my life easier.”</blockquote>
           <p class="how"><strong>How I help:</strong> we connect scattered tools, organize your information so you can find it, simplify the workflows, and automate the repetitive parts.</p>
-          <a class="more" href="help.html#systems">Get your systems working together →</a>
+          <a class="more" href="#accomplish">What we could fix together →</a>
         </div>
       </article>
 
@@ -533,7 +531,8 @@ function ewsImg(i) {
           <h3>Technology only creates value when people can actually use it.</h3>
           <blockquote>“We need to introduce new technology, but our people are struggling to keep up.”</blockquote>
           <p class="how"><strong>How I help:</strong> requirements, stakeholder engagement, rollout planning, training, and the human side of change, so what you invested in actually gets used.</p>
-          <a class="more" href="help.html#organizations">Bring your people along →</a>
+          <p class="how">I’ve spent two decades working between technical teams and the people who use what they build, as a project manager, business analyst, and change leader, across nonprofits, research, healthcare, and small businesses. Engagements are scoped and quoted per project.</p>
+          <a class="more" href="contact.html#reasons">Talk about your organization →</a>
         </div>
       </article>
 
@@ -551,7 +550,7 @@ function ewsImg(i) {
           <h3>Let’s take the mystery out of AI.</h3>
           <blockquote>“I keep hearing about AI, but I don’t know what it can actually do for me.”</blockquote>
           <p class="how"><strong>How I help:</strong> hands-on sessions using examples from your own life or work, with honest conversation about privacy, limits, and when a simpler tool is better.</p>
-          <a class="more" href="help.html#ai">Take the mystery out of AI →</a>
+          <a class="more" href="ai.html">How I teach AI →</a>
         </div>
       </article>
     </div>
@@ -586,7 +585,7 @@ function ewsImg(i) {
         <p>That isn’t a flaw. It’s perspective. Sometimes the most useful thing you can bring to a complicated problem is another set of eyes.</p>
       </div>
     </div>
-    <p class="serif-line">You bring the vision. I’ll help bring it into focus. Then we get to work.</p>
+    <p class="serif-line">You bring the vision. I’ll help bring it into focus.</p>
   </div>
 </section>
 
@@ -686,7 +685,7 @@ function ewsImg(i) {
       <p>You know something needs to change. You may even have a few ideas about how to fix it. But figuring out where to start has become a project of its own.</p>
       <p>In 90 minutes, we sit down together, untangle what’s going on, bring the bigger picture into focus, and find a practical place to begin. We don’t have to spend the whole time talking about what you could do. Depending on what you need, we can start building the solution right there.</p>
       <ul class="facts"><li>90 minutes</li><li>Fixed price</li><li>Zoom or in person</li><li>A clear next step</li></ul>
-      <div class="btn-row"><a href="contact.html" class="btn warm">Find your start button <span class="arrow">↗</span></a></div>
+      <div class="btn-row"><a href="contact.html" class="btn warm">Find your start button <span class="arrow">↗</span></a><a class="more" href="how-it-works.html">How working together works →</a></div>
     </div>
   </div>
 </section>
@@ -716,21 +715,6 @@ function ewsImg(i) {
         alt="Two people at a table covered with notebooks and sticky notes, sorting ideas into a plan"
         width="1200" height="1500" />
     </figure>
-  </div>
-</section>
-
-<!-- I · HOW WORKING TOGETHER WORKS -->
-<section class="process" id="how">
-  <div class="wrap">
-    <p class="eyebrow">How working together works</p>
-    <h2>Simple, and built for action.</h2>
-    <div class="steps">
-      <div class="step"><p class="label">01</p><h3>Tell me what’s going on.</h3><p>A free 20-minute conversation about where you’re stuck.</p></div>
-      <div class="step"><p class="label">02</p><h3>Bring the bigger picture into focus.</h3><p>We find the relationships, bottlenecks, and possibilities, then agree on outcomes, scope, and cost.</p></div>
-      <div class="step"><p class="label">03</p><h3>Get to work.</h3><p>Make decisions, build the plan, set up the technology, organize the information, move the project forward.</p></div>
-      <div class="step"><p class="label">04</p><h3>Check what’s working.</h3><p>We adjust as we learn, aiming for real progress rather than following a plan that isn’t serving you.</p></div>
-    </div>
-    <p class="ownership"><strong>You stay in charge.</strong> Your goals, decisions, and projects stay yours. I bring perspective, structure, and hands-on help. <a class="more" href="how-it-works.html">Details, pricing, and FAQ →</a></p>
   </div>
 </section>
 
@@ -798,7 +782,7 @@ function ewsImg(i) {
     <div class="foot-row">
       <span><a href="mailto:connect@embodiedworksolutions.com">connect@embodiedworksolutions.com</a><br>Online, and in person around Chapel Hill &amp; the Triangle, NC</span>
       <div class="foot-links">
-        <a href="help.html">How I can help</a><a href="how-it-works.html">How it works</a><a href="ai.html">Using AI</a><a href="about.html">About</a>
+        <a href="how-it-works.html">How it works</a><a href="ai.html">Using AI</a><a href="about.html">About</a>
         <a href="https://cracksandseeds.substack.com/" target="_blank" rel="noopener">Writing: Cracks &amp; Seeds</a>
       </div>
       <span>© 2026 Embodied Work Solutions, LLC · Regulation-Centered System Design™</span>

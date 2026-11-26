@@ -16,10 +16,10 @@ or confirm you have a license to use it.
 | File | Where |
 |---|---|
 | `hero-team-collaboration.webp` | Home hero |
-| `entrepreneur-messy-middle.webp` | Home card + How I can help → Entrepreneurs |
-| `scattered-systems.webp` | Home card + How I can help → Business owners |
-| `organizational-change-team.webp` | Home card + How I can help → Organizations |
-| `approachable-ai-learning.webp` | Home AI card + How I can help → AI |
+| `entrepreneur-messy-middle.webp` | Home card |
+| `scattered-systems.webp` | Home card |
+| `organizational-change-team.webp` | Home card |
+| `approachable-ai-learning.webp` | Home: AI-curious card |
 | `experience-recognition.webp` | Home experience strip |
 | `experience-perspective.webp` | Home experience strip |
 | `experience-action.webp` | Home experience strip |
@@ -54,7 +54,7 @@ that way; don't caption them as real client work.
 | 2 | `entrepreneur-messy-middle.webp` | Home, "Entrepreneurs & creators" card | 1200 × 900 | One adult at a kitchen table: laptop, open notebooks, scattered notes, a mug. Thinking about what to do next. | Recognizable overload, not distress | Nature: new leaf |
 | 3 | `scattered-systems.webp` | Home, "Business owners" card | 1200 × 900 | One adult at a desk with laptop, phone, papers, a wall or paper calendar. Searching across tools. | Frustration you recognize | Nature: tangled roots |
 | 4 | `organizational-change-team.webp` | Home, "Teams & organizations" card | 1200 × 900 | 3–5 adults around a table mapping a process: paper, sticky notes, a laptop. | Professional credibility, engagement | Nature: two bees on a sunflower |
-| 5 | `approachable-ai-learning.webp` | Home "Curious about AI" card **and** How I can help → AI | 1200 × 900 | SK beside someone of a different age, both looking at a laptop, the moment something makes sense. Show the learner as capable. | Curiosity, growing confidence | Unsplash: woman at laptop on phone |
+| 5 | `approachable-ai-learning.webp` | Home "Curious about AI" card | 1200 × 900 | SK beside someone of a different age, both looking at a laptop, the moment something makes sense. Show the learner as capable. | Curiosity, growing confidence | Unsplash: woman at laptop on phone |
 | 6 | `sk-working-with-client.webp` | About, next to "I see how things connect" | 1200 × 900 | SK listening or explaining while someone points at a step. Hands and faces both visible. | Competence, care | Hidden until added |
 | 7 | `finally-able-to-exhale.webp` | Home, "When was the last time your mind took a vacation?" | 1200 × 800 | One adult closing a laptop or leaning back, smiling after finishing something. | Relief, ease | Hidden until added |
 | 8 | `sk-headshot.webp` | Home "Hi, I'm SK" and About | 720 × 720 | **Already have it.** Replace only if you want a newer portrait. | Warmth, confidence | n/a |
@@ -64,9 +64,7 @@ that way; don't caption them as real client work.
 | Filename | Where | Size | Scene | Stand-in now |
 |---|---|---|---|---|
 | `finding-the-start-button.webp` | Home, Finding the Start Button | 1200 × 1200 | Two people at a table with notebook and laptop, just beginning to sketch where to start. | SK's magnolia bud, opening |
-| `entrepreneur-vision-to-action.webp` | Home "Bring me the messy middle" **and** How I can help → Entrepreneurs | 1200 × 1500 (portrait) | Two people at a table covered in notebooks and sticky notes, sorting ideas into a plan. | SK's leaves on water / new leaf |
-| `systems-implementation.webp` | How I can help → Business owners | 1200 × 900 | SK and a business owner at a laptop, mapping how calendar, inbox, and records connect. | SK's tangled roots |
-| `ai-adoption-working-session.webp` | How I can help → Organizations | 1200 × 900 | SK demonstrating a tool on a shared screen while a small team asks questions. | Unsplash: two colleagues at a computer |
+| `entrepreneur-vision-to-action.webp` | Home "Bring me the messy middle" | 1200 × 1500 (portrait) | Two people at a table covered in notebooks and sticky notes, sorting ideas into a plan. | SK's leaves on water / new leaf |
 
 | `hands-on-problem-solving.webp` | Home, "I help you do it" | 1200 × 1500 (portrait) | Close-up of hands arranging sticky notes or mapping a process. | Hidden until added |
 
@@ -79,7 +77,7 @@ that way; don't caption them as real client work.
 - **Exhale feelings:** `relief.webp`, `pride.webp`, `thrill.webp`.
 - **Magnolia sequence** (`q1`–`q4`) on the How it works steps; `q2` also stands in for Finding the Start Button until that photo exists.
 - **About:** `rcsd-mushrooms.webp` and the page header.
-- **Headers:** every inner page header still uses your nature photo as its background (green overlay kept), with a people photo or your headshot set into it.
+- **Headers:** the homepage is back on the green forest, and every inner page header still uses your nature photo as its background (green overlay kept), with a people photo or your headshot set into it.
 
 ## One efficient photo session
 
