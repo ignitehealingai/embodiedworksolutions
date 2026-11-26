@@ -389,3 +389,37 @@ a.more { color: var(--forest); font-weight: 700; text-decoration-thickness: 1px;
 /* menu now has six items */
 @media (min-width: 761px) and (max-width: 1180px) { .nav-links { gap: 1.1rem; } .nav-links a { font-size: 13.5px; } .brand span { display: none; } }
 @media (min-width: 901px) { .client.org-help .cols > .slot { position: sticky; top: 96px; align-self: start; } }
+
+/* ---------- HOW I CAN HELP: individuals | organizations, side by side ---------- */
+.split-help { background: var(--warm-white); padding: 0 0 4rem; }
+.halves { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.half { display: flex; flex-direction: column; background: var(--warm-white); }
+.half.org { background: var(--forest-pale); }
+.half-photo { margin: 0; }
+.half-photo img { width: 100%; aspect-ratio: 4 / 3; max-height: 62vh; object-fit: cover; border-radius: 0 !important; display: block; }
+.half-body { padding: 3rem clamp(1.5rem, 5vw, 4.5rem) 3.5rem; max-width: 680px; }
+.half:first-child .half-body { margin-left: auto; }
+.half-body h2 { font-size: clamp(1.9rem, 3.2vw, 2.6rem); }
+.half-body .lede { font-size: 1.02rem; margin-bottom: 1.5rem; }
+.types { display: grid; gap: 0; border-top: 1px solid var(--rule); }
+.type { padding: 1.25rem 0; border-bottom: 1px solid var(--rule); }
+.type .who { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; color: var(--terracotta); margin-bottom: .45rem; }
+.type h3 { font-size: 1.3rem; line-height: 1.25; margin-bottom: .5rem; }
+.type blockquote { margin: 0 0 .55rem; font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--text-mid); border-left: 2px solid var(--honey); padding-left: .8rem; }
+.type p { color: var(--text-mid); font-size: .96rem; }
+.half .thinking { margin-top: 0; }
+.half .cred { margin-top: 1.25rem; color: var(--text-mid); }
+.half .list-head { font-size: 1.3rem; margin: 1.5rem 0 .6rem; }
+.half .hire.half-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 1.25rem; }
+.half .hire.half-list li { padding: .45rem 0 .45rem 1.3rem; border-bottom: 1px solid var(--border); position: relative; color: var(--text-mid); font-size: .92rem; }
+.half .hire.half-list li::before { content: "→"; position: absolute; left: 0; color: var(--terracotta-light); }
+.half .ask { font-family: var(--serif); font-style: italic; font-size: 1.3rem; color: var(--terracotta); margin-top: 1.5rem; }
+.half .fine { font-size: .92rem; color: var(--text-muted); margin-top: .5rem; }
+.half .btn-row a.more { margin-left: .4rem; }
+.split-help .illustrative { margin-top: 2rem; text-align: center; }
+@media (max-width: 900px) {
+  .halves { grid-template-columns: 1fr; }
+  .half-body { max-width: none; padding: 2.25rem 1.25rem 2.75rem; }
+  .half-photo img { max-height: none; aspect-ratio: 16 / 10; }
+}
+@media (max-width: 480px) { .half .hire.half-list { grid-template-columns: 1fr; } }
