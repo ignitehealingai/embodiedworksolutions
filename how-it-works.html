@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>How it works · Embodied Work Solutions</title>
+<title>How It Works · Embodied Work Solutions</title>
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Embodied Work Solutions" />
-  <meta property="og:title" content="Embodied Work Solutions · From idea to solution" />
-  <meta property="og:description" content="What have you been putting off because you don’t know where to start? I’ll help you turn that vision into concrete steps." />
+  <meta property="og:title" content="How It Works · Embodied Work Solutions" />
+  <meta property="og:description" content="How working together goes: a free conversation, a clear focus, hands-on work, and regular check-ins. Pricing, Scrum for One™, and answers to common questions." />
   <meta property="og:image" content="http://embodiedworksolutions.com/assets/share-forest-2.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Embodied Work Solutions — From idea to solution, over a sunlit green forest" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="http://embodiedworksolutions.com/assets/share-forest-2.jpg" />
-  <meta name="description" content="How working together goes, what a first AI session looks like, and honest answers to the biggest concerns about AI." />
+  <meta name="description" content="How working together goes: a free conversation, a clear focus, hands-on work, and regular check-ins. Pricing, Scrum for One™, and answers to common questions." />
 <link rel="icon" type="image/webp" href="assets/leaf.webp" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -344,14 +344,28 @@
   }
   @media (min-width: 761px) { .mobile-menu { display: none !important; } }
 </style>
+<link rel="stylesheet" href="assets/ews.css" />
+<script>
+document.documentElement.classList.add('js');
+function ewsImg(i) {
+  i.onerror = null;
+  var f = i.closest('.slot') || i.parentNode;
+  if (i.getAttribute('data-fallback')) {
+    f.classList.add('is-fallback');
+    if (i.hasAttribute('data-fallback-alt')) i.alt = i.getAttribute('data-fallback-alt');
+    i.src = i.getAttribute('data-fallback');
+  } else { f.classList.add('is-missing'); }
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <nav aria-label="Main">
   <div class="wrap">
-    <a href="index.html" class="brand"><img src="assets/leaf.webp" alt="" /><span>Embodied Work<br>Solutions</span></a>
+    <a href="index.html" class="brand" aria-label="Embodied Work Solutions, home"><img src="assets/leaf.webp" alt="" width="96" height="109" /><span>Embodied Work<br>Solutions</span></a>
     <ul class="nav-links">
+      <li><a href="help.html">How I can help</a></li>
       <li><a href="how-it-works.html" aria-current="page">How it works</a></li>
       <li><a href="ai.html">Using AI</a></li>
       <li><a href="about.html">About</a></li>
@@ -362,6 +376,7 @@
   <div class="mobile-menu" id="mobile-menu" hidden>
     <ul>
       <li><a href="index.html">Home</a></li>
+      <li><a href="help.html">How I can help</a></li>
       <li><a href="how-it-works.html" aria-current="page">How it works</a></li>
       <li><a href="ai.html">Using AI</a></li>
       <li><a href="about.html">About</a></li>
@@ -376,18 +391,42 @@
   <div class="wrap">
     <p class="eyebrow">How it works</p>
     <h1>A simple way from stuck to moving.</h1>
+    <p class="lede">Clear steps, real work, and you in charge the whole way.</p>
   </div>
 </header>
 
 <section class="page-body" id="how">
   <div class="wrap">
+    <h2 class="sr-only">The four steps</h2>
     <div class="steps">
-      <div class="step has-photo"><img src="assets/photos/q1-problem.webp" alt="A tightly closed pink magnolia bud, holding everything in" loading="lazy" width="600" height="400" /><p class="label">01 / TALK</p><h3>Tell me what’s happening.</h3><p>We meet on Zoom for a free 20-minute conversation. You can bring a big idea, a messy process, an AI question, or just a sense that there’s an easier way.</p></div>
-      <div class="step has-photo"><img src="assets/photos/q2-happen.webp" alt="The magnolia bud loosening, pink petals beginning to part" loading="lazy" width="600" height="400" /><p class="label">02 / FIND THE FIT</p><h3>Choose a first move.</h3><p>I’ll be direct about whether I can help. If it makes sense, we’ll agree on a Finding the Start Button session, a small project, or a longer partnership.</p></div>
-      <div class="step has-photo"><img src="assets/photos/q3-works.webp" alt="The magnolia unfolding, soft petals opening to the light" loading="lazy" width="600" height="400" /><p class="label">03 / BUILD</p><h3>Work on the actual thing.</h3><p>We work on your real project: mapping steps, trying tools, and building something useful. When AI is part of it, we notice what it gets right and wrong. Your needs—not the newest tool—shape the approach.</p></div>
-      <div class="step has-photo"><img src="assets/photos/q4-people.webp" alt="The magnolia in full bloom, a new bud already forming beside it" loading="lazy" width="600" height="400" /><p class="label">04 / HANDOFF</p><h3>Make it yours.</h3><p>You leave understanding what we built, how to check it, and how to keep going on your own. No unnecessary complexity—and no dependence on me or on AI.</p></div>
+      <div class="step has-photo"><img src="assets/photos/q1-problem.webp" alt="A tightly closed pink magnolia bud, holding everything in" loading="lazy" width="600" height="400" /><p class="label">01 / TALK</p><h3>Tell me what’s going on.</h3><p>A free 20-minute conversation on Zoom. We talk about what you’re trying to accomplish, where you’re getting stuck, and what you’ve already tried. Bring a big idea, a messy process, an AI question, or just a sense that there’s an easier way.</p></div>
+      <div class="step has-photo"><img src="assets/photos/q2-happen.webp" alt="The magnolia bud loosening, pink petals beginning to part" loading="lazy" width="600" height="400" /><p class="label">02 / FOCUS</p><h3>Bring the bigger picture into focus.</h3><p>We look at the relationships, bottlenecks, and possibilities, and I’ll be direct about whether I can help. If it makes sense, we agree on outcomes, scope, and cost: a Finding the Start Button session, a defined project, or a longer partnership.</p></div>
+      <div class="step has-photo"><img src="assets/photos/q3-works.webp" alt="The magnolia unfolding, soft petals opening to the light" loading="lazy" width="600" height="400" /><p class="label">03 / BUILD</p><h3>Get to work.</h3><p>We work on your real project: making decisions, building the plan, setting up technology, organizing information, and moving it forward. When AI is part of it, we notice what it gets right and wrong. Your needs—not the newest tool—shape the approach.</p></div>
+      <div class="step has-photo"><img src="assets/photos/q4-people.webp" alt="The magnolia in full bloom, a new bud already forming beside it" loading="lazy" width="600" height="400" /><p class="label">04 / ADJUST &amp; HAND OFF</p><h3>Check what’s working. Make it yours.</h3><p>We put more into what’s working and change course when something isn’t serving you. You leave understanding what we built, how to check it, and how to keep going. No unnecessary complexity, and no dependence on me or on AI.</p></div>
     </div>
-    <a href="mailto:connect@embodiedworksolutions.com?subject=Free%2020-minute%20conversation" class="btn warm">Start with a free conversation <span class="arrow">↗</span></a>
+    <a href="contact.html" class="btn warm">Let’s talk about what you need <span class="arrow">↗</span></a>
+  </div>
+</section>
+
+<section class="why-ai" id="questions">
+  <div class="wrap cols">
+    <div>
+      <p class="eyebrow">We start with curiosity</p>
+      <h2>Finding what’s actually in the way.</h2>
+      <p>I don’t assume I know the answer before I understand the problem. Often the thing that looks like the problem is a symptom of something underneath, and fixing the right thing first saves a lot of effort.</p>
+      <p class="ownership" style="margin-top:1.5rem"><strong>You stay in charge.</strong> Your goals, decisions, and projects stay yours. My role isn’t to take responsibility off your plate. It’s to help you act on it with more support, more information, and more room to think.</p>
+    </div>
+    <div>
+      <h3 style="margin-bottom:1rem">Questions I’ll probably ask</h3>
+      <ul>
+        <li>What are you trying to accomplish?</li>
+        <li>What have you already tried?</li>
+        <li>What’s getting in the way?</li>
+        <li>What keeps bringing you back to the same problem?</li>
+        <li>What would need to change for this to work differently?</li>
+        <li>What are you ready to do differently?</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -417,7 +456,7 @@
   </div>
 </section>
 
-<section class="ways">
+<section class="ways" id="ways">
   <div class="wrap">
     <p class="eyebrow">Ways to work together</p>
     <h2>Just enough support for what you need.</h2>
@@ -425,7 +464,7 @@
     <div class="trio">
       <div class="card start"><span class="tag">Your first session</span><h3>Finding the Start Button.</h3><p class="price">$199</p><p>Bring the task, process, question, or idea that feels too tangled to start. We’ll try it on your real work, and you’ll leave with a clear next step.</p></div>
       <div class="card"><span class="tag">Build together</span><h3>A small, useful project.</h3><p class="price-note">Priced by project · quoted up front</p><p>For a defined piece of work with a clear finish line.</p></div>
-      <div class="card"><span class="tag">Ongoing partnership</span><h3>Support as things evolve.</h3><p class="price-note">Hourly, or a monthly package</p><p>For bigger projects, team rollouts, or continuing support as your needs change.</p></div>
+      <div class="card"><span class="tag">Ongoing partnership</span><h3>Support as things evolve.</h3><p class="price-note">Hourly, or a monthly package</p><p>For bigger projects, organizational engagements, team rollouts, or continuing support as your needs change.</p></div>
     </div>
     <p class="fineprint">Nothing starts until you’ve agreed to the cost. Invoices are handled through Wave.</p>
   </div>
@@ -444,6 +483,8 @@
     <p class="read-more">Questions about AI—privacy, trust, bias, and more—are on the <a href="ai.html#ai-questions">Using AI</a> page.</p>
     <h3 class="group">Working together</h3>
     <details><summary>Who usually comes to you?</summary><p>People with lots of moving pieces: creatives, people building a business or side gig, professionals who want AI to help with their workday, people starting a new chapter, and teams taking on something new. Many are neurodivergent, or know they do their best work with systems built for them.</p><p>A lot of what we do together supports executive functioning: getting started, breaking big goals into steps, keeping track of the pieces, and holding priorities when life gets full. We set up supports like visual plans and reminders, so your energy goes to the work you care about. That’s why this approach often clicks for neurodivergent folks.</p></details>
+    <details><summary>Do you work with organizations, or just individuals?</summary><p>Both. I work with individuals and small businesses, and with organizations on short-term and project-based engagements: technology rollouts, AI adoption, process improvement, requirements gathering, and change management. Organizational work is scoped and quoted per engagement. <a href="help.html#organizations" style="color:var(--forest);font-weight:700">How I help teams →</a></p></details>
+    <details><summary>Why hire you instead of just using AI?</summary><p>AI can give you answers. The hard part is usually knowing which problem to solve, which questions matter, whether the answer is right, and how to turn it into something that works for the people involved. That’s what I bring. Sometimes I’ll use AI along the way; sometimes I’ll recommend something simpler. <a href="ai.html#why-a-person" style="color:var(--forest);font-weight:700">More on this →</a></p></details>
     <details><summary>What if I don’t even know what I need?</summary><p>That’s completely fine. Tell me what you’re trying to do, what isn’t working, or where you’re getting stuck. We can figure out the shape of the problem together.</p></details>
     <details><summary>Will you understand my field?</summary><p>You’re the expert in your subject, and I learn what I need as we go. I’ve worked across nonprofits, research, healthcare, small businesses, and family life. When your project calls for a specialist, I’ll help you find one.</p></details>
   </div>
@@ -454,24 +495,33 @@
 <footer>
   <div class="wrap">
     <p class="wordmark">Embodied Work Solutions</p>
-    <p class="tagline">From idea to solution. Practical help, built around real people.</p>
+    <p class="tagline">An outside perspective. A practical plan. A partner in getting it done.</p>
     <div class="foot-row">
-      <a href="mailto:connect@embodiedworksolutions.com">connect@embodiedworksolutions.com</a>
+      <span><a href="mailto:connect@embodiedworksolutions.com">connect@embodiedworksolutions.com</a><br>Online, and in person around Chapel Hill &amp; the Triangle, NC</span>
       <div class="foot-links">
-        <a href="how-it-works.html">How it works</a><a href="ai.html">Using AI</a><a href="about.html">About</a>
+        <a href="help.html">How I can help</a><a href="how-it-works.html">How it works</a><a href="ai.html">Using AI</a><a href="about.html">About</a>
         <a href="https://cracksandseeds.substack.com/" target="_blank" rel="noopener">Writing: Cracks &amp; Seeds</a>
       </div>
-      <span>© 2026 Embodied Work Solutions · Regulation-Centered System Design™</span>
+      <span>© 2026 Embodied Work Solutions, LLC · Regulation-Centered System Design™</span>
     </div>
   </div>
 </footer>
 <script>
 (function () {
   var b = document.querySelector('.menu-toggle'), m = document.getElementById('mobile-menu');
-  if (!b || !m) return;
-  function set(open) { b.setAttribute('aria-expanded', String(open)); b.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); m.hidden = !open; }
-  b.addEventListener('click', function () { set(b.getAttribute('aria-expanded') !== 'true'); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !m.hidden) { set(false); b.focus(); } });
+  if (b && m) {
+    function set(open) { b.setAttribute('aria-expanded', String(open)); b.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); m.hidden = !open; }
+    b.addEventListener('click', function () { set(b.getAttribute('aria-expanded') !== 'true'); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !m.hidden) { set(false); b.focus(); } });
+  }
+  // Lens section: the overlook photo comes into focus as it scrolls into view.
+  var f = document.querySelectorAll('.lens-pair .focus');
+  if (!f.length) return;
+  if (!('IntersectionObserver' in window)) { f.forEach(function (el) { el.classList.add('in-focus'); }); return; }
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in-focus'); io.unobserve(e.target); } });
+  }, { threshold: 0.45 });
+  f.forEach(function (el) { io.observe(el); });
 })();
 </script>
 </body>
