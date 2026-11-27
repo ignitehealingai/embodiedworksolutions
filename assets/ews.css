@@ -435,3 +435,23 @@ a.more { color: var(--forest); font-weight: 700; text-decoration-thickness: 1px;
   .lens-arrow { flex-direction: row; justify-content: center; padding: .25rem 0; }
   .lens-arrow svg { transform: rotate(90deg); width: 70px; height: 50px; }
 }
+
+/* Home hero (trees + text): promise line */
+.hero.has-photo .promise { font-family: var(--serif); font-style: italic; font-size: clamp(1.3rem, 2.4vw, 1.6rem); color: #fff; margin: -1rem 0 2rem; }
+/* For Individuals | For Organizations: space between the photos */
+.halves { gap: 1.5rem; padding: 0 1.5rem; }
+.half-photo img { border-radius: 16px !important; }
+.half, .half.org { background: transparent; }
+.half.org .half-body { background: var(--forest-pale); border-radius: 16px; margin-top: 1rem; }
+.half:first-child .half-body { background: var(--sand); border-radius: 16px; margin-top: 1rem; }
+.split-help { padding-top: 4rem; }
+.half-body h2 { margin-bottom: .35rem; }
+.half-body .subhead { font-family: var(--serif); font-style: italic; font-size: clamp(1.3rem, 2.2vw, 1.6rem); line-height: 1.3; color: var(--terracotta); margin-bottom: 1rem; }
+.half-body { max-width: none; }
+.half:first-child .half-body { margin-left: 0; }
+@media (max-width: 900px) { .halves { gap: 2rem; padding: 0 1rem; } }
+/* Exhale: questions in two columns */
+.wonder.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.5rem; margin-top: 2rem; }
+.wonder.two-col li:nth-child(2) { border-top: 1px solid var(--rule); }
+@media (max-width: 760px) { .wonder.two-col { grid-template-columns: 1fr; } .wonder.two-col li:nth-child(2) { border-top: 0; } }
+.half-body { flex: 1; }

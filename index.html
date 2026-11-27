@@ -388,8 +388,6 @@ function ewsImg(i) {
   <div class="wrap">
     <a href="index.html" class="brand" aria-label="Embodied Work Solutions, home"><img src="assets/leaf.webp" alt="" width="96" height="109" /><span>Embodied Work<br>Solutions</span></a>
     <ul class="nav-links">
-      <li><a href="index.html#who">Individuals</a></li>
-      <li><a href="index.html#organizations">Organizations</a></li>
       <li><a href="how-it-works.html">How it works</a></li>
       <li><a href="ai.html">Using AI</a></li>
       <li><a href="about.html">About</a></li>
@@ -400,8 +398,6 @@ function ewsImg(i) {
   <div class="mobile-menu" id="mobile-menu" hidden>
     <ul>
       <li><a href="index.html" aria-current="page">Home</a></li>
-      <li><a href="index.html#who">Individuals</a></li>
-      <li><a href="index.html#organizations">Organizations</a></li>
       <li><a href="how-it-works.html">How it works</a></li>
       <li><a href="ai.html">Using AI</a></li>
       <li><a href="about.html">About</a></li>
@@ -410,34 +406,18 @@ function ewsImg(i) {
   </div>
 </nav>
 
-<!-- A · HERO
-     Photo: assets/photos/hero-team-collaboration.webp
-     REFERENCE IMAGE from SK's visual-inspiration page (credited there to elevify.com).
-     License it or replace it with SK's own photo before going live. -->
-<header class="hero3 nature" id="top" style="background-image:linear-gradient(rgba(8,51,38,0.55),rgba(8,51,38,0.5)),url(assets/photos/header-home.webp)">
+
+<!-- A · HERO: SK's green forest, text only -->
+<header class="hero has-photo" id="top" style="background-image:linear-gradient(rgba(8,51,38,0.6),rgba(8,51,38,0.55)),url(assets/photos/header-home.webp)">
   <div class="wrap">
-    <p class="eyebrow">Embodied Work Solutions · Business, technology &amp; AI support · Online and around the Triangle, NC</p>
     <h1>You need a team. <em>You don’t need to hire an entire one.</em></h1>
-    <div class="hero3-grid has-slot">
-      <figure class="slot">
-        <img src="assets/photos/hero-team-collaboration.webp" onerror="ewsImg(this)"
-          data-fallback="assets/photos/help-ageing-better.webp"
-          data-fallback-alt="A woman with short white hair and a lanyard points at a computer screen while a colleague leans in, the two of them working something out together"
-          alt="Two people side by side at a table, leaning over an open notebook and a laptop, working something out together"
-          width="1282" height="755" fetchpriority="high" />
-        <figcaption class="credit">Photo by <a href="https://unsplash.com/@ageing_better?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Centre for Ageing Better</a> on <a href="https://unsplash.com/photos/a-man-pointing-at-a-woman-wkFRvw2lTAg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Unsplash</a></figcaption>
-      </figure>
-      <div>
-        <p class="lede">When you’re in the trenches of running your business, it’s difficult to see the bigger picture. You’re juggling responsibilities, navigating technology, managing information, and trying to find time for the things that would actually move you forward.</p>
-        <p class="lede">I bring a wide-angle perspective, practical business and technology expertise, and hands-on support to help you bring your vision into focus, and make it happen.</p>
-        <p class="promise">An outside perspective. A practical plan. A partner in getting it done.</p>
-        <div class="actions">
-          <a href="contact.html" class="btn warm">Let’s talk about what you need <span class="arrow">↗</span></a>
-          <a href="#accomplish" class="btn ghost light-ghost">See what we could accomplish</a>
-        </div>
-        <p class="micro"><span>Free 20-minute conversation</span><span>Zoom or in person</span><span>No pressure</span></p>
-      </div>
+    <p class="lede">When you’re in the trenches of running your business, it’s hard to see the bigger picture. I bring a wide-angle perspective, practical business and technology expertise, and hands-on support to help you bring your vision into focus, and make it happen.</p>
+    <p class="promise">An outside perspective. A practical plan. A partner in getting it done.</p>
+    <div class="actions">
+      <a href="contact.html" class="btn warm">Let’s talk about what you need <span class="arrow">↗</span></a>
+      <a href="#help" class="btn ghost">See how I can help</a>
     </div>
+    <p class="micro"><span>Free 20-minute conversation</span><span>Zoom or in person</span><span>No pressure to commit</span></p>
   </div>
 </header>
 
@@ -460,7 +440,7 @@ function ewsImg(i) {
       </li>
       <li class="beat">
         <img src="assets/photos/experience-action.webp" alt="Two women at a table with a laptop and notebook, one explaining and gesturing while the other takes notes" loading="lazy" width="232" height="293" />
-        <div><p class="stage">Action</p><h3>Now let’s get to work.</h3><p>We turn scattered ideas into plans, disconnected technology into systems you can use, and unfinished projects into real progress.</p><a class="more" href="#accomplish">What we could accomplish →</a></div>
+        <div><p class="stage">Action</p><h3>Now let’s get to work.</h3><p>We turn scattered ideas into plans, disconnected technology into systems you can use, and unfinished projects into real progress.</p><a class="more" href="how-it-works.html#accomplish">What we could accomplish →</a></div>
       </li>
       <li class="beat">
         <img src="assets/photos/finally-able-to-exhale.webp" alt="A smiling woman in a striped shirt closes her laptop at the end of a productive day" loading="lazy" width="232" height="295" />
@@ -485,8 +465,8 @@ function ewsImg(i) {
           width="739" height="551" />
       </figure>
       <div class="half-body">
-        <p class="eyebrow">How I can help individuals</p>
-        <h2>You’ve been trying to run an entire team by yourself.</h2>
+        <h2>For Individuals</h2>
+        <p class="subhead">You’ve been trying to run an entire team by yourself.</p>
         <p class="lede">Visionary, strategist, project manager, tech support, marketing, admin, often while carrying a lot outside of work too. That isn’t a discipline problem. It’s more than one person can reasonably hold. Think of me as another member of your team: another brain, another set of eyes, and another pair of hands, for as long as you need them.</p>
         <div class="types">
           <div class="type">
@@ -508,7 +488,7 @@ function ewsImg(i) {
             <p>Hands-on sessions using examples from your own life or work, with honest conversation about privacy, limits, and when a simpler tool is better. <a class="more" href="ai.html">How I teach AI →</a></p>
           </div>
         </div>
-        <div class="btn-row"><a href="contact.html" class="btn warm">Let’s talk about what you need <span class="arrow">↗</span></a><a class="more" href="#accomplish">What we could accomplish →</a></div>
+        <div class="btn-row"><a href="contact.html" class="btn warm">Let’s talk about what you need <span class="arrow">↗</span></a><a class="more" href="how-it-works.html#accomplish">What we could accomplish →</a></div>
       </div>
     </article>
 
@@ -521,8 +501,8 @@ function ewsImg(i) {
           width="740" height="551" />
       </figure>
       <div class="half-body">
-        <p class="eyebrow">How I can help organizations</p>
-        <h2>Technology only creates value when people can actually use it.</h2>
+        <h2>For Organizations</h2>
+        <p class="subhead">Technology only creates value when people can actually use it.</p>
         <p class="lede">You’re bringing in AI tools, new software, or new processes, and you know the technology is only part of the challenge. People may be overwhelmed, skeptical, or quietly sticking with the old workarounds. Technical and business teams may not be speaking the same language.</p>
         <ul class="thinking" aria-label="What you might be thinking">
         <li>“We’ve invested in technology, but people aren’t using it.”</li>
@@ -553,27 +533,6 @@ function ewsImg(i) {
 
   </div>
   <p class="illustrative wrap">Scenarios and photos on this site are illustrative, not actual clients or testimonials. Not sure where you fit? You don’t need to choose. That’s what our first conversation is for.</p>
-</section>
-
-<!-- F · WHAT WE COULD ACCOMPLISH TOGETHER -->
-<section class="accomplish" id="accomplish">
-  <div class="wrap">
-    <p class="eyebrow">For individuals &amp; small businesses · What we could accomplish together</p>
-    <h2>Concrete help. Things you can point to.</h2>
-    <p class="lede">Here’s what working together can actually produce. Each one starts with your situation, not a template.</p>
-    <div class="verbs">
-      <div class="verb"><span class="v">CONNECT</span><div><h3>Connect your scattered email and calendars.</h3><p>Bring accounts, calendars, documents, and apps into one setup that makes sense, so you stop switching between systems and stop missing things.</p></div></div>
-      <div class="verb"><span class="v">ORGANIZE</span><div><h3>Create structure out of disorganization.</h3><p>Sorting, tagging, and making things easy to find. A searchable library or knowledge base means no more hunting for information you know you already have.</p></div></div>
-      <div class="verb"><span class="v">SIMPLIFY</span><div><h3>Cut what’s creating extra work.</h3><p>Unneeded steps, duplicate data entry, overlapping subscriptions, confusing processes. Fewer things to track, and less to pay for.</p></div></div>
-      <div class="verb"><span class="v">AUTOMATE</span><div><h3>Take repetitive tasks off your plate.</h3><p>Templates, integrations, workflows, and AI-assisted steps where they genuinely fit, so your time goes to the work that needs you.</p></div></div>
-      <div class="verb"><span class="v">FOCUS</span><div><h3>Turn your ideas into an actionable plan.</h3><p>What matters most, what’s in the way, what comes first, and where your energy counts. A business plan, a project roadmap, or a content schedule you can actually follow.</p></div></div>
-      <div class="verb"><span class="v">BUILD</span><div><h3>Build what your next stage needs.</h3><p>Plans, systems, resources, simple tools, marketing graphics, and workflows that support where you’re headed.</p></div></div>
-      <div class="verb"><span class="v">COMPARE</span><div><h3>Compare software before you commit.</h3><p>Make an informed choice without spending hours researching every tool, and stop paying for ones you don’t need.</p></div></div>
-      <div class="verb"><span class="v">IMPLEMENT</span><div><h3>Move an unfinished project forward.</h3><p>Not just recommendations. We find where it’s stuck and put the solution into practice, step by step, until it’s working.</p></div></div>
-    </div>
-    <p class="also"><strong>Curious about AI?</strong> Learn what it can actually do for you, using real examples from your own life or business. <a class="more" href="ai.html">Using AI →</a></p>
-    <div class="btn-row"><a href="contact.html" class="btn">Let’s talk about what you need <span class="arrow">↗</span></a></div>
-  </div>
 </section>
 
 <!-- C · A DIFFERENT LENS ─ SK's own photographs -->
@@ -634,38 +593,8 @@ function ewsImg(i) {
       <h3>Are you ready to finally make it happen?</h3>
       <p>What have you been wanting to accomplish for years? What would you love to stop talking about and start doing?</p>
       <p class="pledge">If you know you’re ready to change, I’ll be the best team member you’ve ever hired.</p>
-      <a class="more" href="#accomplish">Here’s what we can do together →</a>
+      <a class="more" href="how-it-works.html#accomplish">Here’s what we can do together →</a>
     </div>
-  </div>
-</section>
-
-<!-- E · I DON'T JUST HELP YOU FIGURE IT OUT -->
-<section class="doit" id="do-it">
-  <div class="wrap cols has-slot">
-    <div>
-      <p class="eyebrow">Thinking partner and implementation partner</p>
-      <h2>I don’t just help you figure it out. <em>I help you do it.</em></h2>
-      <p>Sometimes you need someone to think through a complicated decision with you. Sometimes you need someone to research the options, build the plan, organize the information, set up the technology, or get a stalled project moving again. I can do both.</p>
-      <p>Depending on what you need, I can be your:</p>
-      <ul class="roles">
-        <li><strong>Thinking partner</strong>Talk it through, test ideas, make the call.</li>
-        <li><strong>Project manager</strong>Break it down, put it in order, keep it moving.</li>
-        <li><strong>Systems designer</strong>Build structures around how you actually work.</li>
-        <li><strong>Technology translator</strong>Between tech-speak and plain language.</li>
-        <li><strong>Facilitator</strong>Get a group aligned and moving in one direction.</li>
-        <li><strong>Implementation partner</strong>Roll up our sleeves and set it up.</li>
-      </ul>
-      <div class="why-person">
-        <h3>Why not just ask AI?</h3>
-        <p>AI can give you answers. Knowing which problem to solve and turning an answer into something that works for real people is a different skill. <a class="more" href="ai.html#why-a-person">Why work with a person →</a></p>
-      </div>
-    </div>
-    <!-- photo slot: assets/photos/hands-on-problem-solving.webp (section works without it) -->
-    <figure class="slot">
-      <img src="assets/photos/hands-on-problem-solving.webp" onerror="ewsImg(this)" loading="lazy"
-        alt="Close-up of hands arranging sticky notes into a process map next to an open laptop"
-        width="1200" height="1500" />
-    </figure>
   </div>
 </section>
 
@@ -691,45 +620,11 @@ function ewsImg(i) {
   </div>
 </section>
 
-<!-- H · BRING ME THE MESSY MIDDLE ─ photo slot: assets/photos/entrepreneur-vision-to-action.webp -->
-<section class="messy-mid" id="messy-middle">
-  <div class="wrap cols has-slot">
-    <div>
-      <p class="eyebrow">Start wherever you are</p>
-      <h2>Bring me the <em>messy middle.</em></h2>
-      <p>You don’t need a polished project plan, a clear problem statement, or a finished business idea before you reach out. Bring me:</p>
-      <ul class="scraps">
-        <li>the scattered notes</li>
-        <li>the half-finished plan</li>
-        <li>the tools that don’t talk to each other</li>
-        <li>the process that makes you sigh</li>
-        <li>the question you can’t quite put into words</li>
-        <li>the idea you can’t stop thinking about</li>
-      </ul>
-      <p>I’m good at holding complexity, spotting connections, and figuring out what needs to happen next, without ever making you feel like you should have figured it out already.</p>
-      <p class="start-here">We can start wherever you are.</p>
-    </div>
-    <figure class="slot">
-      <img src="assets/photos/entrepreneur-vision-to-action.webp" onerror="ewsImg(this)" loading="lazy"
-        data-fallback="assets/photos/exhale.webp"
-        data-fallback-alt="Autumn leaves scattered across still water, the sky reflected among them"
-        alt="Two people at a table covered with notebooks and sticky notes, sorting ideas into a plan"
-        width="1200" height="1500" />
-    </figure>
-  </div>
-</section>
-
 <!-- J · IMAGINE BEING ABLE TO EXHALE ─ photo slot: assets/photos/finally-able-to-exhale.webp -->
 <section class="exhale" id="exhale">
   <div class="wrap">
     <p class="eyebrow">More than getting more done</p>
-    <h2>When was the last time your mind took a vacation?</h2>
-    <div class="cols has-slot">
-      <div>
-        <p>Even when you’re not working, part of your brain is still tracking appointments, unfinished projects, emails, client requests, things you need to find, systems you need to fix, and ideas you haven’t had time for. You can take a vacation from your desk without ever taking one from your business.</p>
-        <p><strong style="color:var(--forest)">What if we could change some of that?</strong> Together we find what’s eating your time and attention, simplify the systems creating extra work, and set up structures that hold things for you, so there’s less to keep track of in your head.</p>
-      </div>
-      <ul class="wonder">
+    <h2>When was the last time your mind took a vacation?</h2><ul class="wonder two-col">
         <li>Do you wake up already feeling behind?</li>
         <li>Do you go to bed thinking about everything you didn’t get done?</li>
         <li>Even when you’re not working, are you still working in your head?</li>
@@ -737,27 +632,10 @@ function ewsImg(i) {
         <li>What would it feel like to close your laptop and actually feel finished?</li>
         <li>What would you do with the mental space you’re spending on managing everything?</li>
       </ul>
-    </div>
     <div class="feelings">
       <div class="feeling"><img src="assets/photos/relief.webp" alt="Sunset clouds glowing gold above the treetops" loading="lazy" width="900" height="675" /><div><h3>Relief</h3><p>Seeing the whole project laid out in steps you can actually take.</p></div></div>
       <div class="feeling"><img src="assets/photos/pride.webp" alt="A bright orange zinnia, petals open wide in the sun" loading="lazy" width="900" height="675" /><div><h3>Pride</h3><p>Finally launching the thing you’ve put off for years.</p></div></div>
       <div class="feeling"><img src="assets/photos/thrill.webp" alt="A yellow swallowtail butterfly landing on purple blooms" loading="lazy" width="900" height="675" /><div><h3>Ease</h3><p>Your apps and calendars finally talking to each other, and nothing living in three places anymore.</p></div></div>
-    </div>
-    <p class="closing">More room for the work you love. <em>More room for the life you want.</em></p>
-  </div>
-</section>
-
-<!-- K · MEET SK -->
-<section class="meet" id="meet">
-  <div class="wrap cols">
-    <div class="portrait"><img src="assets/photos/sk-headshot.webp" alt="SK smiling warmly, with swept-up copper hair and navy glasses, in a navy blazer and light blue shirt" width="720" height="720" loading="lazy" /></div>
-    <div>
-      <p class="eyebrow">Who you’d be working with</p>
-      <h2>Hi, I’m SK.</h2>
-      <p>For more than 20 years I’ve worked across technology, project management, business analysis, organizational change, social work, and psychology. I’m often the person who can step into a complicated situation, notice what isn’t working, and help people figure out how to move forward.</p>
-      <p>I bring strategic thinking and hands-on implementation, and I care about building things that work for real people’s lives.</p>
-      <p class="creds-line">MSW, BS Business Administration &amp; BA Psychology, UNC-Chapel Hill · Certified ScrumMaster® · Georgetown executive certificate, Organizational Development &amp; Change Leadership · Responsible Generative AI, University of Michigan</p>
-      <div class="btn-row"><a class="more" href="about.html">More about me and how I work →</a></div>
     </div>
   </div>
 </section>
@@ -767,8 +645,8 @@ function ewsImg(i) {
   <div class="wrap narrow">
     <p class="eyebrow">Let’s talk</p>
     <h2>What have you been trying to figure out on your own?</h2>
-    <p>Tell me what’s going on. You don’t need to know which service you need or have the problem perfectly put into words. We’ll start with a free 20-minute conversation and figure out whether I can help.</p>
-    <p class="messy">You need a team. Let’s get to work.</p>
+    <p>Bring me the messy middle: the scattered notes, the half-finished plan, the tools that don’t talk to each other, the idea you can’t stop thinking about. You don’t need to know which service you need. We’ll start with a free 20-minute conversation and figure out whether I can help.</p>
+    <p class="messy">We can start wherever you are.</p>
     <a href="contact.html" class="btn light">Let’s talk about what you need <span class="arrow">↗</span></a>
     <ul class="checks"><li>Free 20 minutes</li><li>Zoom, or in person around the Triangle</li><li>No pressure to commit</li></ul>
     <p class="refer">Know someone who needs another person in their corner? <a href="mailto:connect@embodiedworksolutions.com?subject=A%20referral">Send them my way.</a></p>

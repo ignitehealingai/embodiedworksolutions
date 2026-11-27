@@ -7,19 +7,16 @@ Unsplash photo) or quietly hides that spot. Nothing looks broken.
 
 ## ⚠️ Reference images in use right now (replace or license before going live)
 
-These nine files were cropped from the visual-inspiration page in SK's brief so
+These six files were cropped from the visual-inspiration page in SK's brief so
 the preview shows the intended look. **They aren't SK's photos, and their
-licenses are unknown.** The hero image is credited there to elevify.com. Before
+licenses are unknown.** Before
 merging to `main`, either replace each one with your own photo (same filename)
 or confirm you have a license to use it.
 
 | File | Where |
 |---|---|
-| `hero-team-collaboration.webp` | Home hero |
-| `entrepreneur-messy-middle.webp` | Home card |
-| `scattered-systems.webp` | Home card |
-| `organizational-change-team.webp` | Home card |
-| `approachable-ai-learning.webp` | Home: AI-curious card |
+| `entrepreneur-messy-middle.webp` | Home: For Individuals |
+| `organizational-change-team.webp` | Home: For Organizations |
 | `experience-recognition.webp` | Home experience strip |
 | `experience-perspective.webp` | Home experience strip |
 | `experience-action.webp` | Home experience strip |
@@ -48,25 +45,21 @@ that way; don't caption them as real client work.
 
 ## Priority order (shoot these first)
 
-| # | Filename | Where it appears | Export size | Scene | Feeling | Stand-in now |
+| # | Filename | Where it appears | Export size | Scene | Feeling | Shows now |
 |---|---|---|---|---|---|---|
-| 1 | `hero-team-collaboration.webp` | Home, hero (top of the page) | 1600 × 1200 | SK and one other adult at a kitchen table or home office, reviewing a laptop or notebook together. One explaining, one leaning in. | Partnership, capability, warmth | Unsplash: two colleagues at a computer |
-| 2 | `entrepreneur-messy-middle.webp` | Home, "Entrepreneurs & creators" card | 1200 × 900 | One adult at a kitchen table: laptop, open notebooks, scattered notes, a mug. Thinking about what to do next. | Recognizable overload, not distress | Nature: new leaf |
-| 3 | `scattered-systems.webp` | Home, "Business owners" card | 1200 × 900 | One adult at a desk with laptop, phone, papers, a wall or paper calendar. Searching across tools. | Frustration you recognize | Nature: tangled roots |
-| 4 | `organizational-change-team.webp` | Home, "Teams & organizations" card | 1200 × 900 | 3–5 adults around a table mapping a process: paper, sticky notes, a laptop. | Professional credibility, engagement | Nature: two bees on a sunflower |
-| 5 | `approachable-ai-learning.webp` | Home "Curious about AI" card | 1200 × 900 | SK beside someone of a different age, both looking at a laptop, the moment something makes sense. Show the learner as capable. | Curiosity, growing confidence | Unsplash: woman at laptop on phone |
-| 6 | `sk-working-with-client.webp` | About, next to "I see how things connect" | 1200 × 900 | SK listening or explaining while someone points at a step. Hands and faces both visible. | Competence, care | Hidden until added |
-| 7 | `finally-able-to-exhale.webp` | Home, "When was the last time your mind took a vacation?" | 1200 × 800 | One adult closing a laptop or leaning back, smiling after finishing something. | Relief, ease | Hidden until added |
-| 8 | `sk-headshot.webp` | Home "Hi, I'm SK" and About | 720 × 720 | **Already have it.** Replace only if you want a newer portrait. | Warmth, confidence | n/a |
+| 1 | `entrepreneur-messy-middle.webp` | Home: For Individuals (half-screen photo) | 1200 × 900 | One adult at a kitchen table: laptop, open notebooks, scattered notes, a mug. Thinking about what to do next. | Recognizable overload, not distress | Reference image |
+| 2 | `organizational-change-team.webp` | Home: For Organizations (half-screen photo) | 1200 × 900 | 3–5 adults around a table mapping a process: paper, sticky notes, a laptop. | Professional credibility, engagement | Reference image |
+| 3 | `experience-recognition.webp` | Home: "You need a team." | 800 × 1000 (portrait) | One adult at a desk covered in papers, head in hand. | Overload you recognize | Reference image |
+| 4 | `experience-perspective.webp` | Home: "Let's bring your vision into focus." | 800 × 1000 (portrait) | A hand holding a lens (or glasses, or a camera) up to a landscape, the view sharp through it. Could be one of SK's own photos. | Clarity | Reference image |
+| 5 | `experience-action.webp` | Home: "Now let's get to work." | 800 × 1000 (portrait) | SK and someone at a laptop, one explaining, one taking notes. | Momentum | Reference image |
+| 6 | `finally-able-to-exhale.webp` | Home: "Imagine being able to exhale." | 800 × 1000 (portrait) | One adult closing a laptop, smiling. | Relief | Reference image |
+| 7 | `sk-working-with-client.webp` | About, next to "I see how things connect" | 1200 × 900 | SK listening or explaining while someone points at a step. | Competence, care | Hidden until added |
 
-## Also reserved (nice to have)
+## Also reserved
 
-| Filename | Where | Size | Scene | Stand-in now |
+| Filename | Where | Size | Scene | Shows now |
 |---|---|---|---|---|
-| `finding-the-start-button.webp` | Home, Finding the Start Button | 1200 × 1200 | Two people at a table with notebook and laptop, just beginning to sketch where to start. | SK's magnolia bud, opening |
-| `entrepreneur-vision-to-action.webp` | Home "Bring me the messy middle" | 1200 × 1500 (portrait) | Two people at a table covered in notebooks and sticky notes, sorting ideas into a plan. | SK's leaves on water / new leaf |
-
-| `hands-on-problem-solving.webp` | Home, "I help you do it" | 1200 × 1500 (portrait) | Close-up of hands arranging sticky notes or mapping a process. | Hidden until added |
+| `finding-the-start-button.webp` | Home: Finding the Start Button | 1200 × 1200 | Two people at a table with notebook and laptop, just beginning to sketch where to start. | SK's magnolia bud |
 
 ## Your own photography, already in use
 
@@ -77,26 +70,25 @@ that way; don't caption them as real client work.
 - **Exhale feelings:** `relief.webp`, `pride.webp`, `thrill.webp`.
 - **Magnolia sequence** (`q1`–`q4`) on the How it works steps; `q2` also stands in for Finding the Start Button until that photo exists.
 - **About:** `rcsd-mushrooms.webp` and the page header.
-- **Headers:** the homepage is back on the green forest, and every inner page header still uses your nature photo as its background (green overlay kept), with a people photo or your headshot set into it.
+- **Headers:** the homepage top is your green forest with text only, and every inner page header still uses your nature photo as its background (green overlay kept), with a people photo or your headshot set into it.
 
 ## One efficient photo session
 
-You can get most of the list in about two hours with **SK + 2–4 friends** and
+You can get the whole list in about two hours with **SK + 2–4 friends** and
 two settings.
 
 **Setting A: kitchen table or home office** (natural window light, side-lit)
-1. Friend alone, scattered notes and laptop → #2
-2. Same friend, add phone and calendar, searching → #3
-3. Same friend, laptop closed, leaning back and laughing → #7
-4. SK sits down beside them, laptop + notebook → #1 (shoot wide, leave space)
-5. SK sketching a process, friend pointing → #6
-6. Swap in a different-age friend, exploring an AI tool → #5
-7. Notebook + sticky notes spread out, both sorting → `entrepreneur-vision-to-action`
-8. First few minutes of a conversation, notebook open → `finding-the-start-button`
+1. Friend alone, scattered notes and laptop → #1
+2. Same friend, head in hand over a pile of papers (shoot portrait) → #3
+3. Same friend, laptop closed, smiling and leaning back (portrait) → #6
+4. SK sits down beside them; one explains, one takes notes (portrait) → #5
+5. SK listening while the friend points at a step → #7
+6. First few minutes of a conversation, notebook open → `finding-the-start-button`
 
 **Setting B: meeting room, library study room, or coworking space**
-9. 3–5 people around a table, process on paper → #4
-10. SK at a shared screen, others taking notes → `ai-adoption-working-session`
+7. 3–5 people around a table, process on paper and sticky notes → #2
+
+**Your own camera:** a lens, glasses, or phone held up to a wide view → #4
 
 Tips: shoot landscape and portrait of each scene. Ask people to actually do the
 task (real conversation, real sticky notes) rather than pose. Skip direct eye
