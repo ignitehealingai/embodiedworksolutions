@@ -55,11 +55,6 @@ that way; don't caption them as real client work.
 | 6 | `finally-able-to-exhale.webp` | Home: "Imagine being able to exhale." | 800 × 1000 (portrait) | One adult closing a laptop, smiling. | Relief | Reference image |
 | 7 | `sk-working-with-client.webp` | About, next to "I see how things connect" | 1200 × 900 | SK listening or explaining while someone points at a step. | Competence, care | Hidden until added |
 
-## Also reserved
-
-| Filename | Where | Size | Scene | Shows now |
-|---|---|---|---|---|
-| `finding-the-start-button.webp` | Home: Finding the Start Button | 1200 × 1200 | Two people at a table with notebook and laptop, just beginning to sketch where to start. | SK's magnolia bud |
 
 ## Your own photography, already in use
 
@@ -68,7 +63,7 @@ that way; don't caption them as real client work.
   and comes into focus as you scroll to it. People who've set their device to
   reduce motion see it sharp from the start.
 - **Exhale feelings:** `relief.webp`, `pride.webp`, `thrill.webp`.
-- **Magnolia sequence** (`q1`–`q4`) on the How it works steps; `q2` also stands in for Finding the Start Button until that photo exists.
+- **Magnolia sequence** (`q1`–`q4`) on the How it works steps.
 - **About:** `rcsd-mushrooms.webp` and the page header.
 - **Headers:** the homepage top is your green forest with text only, and every inner page header still uses your nature photo as its background (green overlay kept), with a people photo or your headshot set into it.
 
@@ -83,7 +78,6 @@ two settings.
 3. Same friend, laptop closed, smiling and leaning back (portrait) → #6
 4. SK sits down beside them; one explains, one takes notes (portrait) → #5
 5. SK listening while the friend points at a step → #7
-6. First few minutes of a conversation, notebook open → `finding-the-start-button`
 
 **Setting B: meeting room, library study room, or coworking space**
 7. 3–5 people around a table, process on paper and sticky notes → #2
